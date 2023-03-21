@@ -6669,14 +6669,14 @@ span.form-bg {
 .event-address {
   position: relative;
 }
-.event-address a.zegen-popup-gmaps {
+.event-address a.maneno-popup-gmaps {
   position: absolute;
   right: -10px;
   font-size: 20px;
   top: 32%;
   transform: translateY(-50%);
 }
-.event-address a.zegen-popup-gmaps:after {
+.event-address a.maneno-popup-gmaps:after {
   content: "\e693";
   font-family: "themify";
   position: absolute;
@@ -9450,12 +9450,12 @@ body.rtl.overlay-active .page-wrapper.right-overlay .sticky-nav-inner,
 .video-icon.icon-style-2 a.popup-youtube::after {
   content: none;
 }
-.sermon-play-list li,
-.sermon-tool-list li {
+.feast-play-list li,
+.feast-tool-list li {
   display: inline-block;
 }
-.sermon-play-list li a,
-.sermon-tool-list li a {
+.feast-play-list li a,
+.feast-tool-list li a {
   width: 45px;
   height: 45px;
   text-align: center;
@@ -9467,28 +9467,28 @@ body.rtl.overlay-active .page-wrapper.right-overlay .sticky-nav-inner,
   color: #fff;
   margin-right: 4px;
 }
-.sermon-play-list li:last-child a {
+.feast-play-list li:last-child a {
   margin-right: 0;
 }
-.sermon-info a:hover {
+.feast-info a:hover {
   color: #252525;
 }
-.sermon-info li i {
+.feast-info li i {
   font-size: 12px;
 }
-.sermon-info li {
+.feast-info li {
   font-size: 14px;
   display: inline-block;
 }
-.sermon-info ul li:first-child {
+.feast-info ul li:first-child {
   display: block;
 }
-.sermon-inner .sermon-link > a {
+.feast-inner .feast-link > a {
   font-weight: 600;
   border-bottom: solid 2px;
 }
-.sermon-grid-1 .sermon-inner,
-.sermon-grid-2 .sermon-inner {
+.feast-grid-1 .feast-inner,
+.feast-grid-2 .feast-inner {
   -webkit-box-shadow: rgb(2 2 2 / 6%) 0px 0px 50px;
   -moz-box-shadow: rgba(2, 2, 2, 0.06) 0px 0px 50px;
   box-shadow: rgb(2 2 2 / 6%) 0px 0px 50px;
@@ -9504,29 +9504,29 @@ body.rtl.overlay-active .page-wrapper.right-overlay .sticky-nav-inner,
   -o-transition: all 0.3s ease-in-out 0s;
   background-color: #fff;
 }
-.sermon-grid-1 .sermon-inner .sermon-thumb:first-child,
-.sermon-grid-2 .sermon-inner .sermon-thumb:first-child {
+.feast-grid-1 .feast-inner .feast-thumb:first-child,
+.feast-grid-2 .feast-inner .feast-thumb:first-child {
   margin-top: -35px;
 }
-.sermon-grid-1 .sermon-inner .sermon-thumb,
-.sermon-grid-2 .sermon-inner .sermon-thumb {
+.feast-grid-1 .feast-inner .feast-thumb,
+.feast-grid-2 .feast-inner .feast-thumb {
   margin-left: -30px;
   margin-right: -30px;
 }
-.sermon-grid-2 .sermon-inner:last-child .sermon-thumb {
+.feast-grid-2 .feast-inner:last-child .feast-thumb {
   margin-bottom: -35px;
 }
-.sermon-grid-2 .sermon-inner .sermon-details .sermon-play-list:first-child {
+.feast-grid-2 .feast-inner .feast-details .feast-play-list:first-child {
   margin-top: -25px;
   text-align: center;
 }
-.sermon-grid-2 .sermon-inner .sermon-info {
+.feast-grid-2 .feast-inner .feast-info {
   font-style: italic;
 }
-.sermon-grid-2 .sermon-inner .sermon-info li {
+.feast-grid-2 .feast-inner .feast-info li {
   font-size: 13px;
 }
-.sermon-grid-2 .sermon-inner .sermon-link > a {
+.feast-grid-2 .feast-inner .feast-link > a {
   color: #fff;
   font-size: 13px;
   line-height: 18px;
@@ -9535,10 +9535,10 @@ body.rtl.overlay-active .page-wrapper.right-overlay .sticky-nav-inner,
   border: none;
   display: inline-block;
 }
-.sermon-grid-2 .sermon-inner .sermon-link > a:hover {
+.feast-grid-2 .feast-inner .feast-link > a:hover {
   background: #111;
 }
-.sermon-grid-2 .sermon-inner .sermon-link > a.btn-link {
+.feast-grid-2 .feast-inner .feast-link > a.btn-link {
   background: unset;
   font-size: 15px;
   line-height: 20px;
@@ -9548,17 +9548,17 @@ body.rtl.overlay-active .page-wrapper.right-overlay .sticky-nav-inner,
   padding: 0;
   text-decoration: unset;
 }
-.sermon-grid-2 .sermon-inner .sermon-link > a.btn-link:hover {
+.feast-grid-2 .feast-inner .feast-link > a.btn-link:hover {
   color: #000;
 }
-.sermon-list.sermon-grid-2 .sermon-inner {
+.feast-list.feast-grid-2 .feast-inner {
   padding: 0 30px;
 }
-.sermon-list.sermon-grid-2 .media-body {
+.feast-list.feast-grid-2 .media-body {
   padding-right: 20px;
   align-self: center;
 }
-.sermon-list.sermon-grid-2 .sermon-details .sermon-play-list {
+.feast-list.feast-grid-2 .feast-details .feast-play-list {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -9569,31 +9569,31 @@ body.rtl.overlay-active .page-wrapper.right-overlay .sticky-nav-inner,
   box-shadow: rgb(2 2 2 / 18%) 0px 0px 50px;
   border-radius: 0px 10px 0 9px;
 }
-.sermon-list.sermon-grid-2 .sermon-inner .sermon-thumb:first-child {
+.feast-list.feast-grid-2 .feast-inner .feast-thumb:first-child {
   margin-top: 0;
 }
-.sermon-list.sermon-grid-2 .sermon-thumb {
+.feast-list.feast-grid-2 .feast-thumb {
   margin-right: 32px;
   max-width: 34%;
 }
-.sermon-list.sermon-grid-2 .sermon-inner .sermon-info li {
+.feast-list.feast-grid-2 .feast-inner .feast-info li {
   font-size: 15px;
   display: inline-block;
   margin-right: 15px;
 }
-.sermon-list.sermon-grid-2 .sermon-inner .sermon-info li:last-child {
+.feast-list.feast-grid-2 .feast-inner .feast-info li:last-child {
   margin-right: 0px;
 }
-.sermon-list.sermon-grid-2 .sermon-title a {
+.feast-list.feast-grid-2 .feast-title a {
   font-size: 24px;
   line-height: 32px;
 }
-.single-sermon .sermon-info ul li {
+.single-feast .feast-info ul li {
   display: inline-block;
   font-size: 15px;
   margin-right: 20px;
 }
-.sermon-view-wrapper {
+.feast-view-wrapper {
   padding: 30px;
   border-radius: 10px;
   position: relative;
@@ -9602,7 +9602,7 @@ body.rtl.overlay-active .page-wrapper.right-overlay .sticky-nav-inner,
   margin-top: -70px;
   margin-bottom: 40px;
 }
-.sermon-view-wrapper:before {
+.feast-view-wrapper:before {
   content: "";
   width: 20px;
   height: 127%;
@@ -9614,20 +9614,20 @@ body.rtl.overlay-active .page-wrapper.right-overlay .sticky-nav-inner,
   top: -19px;
   transform: rotate(27deg);
 }
-.single-sermon .sermon-play-list li a,
-.single-sermon .sermon-tool-list li a {
+.single-feast .feast-play-list li a,
+.single-feast .feast-tool-list li a {
   width: 50px;
   height: 50px;
   line-height: 50px;
   margin-right: 10px;
   background: #fff;
 }
-.single-sermon .sermon-play-list li:last-child a,
-.single-sermon .sermon-tool-list li:last-child a {
+.single-feast .feast-play-list li:last-child a,
+.single-feast .feast-tool-list li:last-child a {
   margin-right: 0;
 }
-.single-sermon .sermon-play-list li a i,
-.single-sermon .sermon-tool-list li a i {
+.single-feast .feast-play-list li a i,
+.single-feast .feast-tool-list li a i {
   color: #252525;
 }
 .text-right {
