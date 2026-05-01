@@ -1,0 +1,38 @@
+
+> koi-platform@0.1.0 dev
+> next dev --hostname 127.0.0.1 --port 3001
+
+   ▲ Next.js 15.5.15
+   - Local:        http://127.0.0.1:3001
+   - Network:      http://127.0.0.1:3001
+
+ ✓ Starting...
+ ✓ Ready in 9.8s
+ ○ Compiling / ...
+ ✓ Compiled / in 4.8s (535 modules)
+ GET / 200 in 7776ms
+ GET / 200 in 339ms
+ ○ Compiling /lessons ...
+ ✓ Compiled /lessons in 2.7s (537 modules)
+ GET /lessons 200 in 3814ms
+   ▲ Next.js 15.5.15
+   - Local:        http://127.0.0.1:3001
+   - Network:      http://127.0.0.1:3001
+   - Experiments (use with caution):
+     ⨯ webpackBuildWorker
+
+ ✓ Starting...
+ ✓ Ready in 13.4s
+   ▲ Next.js 15.5.15
+   - Local:        http://127.0.0.1:3001
+   - Network:      http://127.0.0.1:3001
+
+ ✓ Starting...
+ ✓ Ready in 8.9s
+ ○ Compiling / ...
+ ✓ Compiled / in 1610ms (550 modules)
+ GET / 200 in 2388ms
+ ○ Compiling /lessons ...
+ ✓ Compiled /lessons in 2.4s (537 modules)
+ GET /lessons 200 in 3066ms
+ ✓ Compiled in 279ms
