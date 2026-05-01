@@ -1,0 +1,43 @@
+import type { LessonVariant } from "../features/lessons/types";
+
+export const lessonVariants: LessonVariant[] = [
+  {
+    id: "law-testimony-en",
+    lessonGroupId: "law-testimony",
+    language: "en",
+    title: "The Law and the Testimony",
+    summary: "English PDF lesson metadata scaffold. Replace the file path with the confirmed PDF before launch.",
+    pdfUrl: "/lessons/the-law-and-the-testimony-en.pdf",
+    date: "",
+    category: "Foundation",
+    scriptureReferences: [],
+    relatedTeachingSlug: "the-law-and-the-testimony",
+    featured: true,
+  },
+  {
+    id: "law-testimony-zu",
+    lessonGroupId: "law-testimony",
+    language: "zu",
+    title: "The Law and the Testimony",
+    summary: "IsiZulu PDF lesson metadata scaffold. Replace the file path with the confirmed PDF before launch.",
+    pdfUrl: "/lessons/the-law-and-the-testimony-zu.pdf",
+    date: "",
+    category: "Foundation",
+    scriptureReferences: [],
+    relatedTeachingSlug: "the-law-and-the-testimony",
+    featured: true,
+  },
+  {
+    id: "law-testimony-st",
+    lessonGroupId: "law-testimony",
+    language: "st",
+    title: "The Law and the Testimony",
+    summary: "Sesotho PDF lesson metadata scaffold. Replace the file path with the confirmed PDF before launch.",
+    pdfUrl: "/lessons/the-law-and-the-testimony-st.pdf",
+    date: "",
+    category: "Foundation",
+    scriptureReferences: [],
+    relatedTeachingSlug: "the-law-and-the-testimony",
+    featured: true,
+  },
+];
