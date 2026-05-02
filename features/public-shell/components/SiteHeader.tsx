@@ -1,25 +1,15 @@
-import { primaryNavigation } from "../../../content/navigation";
-import { KoiWordmark } from "../../brand/components/KoiWordmark";
+﻿import { Wordmark } from "../../brand/components/KoiWordmark";
+import { MobileNav } from "./MobileNav";
 
 export function SiteHeader() {
   return (
     <header className="site-header">
-      <a className="site-header__brand" href="/" aria-label="Kingdom of Israel home">
-        <KoiWordmark />
-      </a>
-      <nav className="site-header__nav" aria-label="Primary navigation">
-        {primaryNavigation.map((item) =>
-          item.active ? (
-            <a key={item.href} href={item.href}>
-              {item.label}
-            </a>
-          ) : (
-            <span key={item.href} aria-disabled="true">
-              {item.label}
-            </span>
-          ),
-        )}
-      </nav>
+      <div className="site-header__inner">
+        <a className="site-header__brand" href="/" aria-label="Kingdom of Israel home">
+          <Wordmark />
+        </a>
+        <MobileNav />
+      </div>
     </header>
   );
 }

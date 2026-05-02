@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --color-ink: #11100d;
   --color-ink-soft: #2c2922;
   --color-linen: #f6f0e4;
@@ -10,8 +10,16 @@
   --color-surface: #fffaf0;
   --color-focus: #bf8f3f;
 
-  --font-display: "Georgia", "Times New Roman", serif;
-  --font-body: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-display: var(--font-fraunces), "Fraunces", serif;
+  --font-body: var(--font-inter), "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-label: var(--font-inter), "Inter", "Segoe UI", system-ui, sans-serif;
+
+  --font-size-display: clamp(4.2rem, 12vw, 10.5rem);
+  --font-size-h1: clamp(3rem, 7vw, 6.8rem);
+  --font-size-h2: clamp(2rem, 4vw, 4.1rem);
+  --font-size-body: clamp(1rem, 1.1vw, 1.125rem);
+  --font-size-small: 0.875rem;
+  --font-size-eyebrow: 0.72rem;
 
   --space-1: 0.25rem;
   --space-2: 0.5rem;
@@ -27,8 +35,9 @@
   --radius-md: 0.5rem;
   --radius-lg: 0.75rem;
 
-  --border-subtle: 1px solid color-mix(in srgb, var(--color-stone) 40%, transparent);
-  --shadow-soft: 0 24px 80px rgba(17, 16, 13, 0.1);
+  --border-subtle: 1px solid color-mix(in srgb, var(--color-stone) 34%, transparent);
+  --shadow-soft: 0 24px 80px rgba(17, 16, 13, 0.08);
   --content-max: 1180px;
   --measure: 68ch;
 }
+

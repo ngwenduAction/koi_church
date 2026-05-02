@@ -1,4 +1,4 @@
-import type { LessonVariant } from "../features/lessons/types";
+﻿import type { LessonVariant } from "../features/lessons/types";
 
 export const lessonVariants: LessonVariant[] = [
   {
@@ -6,7 +6,7 @@ export const lessonVariants: LessonVariant[] = [
     lessonGroupId: "law-testimony",
     language: "en",
     title: "The Law and the Testimony",
-    summary: "English PDF lesson metadata scaffold. Replace the file path with the confirmed PDF before launch.",
+    summary: "English lesson document for The Law and the Testimony.",
     pdfUrl: "/lessons/the-law-and-the-testimony-en.pdf",
     date: "",
     category: "Foundation",
@@ -19,7 +19,7 @@ export const lessonVariants: LessonVariant[] = [
     lessonGroupId: "law-testimony",
     language: "zu",
     title: "The Law and the Testimony",
-    summary: "IsiZulu PDF lesson metadata scaffold. Replace the file path with the confirmed PDF before launch.",
+    summary: "IsiZulu lesson document for The Law and the Testimony.",
     pdfUrl: "/lessons/the-law-and-the-testimony-zu.pdf",
     date: "",
     category: "Foundation",
@@ -32,7 +32,7 @@ export const lessonVariants: LessonVariant[] = [
     lessonGroupId: "law-testimony",
     language: "st",
     title: "The Law and the Testimony",
-    summary: "Sesotho PDF lesson metadata scaffold. Replace the file path with the confirmed PDF before launch.",
+    summary: "Sesotho lesson document for The Law and the Testimony.",
     pdfUrl: "/lessons/the-law-and-the-testimony-st.pdf",
     date: "",
     category: "Foundation",

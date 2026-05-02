@@ -1,4 +1,4 @@
-import { site } from "./site";
+﻿import { site } from "./site";
 
 export const homeContent = {
   hero: {
@@ -10,9 +10,9 @@ export const homeContent = {
   },
   foundation: {
     eyebrow: "Foundation",
-    title: "Doctrine with order, study, and remembrance.",
+    title: "Built on the testimony of Christ, the prophets, and the apostles.",
     body:
-      "KOI teaches according to the God of Israel, Jesus Christ, the prophets, and the apostles. The public platform begins with the same discipline: clear doctrine, useful resources, and trustworthy pathways for those who want to learn.",
+      "KOI teaches according to the God of Israel, Jesus Christ, the prophets, and the apostles. The platform begins with the same discipline: clear doctrine, useful study resources, and trustworthy pathways for those who want to learn.",
     pillars: [
       "The God of Israel",
       "Jesus Christ, the cornerstone",

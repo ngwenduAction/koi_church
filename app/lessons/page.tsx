@@ -1,4 +1,4 @@
-import { lessonVariants } from "../../content/lessons";
+﻿import { lessonVariants } from "../../content/lessons";
 import { Container } from "../../shared/components/Container";
 
 const languageNames = {
@@ -44,7 +44,6 @@ export default function LessonsPage() {
                   <a className="download-row" href={variant.pdfUrl} key={variant.id}>
                     <span>
                       <strong>{languageNames[variant.language]}</strong>
-                      <small>PDF lesson</small>
                     </span>
                     <span aria-hidden="true">Download</span>
                   </a>

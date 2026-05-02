@@ -1,13 +1,13 @@
-import { site } from "../../../content/site";
+﻿import { site } from "../../../content/site";
 import { Container } from "../../../shared/components/Container";
-import { KoiWordmark } from "../../brand/components/KoiWordmark";
+import { Wordmark } from "../../brand/components/KoiWordmark";
 
 export function SiteFooter() {
   return (
     <footer className="site-footer">
       <Container className="site-footer__inner">
         <div className="site-footer__identity">
-          <KoiWordmark />
+          <Wordmark />
           <p>{site.description}</p>
         </div>
         <div className="site-footer__meta">
@@ -17,6 +17,12 @@ export function SiteFooter() {
               {site.sabbath.time}
               <br />
               {site.sabbath.location}
+            </p>
+          </div>
+          <div>
+            <span className="eyebrow">Contact</span>
+            <p>
+              <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a>
             </p>
           </div>
           <div>
