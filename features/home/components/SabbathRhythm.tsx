@@ -13,14 +13,9 @@ export function SabbathRhythm() {
   return (
     <section className="sabbath-rhythm" aria-labelledby="sabbath-rhythm-title">
       <Container className="sabbath-rhythm__inner">
-        <div className="sabbath-rhythm__content">
-          <p className="section-kicker">{homeContent.sabbathRhythm.eyebrow}</p>
-          <h2 id="sabbath-rhythm-title">{homeContent.sabbathRhythm.title}</h2>
-          <p>{homeContent.sabbathRhythm.body}</p>
-          <Button href={homeContent.sabbathRhythm.link.href} variant="quiet">
-            {homeContent.sabbathRhythm.link.label} <span aria-hidden="true">&rarr;</span>
-          </Button>
-        </div>
+        <p className="section-kicker">{homeContent.sabbathRhythm.eyebrow}</p>
+        <h2 id="sabbath-rhythm-title">{homeContent.sabbathRhythm.title}</h2>
+        <p className="sabbath-rhythm__body">{homeContent.sabbathRhythm.body}</p>
         <dl className="sabbath-rhythm__metadata" aria-label="Weekly Sabbath details">
           {sabbathMetadata.map((item) => (
             <div className="sabbath-rhythm__meta" key={item.label}>
@@ -29,6 +24,9 @@ export function SabbathRhythm() {
             </div>
           ))}
         </dl>
+        <Button href={homeContent.sabbathRhythm.link.href} variant="quiet">
+          {homeContent.sabbathRhythm.link.label} <span aria-hidden="true">&rarr;</span>
+        </Button>
       </Container>
     </section>
   );

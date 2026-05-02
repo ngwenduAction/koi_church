@@ -12,7 +12,7 @@ export default function HomePage() {
       <HomeHero />
       <SabbathRhythm />
       <FoundationSection />
-      <FeastsSection />
+      <FeastsSection nowISO={new Date().toISOString()} />
       <section className="home-section home-section--quiet">
         <Container className="preview-grid">
           <LatestTeachingPreview />

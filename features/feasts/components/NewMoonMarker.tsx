@@ -1,31 +1,28 @@
 import type { CSSProperties } from "react";
-import type { Feast } from "../../../content/feasts";
 import { formatFeastDate } from "../lib/groupBySeason";
+import type { AnnotatedFeast } from "../lib/observanceStatus";
 
 type NewMoonMarkerProps = {
-  feast: Feast;
-  index: number;
+  feast: AnnotatedFeast;
 };
 
 type RevealStyle = CSSProperties & {
   "--reveal-delay": string;
 };
 
-export function NewMoonMarker({ feast, index }: NewMoonMarkerProps) {
+export function NewMoonMarker({ feast }: NewMoonMarkerProps) {
   const dateLabel = feast.begins ? formatFeastDate(feast.begins, { includeYear: true }) : "";
 
   return (
     <article
       className="new-moon-marker"
       data-feast-reveal="true"
-      style={{ "--reveal-delay": `${index * 80}ms` } as RevealStyle}
+      style={{ "--reveal-delay": `${feast.revealIndex * 80}ms` } as RevealStyle}
       aria-label={feast.name}
     >
       <p>
         <span>{feast.name}</span>
-        {feast.begins ? (
-          <time dateTime={feast.begins}>{dateLabel}</time>
-        ) : null}
+        {feast.begins ? <time dateTime={feast.begins}>{dateLabel}</time> : null}
         {feast.note ? <span>{feast.note}</span> : null}
       </p>
     </article>
