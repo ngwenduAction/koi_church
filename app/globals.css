@@ -354,27 +354,33 @@ button {
 
 .sabbath-rhythm__inner {
   display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   gap: var(--space-7);
+  align-items: end;
+}
+
+.sabbath-rhythm__content {
+  display: grid;
+  gap: var(--space-4);
 }
 
 .sabbath-rhythm h2,
-.feasts-section__intro h2,
-.next-observance h3 {
+.feasts-section__intro h2 {
   margin: 0;
   color: var(--color-ink);
   font-family: var(--font-display);
   font-weight: 430;
   font-variation-settings: "opsz" 96, "SOFT" 16, "WONK" 0;
   letter-spacing: -0.014em;
+  line-height: 1;
 }
 
 .sabbath-rhythm h2 {
-  max-width: 18ch;
-  font-size: clamp(2.2rem, 3vw, 3.15rem);
-  line-height: 1.05;
+  max-width: 13ch;
+  font-size: var(--font-size-h2);
 }
 
-.sabbath-rhythm__body {
+.sabbath-rhythm__content p:not(.section-kicker) {
   max-width: 46rem;
   margin: 0;
   color: var(--color-ink-soft);
@@ -384,18 +390,12 @@ button {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   margin: 0;
+  border-top: var(--border-subtle);
+  border-bottom: var(--border-subtle);
 }
 
 .sabbath-rhythm__meta {
-  padding: 0 var(--space-5);
-}
-
-.sabbath-rhythm__meta:first-child {
-  padding-left: 0;
-}
-
-.sabbath-rhythm__meta:last-child {
-  padding-right: 0;
+  padding: var(--space-5);
 }
 
 .sabbath-rhythm__meta + .sabbath-rhythm__meta {
@@ -405,8 +405,7 @@ button {
 .sabbath-rhythm dt,
 .feast-meta p,
 .feast-row__ordinal,
-.preview-card__meta,
-.next-observance__meta {
+.preview-card__meta {
   margin: 0;
   color: var(--color-bronze-deep);
   font-family: var(--font-label);
@@ -425,65 +424,17 @@ button {
 }
 
 .feasts-section {
-  padding: var(--space-9) 0 var(--space-6);
-}
-
-.next-observance {
-  display: grid;
-  gap: var(--space-3);
-  margin-bottom: var(--space-8);
-}
-
-.next-observance h3 {
-  font-size: var(--font-size-h2);
-  line-height: 1.05;
-}
-
-.next-observance__pill,
-.feast-row__status-pill {
-  display: inline-flex;
-  width: fit-content;
-  align-items: center;
-  border-radius: 999px;
-  background: var(--color-bronze-deep);
-  color: var(--color-linen);
-  padding: 0.32rem 0.7rem;
-  font-family: var(--font-label);
-  font-size: var(--font-size-eyebrow);
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  line-height: 1;
-  text-transform: uppercase;
-}
-
-.next-observance__meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2);
-  align-items: center;
-  color: var(--color-ink-soft);
-  font-family: var(--font-body);
-  font-size: var(--font-size-small);
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: none;
-}
-
-.next-observance__rule {
-  height: 1px;
-  width: min(26rem, 100%);
-  background: color-mix(in srgb, var(--color-bronze) 52%, transparent);
+  padding: var(--space-9) 0;
 }
 
 .feasts-section__intro {
   display: grid;
   gap: var(--space-4);
-  max-width: 56rem;
+  max-width: 780px;
 }
 
 .feasts-section__intro h2 {
-  font-size: clamp(2.4rem, 4.5vw, 4rem);
-  line-height: 1.05;
+  font-size: clamp(2.7rem, 6vw, 6.2rem);
 }
 
 .feasts-section__intro p:not(.section-kicker),
@@ -498,7 +449,7 @@ button {
 }
 
 .feast-season--fall {
-  margin-top: var(--space-8);
+  margin-top: var(--space-9);
   padding-top: var(--space-7);
   border-top: var(--border-subtle);
 }
@@ -539,47 +490,15 @@ button {
 .feast-row {
   display: grid;
   grid-template-columns: minmax(0, 0.4fr) minmax(0, 0.6fr);
-  gap: var(--space-6);
+  gap: var(--space-7);
   border-bottom: var(--border-subtle);
-  padding: var(--space-6) 0;
-}
-
-.feast-row--past {
-  opacity: 0.5;
-}
-
-.feast-row--past .feast-row__ordinal {
-  visibility: hidden;
-}
-
-.feast-row--past h3 {
-  color: var(--color-stone);
-}
-
-.feast-row--current,
-.feast-row--next {
-  padding-left: var(--space-5);
-}
-
-.feast-row--current {
-  border-left: 2px solid var(--color-bronze-deep);
-}
-
-.feast-row--next {
-  border-left: 1px solid var(--color-bronze);
+  padding: var(--space-7) 0;
 }
 
 .feast-row__title-block {
   display: grid;
   align-content: start;
   gap: var(--space-3);
-}
-
-.feast-row__heading {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-3);
-  align-items: baseline;
 }
 
 .feast-row h3 {
@@ -594,26 +513,17 @@ button {
   line-height: 1;
 }
 
-.feast-row__status-label {
-  color: var(--color-bronze-deep);
-  font-family: var(--font-label);
-  font-size: var(--font-size-eyebrow);
-  font-weight: 800;
-  letter-spacing: 0.14em;
-  line-height: 1.2;
-  text-transform: uppercase;
-}
-
 .feast-row__metadata {
   display: grid;
-  gap: var(--space-4);
+  gap: var(--space-5);
 }
 
 .feast-meta {
   display: grid;
-  gap: var(--space-2);
+  grid-template-columns: minmax(6.5rem, 0.28fr) minmax(0, 0.72fr);
+  gap: var(--space-4);
   border-bottom: var(--border-subtle);
-  padding-bottom: var(--space-4);
+  padding-bottom: var(--space-5);
 }
 
 .feast-meta:last-child {
@@ -621,25 +531,20 @@ button {
   padding-bottom: 0;
 }
 
-.feast-meta__value {
+.feast-meta time {
   display: grid;
-  gap: var(--space-2);
+  gap: var(--space-1);
   color: var(--color-ink);
   line-height: 1.35;
 }
 
-.feast-meta__value span:last-child {
+.feast-meta time span:last-child {
   color: var(--color-ink-soft);
-}
-
-.feast-meta__separator {
-  display: none;
-  color: var(--color-bronze-deep);
 }
 
 .new-moon-marker {
   border-bottom: var(--border-subtle);
-  padding: var(--space-4) 0;
+  padding: var(--space-5) 0;
 }
 
 .new-moon-marker p {
@@ -672,7 +577,7 @@ button {
 
 .feasts-section__note {
   max-width: 52rem;
-  margin-top: var(--space-6);
+  margin-top: var(--space-7);
 }
 
 .home-section {
@@ -871,14 +776,30 @@ button {
     display: none;
   }
 
+  .sabbath-rhythm__inner,
   .home-section__grid,
   .preview-grid,
-  .lesson-group {
+  .lesson-group,
+  .feast-row {
     grid-template-columns: 1fr;
   }
 
-  .sabbath-rhythm h2 {
-    max-width: 16ch;
+  .sabbath-rhythm__metadata {
+    grid-template-columns: 1fr;
+  }
+
+  .sabbath-rhythm__meta + .sabbath-rhythm__meta {
+    border-top: var(--border-subtle);
+    border-left: 0;
+  }
+
+  .feast-meta {
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+  }
+
+  .feast-row h3 {
+    max-width: 22ch;
   }
 
   .home-hero {
@@ -890,42 +811,6 @@ button {
   }
 }
 
-@media (max-width: 899px) {
-  .feast-row {
-    grid-template-columns: 1fr;
-  }
-
-  .feast-row--current,
-  .feast-row--next {
-    padding-left: 0;
-    border-left: 0;
-  }
-
-  .feast-row h3 {
-    max-width: 22ch;
-  }
-
-  .feast-meta__value {
-    gap: var(--space-2);
-  }
-
-  .feast-meta__separator {
-    display: none;
-  }
-}
-
-@media (min-width: 900px) {
-  .feast-meta__value {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-2);
-    align-items: baseline;
-  }
-
-  .feast-meta__separator {
-    display: inline;
-  }
-}
 @media (max-width: 959px) {
   .site-footer__inner {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1076,19 +961,6 @@ button {
   .site-footer__inner {
     grid-template-columns: 1fr;
     gap: var(--space-5);
-  }
-
-  .sabbath-rhythm__metadata {
-    grid-template-columns: 1fr;
-  }
-
-  .sabbath-rhythm__meta {
-    padding: var(--space-4) 0;
-  }
-
-  .sabbath-rhythm__meta + .sabbath-rhythm__meta {
-    border-top: var(--border-subtle);
-    border-left: 0;
   }
 }
 @media (prefers-reduced-motion: reduce) {

@@ -2,10 +2,10 @@ import type { Feast } from "../../../content/feasts";
 
 export type FeastSeason = "spring" | "fall";
 
-export type GroupedFeasts<T extends Feast = Feast> = Record<FeastSeason, T[]>;
+export type GroupedFeasts = Record<FeastSeason, Feast[]>;
 
-export function groupBySeason<T extends Feast>(feasts: T[]): GroupedFeasts<T> {
-  return feasts.reduce<GroupedFeasts<T>>(
+export function groupBySeason(feasts: Feast[]): GroupedFeasts {
+  return feasts.reduce<GroupedFeasts>(
     (groups, feast) => {
       groups[feast.season].push(feast);
       return groups;
