@@ -1,12 +1,23 @@
+# dependencies
 node_modules/
+
+# next.js
 .next/
 out/
+
 dist/
+
+# production
 build/
 .vercel/
 .env
 .env.*
 !.env.example
+
+# env
+.env*.local
+.env
+
 # logs
 *.log
 .next-dev*.log
@@ -14,7 +25,14 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+
+# misc
 .DS_Store
+*.pem
+.vercel
 Thumbs.db
+
 # typescript
 *.tsbuildinfo
+next-env.d.ts
+
