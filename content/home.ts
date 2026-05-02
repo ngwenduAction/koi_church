@@ -8,6 +8,13 @@ export const homeContent = {
     primaryCta: { label: "Explore Lessons", href: "/lessons" },
     secondaryCta: { label: "Plan a Visit", href: "/visit" },
   },
+  sabbathRhythm: {
+    eyebrow: "Weekly Sabbath",
+    title: "We gather on the seventh day to study the scriptures.",
+    body:
+      "KOI meets each Sabbath for ordered bible study, reading doctrine through the law, the prophets, Christ, and the apostles.",
+    link: { label: "Plan your visit", href: "/visit" },
+  },
   foundation: {
     eyebrow: "Foundation",
     title: "Built on the testimony of Christ, the prophets, and the apostles.",
@@ -22,7 +29,6 @@ export const homeContent = {
   lessons: {
     eyebrow: "Lessons",
     title: "Study materials in English, IsiZulu, and Sesotho.",
-    body:
-      "Download Sabbath study materials prepared for clear learning across English, IsiZulu, and Sesotho.",
+    body: "Doctrinal study materials prepared in English, IsiZulu, and Sesotho.",
   },
 };
