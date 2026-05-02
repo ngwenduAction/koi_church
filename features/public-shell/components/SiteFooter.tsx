@@ -1,4 +1,4 @@
-﻿import { site } from "../../../content/site";
+import { site } from "../../../content/site";
 import { Container } from "../../../shared/components/Container";
 import { Wordmark } from "../../brand/components/KoiWordmark";
 
@@ -10,31 +10,31 @@ export function SiteFooter() {
           <Wordmark />
           <p>{site.description}</p>
         </div>
-        <div className="site-footer__meta">
-          <div>
-            <span className="eyebrow">{site.sabbath.label}</span>
-            <p>
-              {site.sabbath.time}
-              <br />
-              {site.sabbath.location}
-            </p>
-          </div>
-          <div>
-            <span className="eyebrow">Contact</span>
-            <p>
-              <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a>
-            </p>
-          </div>
-          <div>
-            <span className="eyebrow">Social</span>
-            <ul>
-              {site.socials.map((social) => (
-                <li key={social.platform}>
-                  <a href={social.url}>{social.label}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div className="site-footer__column">
+          <span className="eyebrow">{site.sabbath.label}</span>
+          <p>
+            {site.sabbath.time}
+            <br />
+            {site.sabbath.location}
+          </p>
+        </div>
+        <div className="site-footer__column">
+          <span className="eyebrow">Contact</span>
+          <p>
+            <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a>
+          </p>
+        </div>
+        <div className="site-footer__column">
+          <span className="eyebrow">Social</span>
+          <ul>
+            {site.socials.map((social) => (
+              <li key={social.platform}>
+                <a href={social.url} target="_blank" rel="noopener noreferrer">
+                  {social.label}
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
       </Container>
     </footer>

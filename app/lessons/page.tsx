@@ -1,4 +1,4 @@
-﻿import { lessonVariants } from "../../content/lessons";
+import { lessonVariants } from "../../content/lessons";
 import { Container } from "../../shared/components/Container";
 
 const languageNames = {
@@ -37,7 +37,7 @@ export default function LessonsPage() {
               <div className="lesson-group__body">
                 <p className="section-kicker">{canonical.category}</p>
                 <h2>{canonical.title}</h2>
-                <p>{canonical.summary}</p>
+                {canonical.summary ? <p>{canonical.summary}</p> : null}
               </div>
               <div className="lesson-group__downloads" aria-label={`${canonical.title} downloads`}>
                 {variants.map((variant) => (

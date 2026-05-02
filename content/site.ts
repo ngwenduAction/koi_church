@@ -1,4 +1,4 @@
-﻿export const site = {
+export const site = {
   name: "Kingdom of Israel",
   shortName: "KOI",
   description:
@@ -13,9 +13,25 @@
     phone: "",
   },
   socials: [
-    { platform: "Facebook", url: "#", label: "Facebook" },
-    { platform: "Instagram", url: "#", label: "Instagram" },
-    { platform: "X", url: "#", label: "X" },
-    { platform: "YouTube", url: "#", label: "YouTube" },
+    {
+      platform: "Facebook",
+      url: "https://www.facebook.com/profile.php?id=61560331455656",
+      label: "Facebook",
+    },
+    {
+      platform: "Instagram",
+      url: "https://www.instagram.com/kingdomofisrael101/",
+      label: "Instagram",
+    },
+    {
+      platform: "X",
+      url: "https://x.com/KOI_Oracles",
+      label: "X",
+    },
+    {
+      platform: "YouTube",
+      url: "https://www.youtube.com/channel/UCgcThOBJBBkwpP0tYxq2PYg",
+      label: "YouTube",
+    },
   ],
 } as const;
