@@ -972,3 +972,235 @@ button {
   }
 }
 
+
+.lessons-page,
+.not-found {
+  padding: var(--space-6) 0 0;
+}
+
+.lessons-page__intro {
+  display: grid;
+  gap: var(--space-4);
+  text-align: center;
+}
+
+.lessons-page__intro h1 {
+  margin: 0;
+  color: var(--color-ink);
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 4.5vw, 4rem);
+  font-weight: 430;
+  font-variation-settings: "opsz" 96, "SOFT" 16, "WONK" 0;
+  letter-spacing: -0.014em;
+  line-height: 1.05;
+}
+
+.lessons-page__intro .editorial-copy {
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+.lessons-library {
+  display: grid;
+  gap: var(--space-6);
+  margin-top: var(--space-7);
+}
+
+.lesson-filter-bar {
+  display: flex;
+  justify-content: center;
+}
+
+.lesson-filter-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+.lesson-filter-chip {
+  appearance: none;
+  border: 1px solid color-mix(in srgb, var(--color-stone) 60%, transparent);
+  border-radius: var(--radius-md);
+  background: transparent;
+  color: var(--color-ink-soft);
+  cursor: pointer;
+  padding: 0.5rem 1.25rem;
+  font-family: var(--font-label);
+  font-size: var(--font-size-eyebrow);
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    color 180ms ease;
+}
+
+.lesson-filter-chip:hover {
+  border-color: color-mix(in srgb, var(--color-bronze) 52%, transparent);
+}
+
+.lesson-filter-chip.is-active {
+  border-color: transparent;
+  background: var(--color-ink);
+  color: var(--color-linen);
+}
+
+.lesson-rows {
+  display: grid;
+}
+
+.lesson-row {
+  display: grid;
+  grid-template-columns: minmax(0, 0.6fr) minmax(0, 0.4fr);
+  gap: var(--space-6);
+  align-items: center;
+  border-top: 1px solid color-mix(in srgb, var(--color-stone) 32%, transparent);
+  padding: var(--space-7) 0;
+}
+
+.lesson-row:last-child {
+  border-bottom: 1px solid color-mix(in srgb, var(--color-stone) 32%, transparent);
+}
+
+.lesson-row__body {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.lesson-row__scripture {
+  margin: 0;
+  color: var(--color-bronze-deep);
+  font-family: var(--font-label);
+  font-size: var(--font-size-eyebrow);
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.lesson-row h2 {
+  margin: 0;
+  color: var(--color-ink);
+  font-family: var(--font-display);
+  font-size: clamp(1.65rem, 2.5vw, 2.35rem);
+  font-weight: 430;
+  font-variation-settings: "opsz" 80, "SOFT" 18, "WONK" 0;
+  letter-spacing: -0.012em;
+  line-height: 1.05;
+}
+
+.lesson-row__summary {
+  margin: 0;
+  color: var(--color-ink-soft);
+}
+
+.lesson-row__downloads {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  align-items: center;
+}
+
+.lesson-row__download {
+  display: inline-flex;
+  gap: var(--space-2);
+  align-items: center;
+  border: 1px solid color-mix(in srgb, var(--color-stone) 60%, transparent);
+  border-radius: var(--radius-md);
+  padding: 0.5rem 1rem;
+  color: var(--color-ink-soft);
+  transition:
+    border-color 180ms ease,
+    color 180ms ease,
+    background 180ms ease;
+}
+
+.lesson-row__download:hover {
+  border-color: color-mix(in srgb, var(--color-bronze) 52%, transparent);
+  color: var(--color-bronze-deep);
+}
+
+.lesson-row__download-code,
+.lesson-row__download-icon {
+  font-family: var(--font-label);
+  font-size: var(--font-size-eyebrow);
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.lesson-row__download-icon {
+  letter-spacing: 0;
+}
+
+.lessons-empty {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-3);
+  padding: var(--space-9) 0;
+  text-align: center;
+}
+
+.lessons-empty p {
+  margin: 0;
+  color: var(--color-ink-soft);
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2vw, 1.7rem);
+  font-style: italic;
+  font-variation-settings: "opsz" 72, "SOFT" 28, "WONK" 0;
+}
+
+.lessons-empty a {
+  color: var(--color-bronze-deep);
+  font-family: var(--font-label);
+  font-size: var(--font-size-eyebrow);
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--color-bronze) 58%, transparent);
+  text-decoration-thickness: 1px;
+  text-transform: uppercase;
+  text-underline-offset: 0.34rem;
+  transition: text-decoration-thickness 180ms ease;
+}
+
+.lessons-empty a:hover {
+  text-decoration-thickness: 2px;
+}
+
+@media (max-width: 899px) {
+  .lesson-row {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+    padding: var(--space-5) 0;
+  }
+
+  .lesson-row__downloads {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 639px) {
+  .lessons-page__intro {
+    text-align: left;
+  }
+
+  .lessons-page__intro .editorial-copy {
+    margin: 0;
+  }
+
+  .lesson-row__downloads {
+    display: grid;
+    gap: var(--space-3);
+  }
+
+  .lesson-row__download {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
