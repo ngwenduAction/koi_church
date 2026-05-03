@@ -27,6 +27,7 @@ type LessonGroup = {
   title: string;
   category: string;
   scriptureReference: string;
+  summary: string;
   variants: LessonVariant[];
 };
 
@@ -48,6 +49,7 @@ function groupLessons(variants: LessonVariant[]): LessonGroup[] {
       title: canonical.title,
       category: canonical.category,
       scriptureReference: canonical.scriptureReferences.join(" / "),
+      summary: canonical.summary,
       variants: [...groupVariants].sort(
         (left, right) => (languageSortOrder.get(left.language) ?? 0) - (languageSortOrder.get(right.language) ?? 0),
       ),
@@ -98,6 +100,7 @@ export default async function LessonsPage({ searchParams }: LessonsPageProps) {
                   <div className="lesson-row__body">
                     <p className="lesson-row__scripture">{lesson.scriptureReference}</p>
                     <h2>{lesson.title}</h2>
+                    {lesson.summary ? <p className="lesson-row__summary">{lesson.summary}</p> : null}
                   </div>
                   <div className="lesson-row__downloads" aria-label={`${lesson.title} downloads`}>
                     {visibleVariants.map((variant) => (
@@ -108,7 +111,10 @@ export default async function LessonsPage({ searchParams }: LessonsPageProps) {
                         download
                         aria-label={`${lessonLanguageLabels[variant.language]} download for ${lesson.title}`}
                       >
-                        {variant.language.toUpperCase()} <span aria-hidden="true">&darr;</span>
+                        <span className="lesson-row__download-code">{variant.language.toUpperCase()}</span>
+                        <span className="lesson-row__download-icon" aria-hidden="true">
+                          &darr;
+                        </span>
                       </a>
                     ))}
                   </div>
