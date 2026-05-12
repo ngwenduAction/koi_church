@@ -1,6 +1,6 @@
 :root {
   --color-ink: #11100d;
-  --color-ink-soft: #2c2922;
+  --color-ink-soft: #24211b;
   --color-linen: #f6f0e4;
   --color-linen-deep: #ebe0cf;
   --color-stone: #b7ad9e;
@@ -17,7 +17,7 @@
   --font-size-display: clamp(3rem, 8vw, 7.5rem);
   --font-size-h1: clamp(3rem, 7vw, 6.8rem);
   --font-size-h2: clamp(2rem, 4vw, 4.1rem);
-  --font-size-body: clamp(1rem, 1.1vw, 1.125rem);
+  --font-size-body: 1.125rem;
   --font-size-small: 0.875rem;
   --font-size-eyebrow: 0.72rem;
   --tracking-display: -0.02em;
@@ -40,5 +40,12 @@
   --shadow-soft: 0 24px 80px rgba(17, 16, 13, 0.08);
   --content-max: 1180px;
   --measure: 68ch;
+}
+
+
+@media (max-width: 639px) {
+  :root {
+    --font-size-body: 1.05rem;
+  }
 }
 
