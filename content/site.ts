@@ -9,29 +9,35 @@ export const site = {
     location: "Sandton, Johannesburg, 2196",
   },
   contact: {
-    email: "kingdomofisrael101@gmail.com",
+    email: "kingdomofisrael1010@gmail.com",
     phone: "",
   },
   socials: [
     {
       platform: "Facebook",
-      url: "https://www.facebook.com/profile.php?id=61560331455656",
+      url: "https://www.facebook.com/profile.php?id=61589376132306",
       label: "Facebook",
     },
     {
+      platform: "TikTok",
+      url: "https://www.tiktok.com/@koi_bible_study?lang=en",
+      label: "TikTok",
+    },
+    {
       platform: "Instagram",
-      url: "https://www.instagram.com/kingdomofisrael101/",
+      url: "https://www.instagram.com/koi_biblestudy/",
       label: "Instagram",
     },
     {
       platform: "X",
-      url: "https://x.com/KOI_Oracles",
+      url: "https://x.com/KOI_BibleStudy",
       label: "X",
     },
     {
       platform: "YouTube",
-      url: "https://www.youtube.com/channel/UCgcThOBJBBkwpP0tYxq2PYg",
+      url: "https://www.youtube.com/channel/UC9IKz-Pcp8UqUCKBHUvRy8w",
       label: "YouTube",
     },
   ],
 } as const;
+
