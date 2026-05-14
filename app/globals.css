@@ -20,9 +20,9 @@ body {
   color: var(--color-ink);
   font-family: var(--font-body);
   font-size: var(--font-size-body);
-  line-height: 1.7;
-}
+  line-height: 1.6;
 
+}
 a {
   color: inherit;
   text-decoration: none;
@@ -91,9 +91,9 @@ button {
   max-width: var(--measure);
   color: var(--color-ink-soft);
   font-size: var(--font-size-body);
-  line-height: 1.7;
-}
+  line-height: 1.6;
 
+}
 .surface-panel {
   border: var(--border-subtle);
   border-radius: var(--radius-lg);
@@ -222,8 +222,9 @@ button {
 .site-header__nav span {
   position: relative;
   color: var(--color-ink-soft);
-  font-size: 0.94rem;
+  font-size: 0.84rem;
   font-weight: 500;
+  letter-spacing: 0.05em;
   line-height: 1;
 }
 
@@ -266,40 +267,41 @@ button {
 .site-footer__inner {
   display: grid;
   grid-template-columns: minmax(0, 1.4fr) repeat(3, minmax(0, 1fr));
+  align-items: start;
   gap: var(--space-7);
 }
-
 .site-footer__identity p,
 .site-footer__column p {
   max-width: 36rem;
+  margin: 0;
   color: var(--color-ink-soft);
+  font-size: 0.875rem;
+  line-height: 1.65;
 }
-
 .site-footer__column,
 .site-footer__identity {
+  display: grid;
   min-width: 0;
+  align-content: start;
+  gap: var(--space-3);
 }
-
 .site-footer a {
   overflow-wrap: anywhere;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
   text-decoration: underline;
   text-decoration-color: color-mix(in srgb, var(--color-bronze) 42%, transparent);
   text-decoration-thickness: 1px;
   text-underline-offset: 0.26rem;
+  text-transform: uppercase;
 }
-
-.site-footer a:hover {
-  text-decoration-thickness: 2px;
-}
-
 .site-footer ul {
   display: grid;
   gap: var(--space-2);
-  margin: var(--space-3) 0 0;
+  margin: 0;
   padding: 0;
   list-style: none;
 }
-
 .home-hero {
   padding: clamp(5rem, 12vw, 10rem) 0 var(--space-8);
 }
@@ -1714,6 +1716,185 @@ select,
 
   .intake-shell--study {
     padding: var(--space-4);
+  }
+}
+
+
+/* Batch 4.2 */
+.reading-prose,
+.institution-section__heading p:not(.section-kicker),
+.institution-copy-block p:not(.section-kicker),
+.intake-shell__intro p,
+.intake-success p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+.site-footer .eyebrow,
+.site-footer .section-kicker,
+.metadata-pill {
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+}
+
+.institution-hero__media-shell--image {
+  background:
+    linear-gradient(180deg, rgba(15, 13, 10, 0.2), rgba(15, 13, 10, 0.74)),
+    radial-gradient(circle at 18% 22%, rgba(201, 160, 88, 0.2), transparent 28%),
+    linear-gradient(135deg, rgba(32, 27, 20, 0.96), rgba(106, 79, 37, 0.7));
+}
+
+.institution-hero__image-surface {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(255, 250, 240, 0.05), transparent 42%),
+    linear-gradient(0deg, rgba(17, 16, 13, 0.16), rgba(17, 16, 13, 0.16));
+}
+
+.scripture-block {
+  display: grid;
+  gap: var(--space-4);
+  margin: 0;
+  border-top: var(--border-subtle);
+  border-bottom: var(--border-subtle);
+  padding: var(--space-6) 0;
+}
+
+.scripture-block__eyebrow {
+  margin: 0;
+  color: var(--color-bronze-deep);
+  font-family: var(--font-label);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.scripture-block__text {
+  margin: 0;
+  color: var(--color-ink);
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3vw, 2.85rem);
+  font-weight: 560;
+  font-variation-settings: "opsz" 96, "SOFT" 12, "WONK" 0;
+  letter-spacing: -0.018em;
+  line-height: 1.08;
+}
+
+.bank-detail-card {
+  display: grid;
+  gap: var(--space-5);
+  border: 1px solid color-mix(in srgb, var(--color-stone) 48%, transparent);
+  background: color-mix(in srgb, var(--color-surface) 88%, transparent);
+  padding: var(--space-6);
+}
+
+.bank-detail-card__header {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.bank-detail-card__header h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 2.6vw, 2.6rem);
+  font-weight: 520;
+  font-variation-settings: "opsz" 88, "SOFT" 14, "WONK" 0;
+  letter-spacing: -0.014em;
+  line-height: 1.08;
+}
+
+.bank-detail-card__grid {
+  display: grid;
+  gap: 1px;
+  margin: 0;
+  background: color-mix(in srgb, var(--color-stone) 28%, transparent);
+}
+
+.bank-detail-card__row {
+  display: grid;
+  grid-template-columns: minmax(9rem, 0.42fr) minmax(0, 0.58fr);
+  gap: var(--space-4);
+  align-items: center;
+  padding: var(--space-4);
+  background: color-mix(in srgb, var(--color-linen) 56%, transparent);
+}
+
+.bank-detail-card__row dt {
+  color: var(--color-bronze-deep);
+  font-family: var(--font-label);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.bank-detail-card__row dd {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin: 0;
+  color: var(--color-ink);
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+.bank-detail-card__mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 0.98rem;
+  letter-spacing: 0.04em;
+}
+
+.bank-detail-card__copy {
+  display: inline-flex;
+  width: 3rem;
+  min-height: 3rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid color-mix(in srgb, var(--color-stone) 52%, transparent);
+  background: transparent;
+  color: var(--color-bronze-deep);
+  cursor: pointer;
+  transition:
+    border-color 180ms ease,
+    color 180ms ease,
+    background 180ms ease;
+}
+
+.bank-detail-card__copy:hover {
+  border-color: color-mix(in srgb, var(--color-bronze) 52%, transparent);
+  background: color-mix(in srgb, var(--color-surface) 72%, transparent);
+}
+
+.bank-detail-card__status {
+  margin: 0;
+  color: var(--color-ink-soft);
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+.giving-work {
+  align-content: start;
+}
+
+@media (max-width: 639px) {
+  .bank-detail-card {
+    padding: var(--space-4);
+  }
+
+  .bank-detail-card__row {
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+  }
+
+  .scripture-block__text {
+    font-size: clamp(1.55rem, 8vw, 2.2rem);
   }
 }
 
