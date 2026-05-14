@@ -261,52 +261,38 @@ export const contactForm: IntakeConfig = {
 };
 
 export const prayerForm: IntakeConfig = {
-  title: "Submit a prayer request",
+  title: "Submit an intercession request",
   description:
-    "Share your request carefully. Matters submitted here should be truthful, plain, and respectful.",
-  submitLabel: "Send prayer request",
-  successTitle: "Prayer request prepared",
+    "Share your request carefully. If you are seeking a response, you may leave an email address for the elder or the assembly to reply in order.",
+  submitLabel: "Submit Request",
+  successTitle: "Intercession request prepared",
   successBody:
-    "Your prayer request passed validation in this phase and is ready for KOI's care workflow once backend wiring is connected.",
+    "Your prayer request passed validation in this phase and is ready for KOI's intercession workflow once backend wiring is connected.",
   fields: [
     {
-      name: "fullName",
-      label: "Full name",
+      name: "name",
+      label: "Name",
       type: "text",
-      required: true,
-      placeholder: "Your full name",
+      placeholder: "Optional",
     },
     {
       name: "email",
-      label: "Email address",
+      label: "Email",
       type: "email",
-      placeholder: "name@example.com",
-    },
-    {
-      name: "phone",
-      label: "Phone number",
-      type: "tel",
-      placeholder: "+27 ...",
-    },
-    {
-      name: "requestTitle",
-      label: "Request title",
-      type: "text",
-      required: true,
-      placeholder: "Short prayer subject",
+      placeholder: "If you wish for a response",
     },
     {
       name: "requestBody",
-      label: "Prayer request",
+      label: "Prayer Request",
       type: "textarea",
       required: true,
       placeholder: "Write your request with care and clarity.",
     },
     {
       name: "confidentiality",
-      label:
-        "Please handle this request with confidentiality where appropriate.",
+      label: "Keep this request confidential (Elder only)",
       type: "checkbox",
+      required: false,
     },
   ],
 };

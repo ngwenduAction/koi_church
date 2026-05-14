@@ -1901,3 +1901,15 @@ select,
 }
 
 
+
+.prayer-form-shell {
+  gap: var(--space-6);
+}
+
+.prayer-form textarea {
+  min-height: 11rem;
+}
+
+.prayer-narrative {
+  max-width: 54rem;
+}
