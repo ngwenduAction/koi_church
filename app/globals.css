@@ -1913,3 +1913,144 @@ select,
 .prayer-narrative {
   max-width: 54rem;
 }
+
+.teaching-article {
+  padding: var(--space-7) 0 var(--space-9);
+}
+
+.teaching-masthead {
+  display: grid;
+  gap: var(--space-6);
+  padding-bottom: var(--space-8);
+}
+
+.teaching-masthead__inner {
+  display: grid;
+  gap: var(--space-4);
+  justify-items: center;
+  text-align: center;
+}
+
+.teaching-masthead__eyebrow {
+  margin: 0;
+  color: var(--color-bronze-deep);
+  font-family: var(--font-label);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.teaching-masthead h1 {
+  max-width: 12ch;
+  margin: 0;
+  color: var(--color-ink);
+  font-family: var(--font-display);
+  font-size: clamp(3.25rem, 8vw, 6.5rem);
+  font-weight: 460;
+  font-variation-settings: "opsz" 120, "SOFT" 12, "WONK" 0;
+  letter-spacing: -0.03em;
+  line-height: 0.92;
+}
+
+.teaching-masthead__author {
+  margin: 0;
+  color: var(--color-ink-soft);
+  font-size: 0.95rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.teaching-masthead__media {
+  max-width: min(1080px, calc(100% - 2rem));
+}
+
+.teaching-masthead .media-block figcaption {
+  text-align: center;
+}
+
+.teaching-article__body {
+  max-width: min(65ch, calc(100% - 2rem));
+}
+
+.teaching-article__section {
+  display: grid;
+  gap: var(--space-4);
+  padding: var(--space-7) 0;
+  border-top: var(--border-subtle);
+}
+
+.teaching-article__section:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.teaching-article__section h2 {
+  margin: 0;
+  color: var(--color-ink);
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.2vw, 2.8rem);
+  font-weight: 520;
+  font-variation-settings: "opsz" 88, "SOFT" 12, "WONK" 0;
+  letter-spacing: -0.02em;
+  line-height: 1.04;
+}
+
+.teaching-article__section p {
+  margin: 0;
+}
+
+.teaching-article__anchor {
+  display: grid;
+  gap: var(--space-4);
+  padding-top: var(--space-7);
+  border-top: var(--border-subtle);
+}
+
+.teaching-article__share {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: center;
+  color: var(--color-ink-soft);
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.teaching-article__share span,
+.teaching-article__share a,
+.teaching-article__return {
+  color: var(--color-ink-soft);
+}
+
+.teaching-article__share a,
+.teaching-article__return {
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--color-bronze) 48%, transparent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.28rem;
+}
+
+.teaching-article__return {
+  width: fit-content;
+  color: var(--color-bronze-deep);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 639px) {
+  .teaching-article {
+    padding-top: var(--space-6);
+  }
+
+  .teaching-masthead {
+    gap: var(--space-5);
+    padding-bottom: var(--space-7);
+  }
+
+  .teaching-article__section {
+    padding: var(--space-6) 0;
+  }
+}
