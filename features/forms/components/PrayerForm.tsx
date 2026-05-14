@@ -11,6 +11,8 @@ export function PrayerForm() {
     confidentiality: true,
   });
   const [errors, setErrors] = useState<{ email?: string; requestBody?: string }>({});
+  const [submitError, setSubmitError] = useState<string | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
   function handleChange(name: keyof typeof values, value: string | boolean) {
@@ -20,13 +22,14 @@ export function PrayerForm() {
       delete next[name as keyof typeof current];
       return next;
     });
+    setSubmitError(null);
   }
 
   function validateEmail(value: string) {
     return /.+@.+\..+/.test(value);
   }
 
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
     const nextErrors: { email?: string; requestBody?: string } = {};
@@ -46,13 +49,44 @@ export function PrayerForm() {
       return;
     }
 
-    setSubmitted(true);
+    setIsSubmitting(true);
+    setSubmitError(null);
+
+    try {
+      const response = await fetch("/api/prayer", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: values.name,
+          email: values.email,
+          request: values.requestBody,
+          isConfidential: values.confidentiality,
+        }),
+      });
+
+      const payload = (await response.json()) as { error?: string };
+
+      if (!response.ok) {
+        setSubmitError(payload.error ?? "Unable to submit prayer request.");
+        setSubmitted(false);
+        return;
+      }
+
+      setSubmitted(true);
+    } catch {
+      setSubmitError("Unable to submit prayer request.");
+      setSubmitted(false);
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   if (submitted) {
     return (
       <section className="intake-success" aria-live="polite">
-        <p className="section-kicker">Prepared</p>
+        <p className="section-kicker">Received</p>
         <h2>{prayerForm.successTitle}</h2>
         <p>{prayerForm.successBody}</p>
       </section>
@@ -121,12 +155,14 @@ export function PrayerForm() {
           </label>
         </div>
 
+        {submitError ? <p className="form-status-error">{submitError}</p> : null}
+
         <div className="intake-form__footer">
-          <button className="intake-submit" type="submit">
-            Submit Request
+          <button className="intake-submit" disabled={isSubmitting} type="submit">
+            {isSubmitting ? "Submitting..." : "Submit Request"}
           </button>
           <p className="intake-form__note">
-            This phase validates and resolves locally while KOI&apos;s intercession workflow is prepared for the next batch.
+            This request will be stored for KOI&apos;s intercession workflow and reviewed with care.
           </p>
         </div>
       </form>

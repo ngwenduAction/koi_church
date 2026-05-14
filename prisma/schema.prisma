@@ -1,0 +1,39 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model MembershipRequest {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  phone     String
+  location  String
+  status    String   @default("pending")
+  createdAt DateTime @default(now())
+}
+
+model PrayerRequest {
+  id             String   @id @default(cuid())
+  name           String?
+  email          String?
+  request        String
+  isConfidential Boolean  @default(true)
+  createdAt      DateTime @default(now())
+}
+
+model Teaching {
+  id         String  @id @default(cuid())
+  slug       String  @unique
+  title      String
+  content_en String?
+  content_zu String?
+  content_st String?
+  pdf_url_en String?
+  pdf_url_zu String?
+  pdf_url_st String?
+}
