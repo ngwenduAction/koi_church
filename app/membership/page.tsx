@@ -1,54 +1,79 @@
 import type { Metadata } from "next";
-import {
-  membershipDetails,
-  membershipForm,
-} from "../../content/institutional";
-import { IntakeForm } from "../../features/forms/components/IntakeForm";
-import { InfoList } from "../../features/pages/components/InfoList";
+import { DetailGrid } from "../../features/pages/components/DetailGrid";
 import { PageHero } from "../../features/pages/components/PageHero";
+import { ScriptureBlock } from "../../features/pages/components/ScriptureBlock";
+import { MembershipForm } from "../../features/forms/components/MembershipForm";
 import { Container } from "../../shared/components/Container";
 
 export const metadata: Metadata = {
-  title: "New Member Sign Up | Kingdom of Israel",
+  title: "Membership | Kingdom of Israel",
   description:
-    "Membership information and sign-up form for Kingdom of Israel, including the doctrinal and practical commitments of the assembly.",
+    "Membership at Kingdom of Israel is a covenant request grounded in doctrine, observance, and dedication to the God of Israel.",
 };
+
+const observancePillars = [
+  { label: "The Sabbath", value: "7th Day" },
+  { label: "The Feasts of the Lord", value: "Leviticus 23" },
+  { label: "The Dietary Law", value: "Leviticus 11" },
+  { label: "The Royal Commandments", value: "Moral Law" },
+];
 
 export default function MembershipPage() {
   return (
     <>
       <PageHero
-        eyebrow={membershipDetails.eyebrow}
-        title={membershipDetails.title}
-        description={membershipDetails.description}
+        eyebrow="Membership"
+        title="The Foundation of the Prophets"
+        description="Membership at KOI is received as a covenant matter. It joins doctrine, order, and fellowship under the word taught by the prophets, the apostles, and Christ the chief cornerstone."
+        imageUrl="/media/cinematic-foundation-of-the-prophets.jpg"
+        mediaLabel="Still placeholder"
       />
 
-      <section className="institution-section" aria-labelledby="membership-meaning-title">
+      <section className="institution-section institution-section--ruled" aria-labelledby="membership-covenant-title">
         <Container className="institution-layout institution-layout--split institution-layout--top">
           <div className="institution-copy-block">
-            <p className="section-kicker">Commitment</p>
-            <h2 id="membership-meaning-title">Membership joins doctrine, conduct, and fellowship.</h2>
+            <p className="section-kicker">The Covenant</p>
+            <h2 id="membership-covenant-title">Those received are no longer strangers, but fellow citizens in the household.</h2>
             <p>
-              It is not a waiting-room category. Membership identifies a person with the order of the assembly and
-              the doctrine it confesses and keeps.
+              Membership is not casual subscription. It is an ordered request to walk in fellowship, repentance,
+              and obedience within the household that confesses the God of Israel.
             </p>
-            <p className="institution-note">{membershipDetails.clarification}</p>
           </div>
-          <InfoList title="Membership includes" items={membershipDetails.commitments} />
+          <ScriptureBlock reference="Ephesians 2:19">
+            Now therefore ye are no more strangers and foreigners, but fellowcitizens with the saints, and of the
+            household of God.
+          </ScriptureBlock>
         </Container>
       </section>
 
-      <section className="institution-section institution-section--ruled" aria-labelledby="membership-form-title">
-        <Container className="institution-layout institution-layout--split institution-layout--top">
-          <div className="institution-copy-block">
-            <p className="section-kicker">Sign Up</p>
-            <h2 id="membership-form-title">Submit your membership request plainly and truthfully.</h2>
-            <p>
-              This form prepares the intake structure for KOI&apos;s membership workflow and will be connected to the
-              next backend phase.
+      <section className="institution-section" aria-labelledby="membership-observances-title">
+        <Container className="institution-layout institution-layout--stack">
+          <div className="institution-section__heading">
+            <p className="section-kicker">Institutional Observances</p>
+            <h2 id="membership-observances-title">Membership is kept within a visible order of doctrine and practice.</h2>
+            <p className="reading-prose">
+              These pillars mark the life of the assembly and form the expected frame of covenant continuity at KOI.
             </p>
           </div>
-          <IntakeForm config={membershipForm} />
+          <DetailGrid items={observancePillars} />
+        </Container>
+      </section>
+
+      <section className="institution-section institution-section--ruled" aria-labelledby="membership-preparation-title">
+        <Container className="institution-layout institution-layout--split institution-layout--top">
+          <div className="institution-copy-block reading-prose">
+            <p className="section-kicker">Preparation</p>
+            <h2 id="membership-preparation-title">This is a serious act of repentance and dedication to the God of Israel.</h2>
+            <p>
+              A membership request should be made soberly. It is a declaration that a person desires to be received
+              under the doctrine, judgments, statutes, and fellowship observed in this assembly.
+            </p>
+            <p>
+              KOI does not treat membership as a casual subscription. It is approached with truthfulness, prayer,
+              and a willingness to be examined in the light of the word.
+            </p>
+          </div>
+          <MembershipForm />
         </Container>
       </section>
     </>

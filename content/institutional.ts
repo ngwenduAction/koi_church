@@ -169,86 +169,45 @@ export const visitRequestForm: IntakeConfig = {
 };
 
 export const membershipForm: IntakeConfig = {
-  title: "New Member Sign Up",
+  title: "Request membership interview",
   description:
-    "Complete this form if you are seeking membership and fellowship in the order and doctrine of KOI.",
-  submitLabel: "Submit membership form",
-  successTitle: "Membership form prepared",
+    "Use this form if you are seeking covenant fellowship with KOI and are prepared to be received on the doctrinal foundation taught here.",
+  submitLabel: "Request Membership Interview",
+  successTitle: "Membership request prepared",
   successBody:
-    "Your membership form passed validation in this phase and is ready for KOI's intake workflow once backend wiring is connected.",
+    "Your membership request passed validation in this phase and is ready for KOI's interview workflow once backend wiring is connected.",
   fields: [
     {
       name: "fullName",
-      label: "Full name",
+      label: "Full Name",
       type: "text",
       required: true,
       placeholder: "Your full name",
     },
     {
       name: "email",
-      label: "Email address",
+      label: "Email Address",
       type: "email",
       required: true,
       placeholder: "name@example.com",
     },
     {
       name: "phone",
-      label: "Phone number",
+      label: "Phone Number",
       type: "tel",
       required: true,
       placeholder: "+27 ...",
     },
     {
       name: "city",
-      label: "City",
+      label: "City/Location",
       type: "text",
       required: true,
       placeholder: "Johannesburg",
     },
     {
-      name: "ageRange",
-      label: "Age range",
-      type: "select",
-      required: true,
-      options: [
-        { label: "Select one", value: "" },
-        { label: "18-24", value: "18-24" },
-        { label: "25-34", value: "25-34" },
-        { label: "35-44", value: "35-44" },
-        { label: "45-54", value: "45-54" },
-        { label: "55+", value: "55+" },
-      ],
-    },
-    {
-      name: "baptized",
-      label: "Have you been baptized?",
-      type: "select",
-      required: true,
-      options: [
-        { label: "Select one", value: "" },
-        { label: "Yes", value: "yes" },
-        { label: "No", value: "no" },
-      ],
-    },
-    {
-      name: "background",
-      label: "Short testimony or background",
-      type: "textarea",
-      required: true,
-      placeholder:
-        "Share your background, doctrine, or reason for seeking membership.",
-    },
-    {
-      name: "commitmentAcknowledgment",
-      label:
-        "I understand that membership includes Sabbath observance, feast days, dietary law, royal commandments, judgments, statutes, and doctrine according to the apostles and prophets with Christ as cornerstone.",
-      type: "checkbox",
-      required: true,
-    },
-    {
-      name: "clarificationAcknowledgment",
-      label:
-        "I understand there is no instruction period before membership unless I am preparing for baptism based on understanding of the gospel.",
+      name: "foundationAcknowledgment",
+      label: "I confirm my commitment to the doctrinal foundation of KOI.",
       type: "checkbox",
       required: true,
     },

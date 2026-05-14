@@ -1415,9 +1415,11 @@ button {
 
 .form-field label {
   color: var(--color-ink);
-  font-size: 0.98rem;
+  font-size: 0.875rem;
   font-weight: 600;
+  letter-spacing: 0.05em;
   line-height: 1.4;
+  text-transform: uppercase;
 }
 
 .form-field input,
@@ -1897,4 +1899,5 @@ select,
     font-size: clamp(1.55rem, 8vw, 2.2rem);
   }
 }
+
 
