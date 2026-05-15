@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { createId, getDatabase } from "../../../lib/database";
+import { db } from "../../../lib/db-client";
 
 export const runtime = "nodejs";
 
@@ -34,24 +34,16 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Enter a valid email address." }, { status: 400 });
     }
 
-    const database = getDatabase();
-    const id = createId();
+    const record = await db.prayerRequest.create({
+      data: {
+        name: typeof body.name === "string" && body.name.trim() ? body.name.trim() : null,
+        email: typeof body.email === "string" && body.email.trim() ? body.email.trim().toLowerCase() : null,
+        request: body.request.trim(),
+        isConfidential: body.isConfidential === undefined ? true : Boolean(body.isConfidential),
+      },
+    });
 
-    database
-      .prepare(
-        `INSERT INTO PrayerRequest (id, name, email, request, isConfidential, createdAt)
-         VALUES (?, ?, ?, ?, ?, ?)`
-      )
-      .run(
-        id,
-        typeof body.name === "string" && body.name.trim() ? body.name.trim() : null,
-        typeof body.email === "string" && body.email.trim() ? body.email.trim().toLowerCase() : null,
-        body.request.trim(),
-        body.isConfidential === undefined ? 1 : body.isConfidential ? 1 : 0,
-        new Date().toISOString()
-      );
-
-    return NextResponse.json({ ok: true, id }, { status: 201 });
+    return NextResponse.json({ ok: true, id: record.id }, { status: 201 });
   } catch (error) {
     console.error("Prayer request failed", error);
     return NextResponse.json({ error: "Unable to save prayer request." }, { status: 500 });

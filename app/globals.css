@@ -2066,3 +2066,170 @@ select,
   cursor: wait;
   opacity: 0.72;
 }
+
+.site-header__brand {
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.site-header__brand-mark {
+  width: 2.85rem;
+  height: 2.85rem;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.paystack-shell {
+  display: grid;
+  gap: var(--space-3);
+  align-content: start;
+  margin-top: var(--space-5);
+}
+
+.paystack-button {
+  display: inline-flex;
+  width: fit-content;
+  min-height: 3rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid color-mix(in srgb, var(--color-stone) 52%, transparent);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--color-ink);
+  cursor: pointer;
+  padding: 0.82rem 1.12rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1;
+  transition:
+    border-color 180ms ease,
+    color 180ms ease,
+    background 180ms ease;
+}
+
+.paystack-button:hover {
+  border-color: color-mix(in srgb, var(--color-bronze) 58%, transparent);
+  color: var(--color-bronze-deep);
+  background: color-mix(in srgb, var(--color-surface) 78%, transparent);
+}
+
+.paystack-shell__note {
+  margin: 0;
+  color: var(--color-ink-soft);
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.admin-dashboard {
+  padding: var(--space-8) 0 var(--space-9);
+}
+
+.admin-dashboard__inner {
+  display: grid;
+  gap: var(--space-7);
+}
+
+.admin-dashboard__hero {
+  display: grid;
+  gap: var(--space-4);
+  max-width: 56rem;
+}
+
+.admin-dashboard__hero h1,
+.records-panel__header h2 {
+  margin: 0;
+  color: var(--color-ink);
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-variation-settings: "opsz" 96, "SOFT" 14, "WONK" 0;
+  letter-spacing: -0.02em;
+}
+
+.admin-dashboard__hero h1 {
+  font-size: clamp(2.75rem, 5vw, 4.75rem);
+  line-height: 0.98;
+}
+
+.admin-dashboard__hero p:last-child,
+.records-panel__header p:last-child {
+  margin: 0;
+  color: var(--color-ink-soft);
+}
+
+.admin-dashboard__grid {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.records-panel {
+  display: grid;
+  gap: var(--space-5);
+  border-top: var(--border-subtle);
+  padding-top: var(--space-6);
+}
+
+.records-panel__header {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.records-panel__header h2 {
+  font-size: clamp(1.9rem, 3vw, 2.75rem);
+  line-height: 1.03;
+}
+
+.records-table-wrap {
+  overflow-x: auto;
+  border: var(--border-subtle);
+  background: color-mix(in srgb, var(--color-surface) 88%, transparent);
+}
+
+.records-table {
+  width: 100%;
+  min-width: 52rem;
+  border-collapse: collapse;
+}
+
+.records-table th,
+.records-table td {
+  vertical-align: top;
+  text-align: left;
+  padding: var(--space-4);
+  border-bottom: var(--border-subtle);
+}
+
+.records-table th {
+  color: var(--color-bronze-deep);
+  font-family: var(--font-label);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  background: color-mix(in srgb, var(--color-linen) 70%, transparent);
+}
+
+.records-table td {
+  color: var(--color-ink);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.records-table__request {
+  min-width: 18rem;
+  color: var(--color-ink-soft);
+  white-space: pre-wrap;
+}
+
+.records-table__empty {
+  color: var(--color-ink-soft);
+  text-align: center;
+  font-style: italic;
+}
+
+@media (max-width: 767px) {
+  .site-header__brand-mark {
+    width: 2.45rem;
+    height: 2.45rem;
+  }
+}

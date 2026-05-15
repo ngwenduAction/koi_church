@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { givingDetails } from "../../content/institutional";
 import { BankDetailCard } from "../../features/giving/components/BankDetailCard";
+import { PaystackButton } from "../../features/giving/components/PaystackButton";
 import { PageHero } from "../../features/pages/components/PageHero";
 import { ScriptureBlock } from "../../features/pages/components/ScriptureBlock";
 import { Container } from "../../shared/components/Container";
@@ -42,12 +43,15 @@ export default function GivingPage() {
 
       <section className="institution-section" aria-labelledby="giving-work-title">
         <Container className="institution-layout institution-layout--split institution-layout--top">
-          <BankDetailCard
-            accountHolder={givingDetails.accountHolder}
-            bank="First National Bank (FNB)"
-            accountNumber={givingDetails.accountNumber}
-            branchCode={givingDetails.branch}
-          />
+          <div>
+            <BankDetailCard
+              accountHolder={givingDetails.accountHolder}
+              bank="First National Bank (FNB)"
+              accountNumber={givingDetails.accountNumber}
+              branchCode={givingDetails.branch}
+            />
+            <PaystackButton />
+          </div>
 
           <div className="institution-copy-block giving-work">
             <p className="section-kicker">The Work</p>

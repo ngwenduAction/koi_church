@@ -1,0 +1,132 @@
+import type { Metadata } from "next";
+import { db } from "../../lib/db-client";
+import { Container } from "../../shared/components/Container";
+
+export const metadata: Metadata = {
+  title: "Admin | Kingdom of Israel",
+  description: "Protected administrative records for Kingdom of Israel.",
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
+
+export const dynamic = "force-dynamic";
+
+function formatTimestamp(value: Date) {
+  return new Intl.DateTimeFormat("en-ZA", {
+    dateStyle: "medium",
+    timeStyle: "short",
+  }).format(value);
+}
+
+export default async function AdminPage() {
+  const [membershipRequests, prayerRequests] = await Promise.all([
+    db.membershipRequest.findMany({
+      where: { status: "pending" },
+      orderBy: { createdAt: "desc" },
+    }),
+    db.prayerRequest.findMany({
+      orderBy: { createdAt: "desc" },
+    }),
+  ]);
+
+  return (
+    <section className="admin-dashboard">
+      <Container className="admin-dashboard__inner">
+        <header className="admin-dashboard__hero">
+          <p className="section-kicker">Internal Records Office</p>
+          <h1>Institutional records kept in order before the house.</h1>
+          <p className="reading-prose">
+            This protected view is reserved for pending membership interviews and active intercession matters
+            currently held by the assembly.
+          </p>
+        </header>
+
+        <div className="admin-dashboard__grid">
+          <section className="records-panel" aria-labelledby="admin-membership-title">
+            <div className="records-panel__header">
+              <p className="section-kicker">Membership</p>
+              <h2 id="admin-membership-title">Pending Membership Interviews</h2>
+              <p>{membershipRequests.length} request(s) awaiting review.</p>
+            </div>
+
+            <div className="records-table-wrap">
+              <table className="records-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Location</th>
+                    <th scope="col">Received</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {membershipRequests.length > 0 ? (
+                    membershipRequests.map((request) => (
+                      <tr key={request.id}>
+                        <td>{request.name}</td>
+                        <td>{request.email}</td>
+                        <td>{request.phone}</td>
+                        <td>{request.location}</td>
+                        <td>{formatTimestamp(request.createdAt)}</td>
+                      </tr>
+                    ))
+                  ) : (
+                    <tr>
+                      <td className="records-table__empty" colSpan={5}>
+                        No pending membership interviews at this time.
+                      </td>
+                    </tr>
+                  )}
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section className="records-panel" aria-labelledby="admin-prayer-title">
+            <div className="records-panel__header">
+              <p className="section-kicker">Intercession</p>
+              <h2 id="admin-prayer-title">Active Intercession Requests</h2>
+              <p>{prayerRequests.length} request(s) currently in view.</p>
+            </div>
+
+            <div className="records-table-wrap">
+              <table className="records-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Confidentiality</th>
+                    <th scope="col">Request</th>
+                    <th scope="col">Received</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {prayerRequests.length > 0 ? (
+                    prayerRequests.map((request) => (
+                      <tr key={request.id}>
+                        <td>{request.name ?? "Anonymous"}</td>
+                        <td>{request.email ?? "No reply requested"}</td>
+                        <td>{request.isConfidential ? "Elder only" : "Assembly review"}</td>
+                        <td className="records-table__request">{request.request}</td>
+                        <td>{formatTimestamp(request.createdAt)}</td>
+                      </tr>
+                    ))
+                  ) : (
+                    <tr>
+                      <td className="records-table__empty" colSpan={5}>
+                        No active intercession requests at this time.
+                      </td>
+                    </tr>
+                  )}
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+      </Container>
+    </section>
+  );
+}
