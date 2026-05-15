@@ -20,8 +20,15 @@ function formatTimestamp(value: Date) {
   }).format(value);
 }
 
+function formatCurrency(amount: number) {
+  return new Intl.NumberFormat("en-ZA", {
+    style: "currency",
+    currency: "ZAR",
+  }).format(amount / 100);
+}
+
 export default async function AdminPage() {
-  const [membershipRequests, prayerRequests] = await Promise.all([
+  const [membershipRequests, prayerRequests, offeringSummary] = await Promise.all([
     db.membershipRequest.findMany({
       where: { status: "pending" },
       orderBy: { createdAt: "desc" },
@@ -29,7 +36,15 @@ export default async function AdminPage() {
     db.prayerRequest.findMany({
       orderBy: { createdAt: "desc" },
     }),
+    db.offeringTransaction.aggregate({
+      where: { status: "success" },
+      _sum: { amount: true },
+      _count: { _all: true },
+    }),
   ]);
+
+  const totalOfferingAmount = offeringSummary._sum.amount ?? 0;
+  const totalOfferingCount = offeringSummary._count._all;
 
   return (
     <section className="admin-dashboard">
@@ -38,10 +53,18 @@ export default async function AdminPage() {
           <p className="section-kicker">Internal Records Office</p>
           <h1>Institutional records kept in order before the house.</h1>
           <p className="reading-prose">
-            This protected view is reserved for pending membership interviews and active intercession matters
-            currently held by the assembly.
+            This protected view is reserved for pending membership interviews, active intercession matters, and the
+            recorded stewardship presently held in KOI&apos;s system of record.
           </p>
         </header>
+
+        <section className="records-metrics" aria-label="Offering totals">
+          <article className="records-metric">
+            <p className="section-kicker">Offerings</p>
+            <h2>{formatCurrency(totalOfferingAmount)}</h2>
+            <p>Total offerings received across {totalOfferingCount} verified transaction(s).</p>
+          </article>
+        </section>
 
         <div className="admin-dashboard__grid">
           <section className="records-panel" aria-labelledby="admin-membership-title">
