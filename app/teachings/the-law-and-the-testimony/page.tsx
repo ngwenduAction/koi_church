@@ -1,6 +1,8 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import { lawAndTestimonyArticle, teachings } from "../../../content/teachings";
 import { TeachingLanguageReader } from "../../../features/teachings/components/TeachingLanguageReader";
+import { TeachingShareActions } from "../../../features/teachings/components/TeachingShareActions";
 import { Container } from "../../../shared/components/Container";
 
 const teaching = teachings.find((entry) => entry.slug === "the-law-and-the-testimony");
@@ -40,14 +42,10 @@ export default function TheLawAndTheTestimonyPage() {
         <TeachingLanguageReader languages={lawAndTestimonyArticle.languages} />
 
         <footer className="teaching-article__anchor">
-          <div className="teaching-article__share" aria-label="Share this teaching">
-            <span>Share this teaching</span>
-            <a href="#copy-link">Copy Link</a>
-            <a href="mailto:?subject=The Law and the Testimony">Email</a>
-          </div>
-          <a className="teaching-article__return" href="/lessons">
+          <TeachingShareActions />
+          <Link className="teaching-article__return" href="/lessons">
             Return to Library
-          </a>
+          </Link>
         </footer>
       </Container>
     </article>

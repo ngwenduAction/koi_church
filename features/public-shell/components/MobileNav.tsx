@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { primaryNavigation } from "../../../content/navigation";
@@ -57,9 +58,9 @@ export function MobileNav() {
           const active = pathname === item.href;
 
           return item.active ? (
-            <a key={item.href} href={item.href} aria-current={active ? "page" : undefined}>
+            <Link key={item.href} href={item.href} aria-current={active ? "page" : undefined}>
               {item.label}
-            </a>
+            </Link>
           ) : (
             <span key={item.href} aria-disabled="true">
               {item.label}
@@ -83,7 +84,7 @@ export function MobileNav() {
       {isOpen && (
         <div className="mobile-nav" id="mobile-navigation" role="dialog" aria-modal="true" ref={drawerRef}>
           <div className="mobile-nav__bar">
-            <span className="mobile-nav__title">Kingdom of Israel</span>
+            <span className="mobile-nav__title">Navigation</span>
             <button ref={closeButtonRef} type="button" onClick={() => setIsOpen(false)}>
               Close
             </button>
@@ -93,14 +94,14 @@ export function MobileNav() {
               const active = pathname === item.href;
 
               return item.active ? (
-                <a
+                <Link
                   key={item.href}
                   href={item.href}
                   aria-current={active ? "page" : undefined}
                   onClick={() => setIsOpen(false)}
                 >
                   {item.label}
-                </a>
+                </Link>
               ) : (
                 <span key={item.href} aria-disabled="true">
                   {item.label}

@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { footerNavigation } from "../../../content/navigation";
 import { site } from "../../../content/site";
 import { Container } from "../../../shared/components/Container";
 import { Wordmark } from "../../brand/components/KoiWordmark";
@@ -21,8 +23,20 @@ export function SiteFooter() {
         <div className="site-footer__column">
           <span className="eyebrow">Contact</span>
           <p>
-            <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a>
+            <a className="site-footer__email" href={`mailto:${site.contact.email}`}>
+              {site.contact.email}
+            </a>
           </p>
+        </div>
+        <div className="site-footer__column">
+          <span className="eyebrow">Library</span>
+          <ul>
+            {footerNavigation.map((item) => (
+              <li key={item.href}>
+                <Link href={item.href}>{item.label}</Link>
+              </li>
+            ))}
+          </ul>
         </div>
         <div className="site-footer__column">
           <span className="eyebrow">Social</span>

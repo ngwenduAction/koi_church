@@ -2509,3 +2509,286 @@ select,
     gap: var(--space-2);
   }
 }
+
+.site-footer__inner {
+  grid-template-columns: minmax(0, 1.45fr) repeat(4, minmax(0, 0.9fr));
+}
+
+.site-footer__email {
+  display: inline-block;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  color: var(--color-ink-soft);
+  font-size: clamp(0.82rem, 0.8vw, 0.9rem);
+  letter-spacing: 0.02em;
+  line-height: 1.7;
+  text-transform: none;
+}
+
+.lesson-row__meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.lesson-row__languages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lesson-row__language {
+  padding: 0.3rem 0.62rem;
+  border: 1px solid color-mix(in srgb, var(--color-stone) 44%, transparent);
+  border-radius: 999px;
+  color: var(--color-ink-soft);
+  font-family: var(--font-label);
+  font-size: var(--font-size-eyebrow);
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.lesson-row h2 a {
+  text-decoration: none;
+}
+
+.lesson-row h2 a:hover {
+  color: var(--color-bronze-deep);
+}
+
+.lesson-reader-page {
+  padding: var(--space-6) 0 var(--space-9);
+}
+
+.lesson-reader-page__intro {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.lesson-reader-page__intro h1 {
+  margin: 0;
+  color: var(--color-ink);
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4.6rem);
+  font-weight: 430;
+  font-variation-settings: "opsz" 108, "SOFT" 14, "WONK" 0;
+  letter-spacing: -0.022em;
+  line-height: 0.98;
+}
+
+.lesson-reader-page__body {
+  margin-top: var(--space-7);
+}
+
+.lesson-reader {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.lesson-reader__header {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.lesson-reader__header-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.lesson-reader__header h1 {
+  margin: 0;
+  color: var(--color-ink);
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.8vw, 3.4rem);
+  font-weight: 460;
+  font-variation-settings: "opsz" 88, "SOFT" 12, "WONK" 0;
+  letter-spacing: -0.02em;
+  line-height: 1.02;
+}
+
+.lesson-reader__controls {
+  display: grid;
+  gap: var(--space-4);
+  padding: var(--space-5) 0;
+  border-top: var(--border-subtle);
+  border-bottom: var(--border-subtle);
+}
+
+.lesson-reader__matrix,
+.lesson-reader__downloads {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: center;
+}
+
+.lesson-reader__matrix-item,
+.lesson-reader__language-pill {
+  display: inline-flex;
+  min-height: 3rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid color-mix(in srgb, var(--color-stone) 60%, transparent);
+  border-radius: var(--radius-md);
+  padding: 0.66rem 1rem;
+  background: transparent;
+  color: var(--color-ink-soft);
+  cursor: pointer;
+  font-family: var(--font-label);
+  font-size: var(--font-size-eyebrow);
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    color 180ms ease;
+}
+
+.lesson-reader__matrix-item:hover,
+.lesson-reader__language-pill:hover,
+.lesson-reader__matrix-item.is-active,
+.lesson-reader__language-pill.is-active {
+  border-color: color-mix(in srgb, var(--color-bronze) 60%, transparent);
+  background: color-mix(in srgb, var(--color-surface) 94%, var(--color-bronze) 6%);
+  color: var(--color-bronze-deep);
+}
+
+.lesson-reader__content {
+  display: grid;
+}
+
+.select-none {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.lesson-reader__document,
+.lesson-reader__audio {
+  display: grid;
+  gap: var(--space-5);
+  padding: clamp(1.1rem, 2vw, 1.6rem);
+}
+
+.lesson-reader__panel-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.lesson-reader__panel-head h2 {
+  margin: 0;
+  color: var(--color-ink);
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+  font-weight: 500;
+  font-variation-settings: "opsz" 72, "SOFT" 12, "WONK" 0;
+  letter-spacing: -0.018em;
+  line-height: 1.04;
+}
+
+.lesson-reader__panel-head a,
+.lesson-reader__related a,
+.teaching-article__share button {
+  color: var(--color-bronze-deep);
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--color-bronze) 48%, transparent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.28rem;
+  text-transform: uppercase;
+}
+
+.teaching-article__share button {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+}
+
+.lesson-reader__related {
+  margin: 0;
+  color: var(--color-ink-soft);
+}
+
+.lesson-reader__frame {
+  min-height: 72vh;
+  border: 1px solid color-mix(in srgb, var(--color-stone) 40%, transparent);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: color-mix(in srgb, var(--color-linen) 80%, white);
+}
+
+.lesson-reader__frame object {
+  display: block;
+  width: 100%;
+  min-height: 72vh;
+}
+
+.lesson-reader__fallback {
+  display: grid;
+  gap: var(--space-3);
+  justify-items: start;
+  padding: var(--space-6);
+}
+
+.lesson-reader__audio audio {
+  width: 100%;
+}
+
+@media (max-width: 959px) {
+  .site-footer__inner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .lesson-row__meta-row,
+  .lesson-reader__header-top,
+  .lesson-reader__panel-head {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .lesson-reader__matrix,
+  .lesson-reader__downloads {
+    display: grid;
+  }
+
+  .lesson-reader__matrix-item,
+  .lesson-reader__language-pill {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+@media print {
+  body.lesson-reader-locked * {
+    visibility: hidden !important;
+  }
+
+  body.lesson-reader-locked::before {
+    display: block;
+    padding: 2rem;
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    content: "Printing is unavailable for this lesson.";
+    visibility: visible;
+  }
+}

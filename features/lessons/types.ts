@@ -7,6 +7,8 @@ export type LessonVariant = {
   title: string;
   summary: string;
   pdfUrl: string;
+  videoUrl?: string;
+  audioUrl?: string;
   date: string;
   category: string;
   scriptureReferences: string[];
