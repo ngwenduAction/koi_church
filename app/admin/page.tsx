@@ -44,12 +44,12 @@ export default async function AdminPage() {
       orderBy: { createdAt: "desc" },
     }),
     db.offeringTransaction.aggregate({
-      where: { status: "success" },
+      where: { status: "SUCCESS" },
       _sum: { amount: true },
       _count: { _all: true },
     }),
     db.offeringTransaction.findMany({
-      where: { status: "success" },
+      where: { status: "SUCCESS" },
       orderBy: [{ paidAt: "desc" }, { createdAt: "desc" }],
     }),
   ]);

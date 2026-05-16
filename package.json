@@ -8,13 +8,14 @@
   },
   "scripts": {
     "dev": "next dev",
+    "prebuild": "npm run prisma:generate",
     "build": "next build",
     "typecheck": "tsc --noEmit",
     "start": "next start",
     "lint": "next lint",
-    "prisma:generate": "prisma generate",
-    "prisma:push": "prisma db push",
-    "prisma:push:rds": "prisma db push --schema prisma/schema.rds.prisma"
+    "prisma:generate": "node ./scripts/prisma-command.mjs generate",
+    "prisma:push": "node ./scripts/prisma-command.mjs db push",
+    "prisma:push:rds": "node ./scripts/prisma-command.mjs db push --target=rds"
   },
   "dependencies": {
     "@prisma/client": "^6.19.0",

@@ -1,6 +1,6 @@
 # Aurora RDS Cutover
 
-KOI currently develops against local SQLite for safe offline work. For the Aurora cutover, use the PostgreSQL schema file below and a real Prisma connection URL.
+KOI now supports environment-native Prisma commands. Local SQLite and production Aurora/PostgreSQL use the same application code, and the Prisma command wrapper selects the correct schema by `DATABASE_URL` or `PRISMA_TARGET`.
 
 ## Required connection string
 
@@ -12,7 +12,7 @@ For the KOI cluster shown in your screenshots, the endpoint format should be:
 
 `postgresql://postgres:<password>@koi-database-1.cluster-cd8esk2yaxvw.af-south-1.rds.amazonaws.com:5432/postgres?sslmode=require`
 
-## Important note about the current .env attempt
+## Important note about shell expressions in .env
 
 Prisma cannot use a shell expression inside `.env` such as:
 
@@ -20,16 +20,26 @@ Prisma cannot use a shell expression inside `.env` such as:
 
 The token or password must already be resolved into a plain string before Prisma runs.
 
-## Push the schema to Aurora
+## Deployment checklist
 
-1. Export or set `DATABASE_URL` to the resolved PostgreSQL URL above.
-2. Run:
+1. Set `DATABASE_URL` in the deployment platform to the real Aurora PostgreSQL URL.
+2. Set `NEXT_PUBLIC_PAYSTACK_PUBLIC_KEY`.
+3. Set `PAYSTACK_SECRET_KEY`.
+4. Set `ADMIN_USERNAME` and `ADMIN_PASSWORD`.
+5. Run `npm run prisma:push:rds` once against the production environment.
+6. Deploy normally; `npm run build` will call `npm run prisma:generate`, and the schema wrapper will infer the correct target from `DATABASE_URL`.
+
+## Available commands
 
 ```powershell
+npm run prisma:generate
+npm run prisma:push
 npm run prisma:push:rds
 ```
 
-This uses `prisma/schema.rds.prisma`, which mirrors the local schema but targets PostgreSQL.
+- `prisma:generate` chooses `prisma/schema.prisma` for local SQLite and `prisma/schema.rds.prisma` for PostgreSQL.
+- `prisma:push` does the same automatic environment detection.
+- `prisma:push:rds` forces the Aurora/PostgreSQL schema explicitly.
 
 ## If using IAM database auth
 
