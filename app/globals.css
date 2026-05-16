@@ -2435,3 +2435,77 @@ select,
     min-width: 44rem;
   }
 }
+
+.records-error {
+  margin: 0;
+  color: #8b2f2f;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.records-panel--ledger {
+  margin-top: var(--space-2);
+}
+
+.records-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: center;
+}
+
+.records-action {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: var(--color-bronze-deep);
+  cursor: pointer;
+  font-family: var(--font-label);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--color-bronze) 48%, transparent);
+  text-decoration-thickness: 1px;
+  text-transform: uppercase;
+  text-underline-offset: 0.28rem;
+  transition:
+    color 180ms ease,
+    text-decoration-thickness 180ms ease,
+    opacity 180ms ease;
+}
+
+.records-action:hover {
+  color: var(--color-ink);
+  text-decoration-thickness: 2px;
+}
+
+.records-action:disabled {
+  cursor: wait;
+  opacity: 0.5;
+}
+
+.records-table__reference,
+.records-table__amount {
+  white-space: nowrap;
+}
+
+.records-table__reference {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 0.88rem;
+  letter-spacing: 0.02em;
+}
+
+.records-table__amount {
+  color: var(--color-ink);
+  font-weight: 600;
+}
+
+@media (max-width: 639px) {
+  .records-actions {
+    display: grid;
+    justify-items: start;
+    gap: var(--space-2);
+  }
+}

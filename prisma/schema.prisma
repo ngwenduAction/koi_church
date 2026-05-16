@@ -13,7 +13,7 @@ model MembershipRequest {
   email     String
   phone     String
   location  String
-  status    String   @default("pending")
+  status    String   @default("PENDING")
   createdAt DateTime @default(now())
 }
 
@@ -23,6 +23,7 @@ model PrayerRequest {
   email          String?
   request        String
   isConfidential Boolean  @default(true)
+  status         String   @default("PENDING")
   createdAt      DateTime @default(now())
 }
 

@@ -1,5 +1,6 @@
 import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
+import { hasValidAdminAuthorization } from "./lib/adminAuth";
 
 function unauthorizedResponse() {
   return new NextResponse("Authentication required.", {
@@ -12,7 +13,6 @@ function unauthorizedResponse() {
 
 export function middleware(request: NextRequest) {
   const expectedPassword = process.env.ADMIN_PASSWORD;
-  const expectedUsername = process.env.ADMIN_USERNAME ?? "admin";
 
   if (!expectedPassword) {
     return new NextResponse("ADMIN_PASSWORD is not configured.", {
@@ -20,22 +20,7 @@ export function middleware(request: NextRequest) {
     });
   }
 
-  const authorization = request.headers.get("authorization");
-
-  if (!authorization || !authorization.startsWith("Basic ")) {
-    return unauthorizedResponse();
-  }
-
-  try {
-    const decoded = atob(authorization.slice(6));
-    const separatorIndex = decoded.indexOf(":");
-    const username = separatorIndex >= 0 ? decoded.slice(0, separatorIndex) : "";
-    const password = separatorIndex >= 0 ? decoded.slice(separatorIndex + 1) : "";
-
-    if (username !== expectedUsername || password !== expectedPassword) {
-      return unauthorizedResponse();
-    }
-  } catch {
+  if (!hasValidAdminAuthorization(request.headers.get("authorization"))) {
     return unauthorizedResponse();
   }
 
@@ -43,5 +28,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/admin/:path*"],
+  matcher: ["/admin/:path*", "/api/admin/:path*"],
 };
