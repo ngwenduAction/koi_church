@@ -23,7 +23,8 @@ export default function VisitPage() {
         eyebrow={visitDetails.eyebrow}
         title={visitDetails.title}
         description={visitDetails.description}
-        videoUrl="/media/cinematic-sabbath-dawn.mp4"
+        videoUrl="/media/Homepage%20hero%20atmosphere.mp4"
+        mediaLabel="Sabbath arrival atmosphere"
       />
 
       <section className="institution-section" aria-labelledby="visit-essentials-title">
@@ -52,7 +53,8 @@ export default function VisitPage() {
           <MediaBlock
             aspectRatio="3:2"
             description="Sabbath study atmosphere in Johannesburg, warm natural light."
-            label="Documentary placeholder"
+            imageUrl="/media/Sabbath%20study%20atmosphere%20in%20Johannesburg,%20warm%20natural%20light.jpg"
+            label="Johannesburg Sabbath study"
           />
         </Container>
       </section>
@@ -81,7 +83,8 @@ export default function VisitPage() {
             aspectRatio="4:5"
             className="visit-dress-code__media"
             description="Close-up of modest textures, linen, and respectful attire."
-            label="Attire placeholder"
+            imageUrl="/media/Close-up%20of%20modest%20textures,%20linen,%20and%20respectful%20attire.jpg"
+            label="Modest textures"
           />
           <div className="visit-dress-code__content">
             <div className="institution-copy-block">

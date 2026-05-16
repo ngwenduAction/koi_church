@@ -1,4 +1,5 @@
-﻿import { homeContent } from "../../../content/home";
+import Link from "next/link";
+import { homeContent } from "../../../content/home";
 import { site } from "../../../content/site";
 import { Button } from "../../../shared/components/Button";
 import { Container } from "../../../shared/components/Container";
@@ -23,6 +24,10 @@ export function HomeHero() {
             <Button href={hero.secondaryCta.href} variant="secondary">
               {hero.secondaryCta.label}
             </Button>
+          </div>
+          <div className="home-hero__entry-links" aria-label="Operational entry points">
+            <Link href="/membership">Request Membership</Link>
+            <Link href="/prayer">Submit Prayer Request</Link>
           </div>
         </div>
       </Container>

@@ -25,8 +25,8 @@ export default function MembershipPage() {
         eyebrow="Membership"
         title="The Foundation of the Prophets"
         description="Membership at KOI is received as a covenant matter. It joins doctrine, order, and fellowship under the word taught by the prophets, the apostles, and Christ the chief cornerstone."
-        imageUrl="/media/cinematic-foundation-of-the-prophets.jpg"
-        mediaLabel="Still placeholder"
+        imageUrl="/media/linen-texture-bg.jpg"
+        mediaLabel="Foundational archive still"
       />
 
       <section className="institution-section institution-section--ruled" aria-labelledby="membership-covenant-title">

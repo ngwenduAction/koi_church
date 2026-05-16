@@ -19,7 +19,7 @@ export default function PrayerPage() {
         title="The Prayer of the Righteous"
         description="Requests brought here are handled with sobriety, compassion, and care. Intercession is approached as a serious labor before God, not as public display."
         imageUrl="/media/cinematic-intercession.jpg"
-        mediaLabel="Still placeholder"
+        mediaLabel="Intercession chamber still"
       />
 
       <section className="institution-section institution-section--ruled" aria-labelledby="prayer-mandate-title">

@@ -20,7 +20,7 @@ export default function GivingPage() {
         title="Honour the Lord with thy Substance"
         description="Giving at KOI is handled in seriousness, gratitude, and order. The support of the work is received without spectacle and with plainness before God."
         imageUrl="/media/cinematic-first-fruits.jpg"
-        mediaLabel="Still placeholder"
+        mediaLabel="First-fruits ledger still"
       />
 
       <section className="institution-section institution-section--ruled" aria-labelledby="giving-mandate-title">

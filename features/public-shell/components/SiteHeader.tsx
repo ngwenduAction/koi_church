@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { KoiLogoMark } from "../../brand/components/KoiLogoMark";
 import { MobileNav } from "./MobileNav";
 
 export function SiteHeader() {
@@ -7,14 +7,7 @@ export function SiteHeader() {
     <header className="site-header">
       <div className="site-header__inner">
         <Link className="site-header__brand" href="/" aria-label="Kingdom of Israel home">
-          <Image
-            src="/KOI_logo/koi_logo_b_trans.png"
-            alt="Kingdom of Israel"
-            className="site-header__brand-mark"
-            width={60}
-            height={60}
-            priority
-          />
+          <KoiLogoMark className="site-header__brand-mark" priority size={78} />
         </Link>
         <MobileNav />
       </div>
