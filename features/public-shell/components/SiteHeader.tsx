@@ -5,9 +5,9 @@ import { MobileNav } from "./MobileNav";
 export function SiteHeader() {
   return (
     <header className="site-header">
-      <div className="site-header__inner">
-        <Link className="site-header__brand" href="/" aria-label="Kingdom of Israel home">
-          <KoiLogoMark className="site-header__brand-mark" priority sizes="(max-width: 767px) 76px, 112px" />
+      <div className="site-header__inner site-header__inner--brand-led">
+        <Link className="site-header__brand site-header__brand--dominant" href="/" aria-label="Kingdom of Israel home">
+          <KoiLogoMark className="site-header__brand-mark" priority sizes="(max-width: 767px) 88px, 144px" />
         </Link>
         <MobileNav />
       </div>
