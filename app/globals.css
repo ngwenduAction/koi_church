@@ -2872,3 +2872,214 @@ select,
     height: 3.25rem;
   }
 }
+
+.koi-logo-mark {
+  object-fit: contain;
+}
+
+.site-header {
+  min-height: 5rem;
+}
+
+.site-header__inner {
+  min-height: 5rem;
+  align-items: center;
+  padding: 0.85rem 0;
+}
+
+.site-header__brand {
+  height: 100%;
+  align-items: center;
+}
+
+.site-header__brand-mark {
+  width: clamp(4.1rem, 5vw, 5rem);
+  height: auto;
+  max-height: 4.2rem;
+}
+
+.site-header__nav {
+  align-items: center;
+}
+
+.home-hero--cinematic {
+  position: relative;
+  overflow: hidden;
+  min-height: clamp(38rem, 86vh, 52rem);
+  padding: clamp(6rem, 14vw, 11rem) 0 var(--space-8);
+}
+
+.home-hero__media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.home-hero__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(10, 10, 10, 0.56), rgba(10, 10, 10, 0.62)),
+    radial-gradient(circle at 20% 18%, rgba(169, 127, 54, 0.18), transparent 28%);
+}
+
+.home-hero__inner,
+.home-hero__content {
+  position: relative;
+  z-index: 1;
+}
+
+.home-hero--cinematic .eyebrow,
+.home-hero--cinematic .home-hero__meta {
+  color: color-mix(in srgb, var(--color-linen) 88%, var(--color-bronze) 12%);
+}
+
+.home-hero--cinematic .editorial-title,
+.home-hero--cinematic .home-hero__statement {
+  color: var(--color-linen);
+}
+
+.home-hero--cinematic .koi-button--primary {
+  background: color-mix(in srgb, var(--color-ink) 82%, black);
+}
+
+.home-hero--cinematic .koi-button--secondary,
+.home-hero--cinematic .koi-button--quiet,
+.home-hero--cinematic .home-hero__entry-links a {
+  color: color-mix(in srgb, var(--color-linen) 86%, var(--color-bronze) 14%);
+  text-decoration-color: color-mix(in srgb, var(--color-bronze) 60%, transparent);
+}
+
+.blog-journal-page {
+  padding: var(--space-6) 0 var(--space-9);
+}
+
+.blog-journal {
+  display: grid;
+  gap: var(--space-7);
+}
+
+.blog-journal__masthead {
+  gap: var(--space-5);
+}
+
+.blog-journal__article-switcher,
+.blog-journal__language-toggle {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: center;
+  justify-content: center;
+}
+
+.blog-journal__switcher-tab,
+.blog-journal__language-chip {
+  display: inline-flex;
+  min-height: 3rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid color-mix(in srgb, var(--color-stone) 60%, transparent);
+  border-radius: var(--radius-md);
+  padding: 0.7rem 1rem;
+  background: transparent;
+  color: var(--color-ink-soft);
+  cursor: pointer;
+  font-family: var(--font-label);
+  font-size: var(--font-size-eyebrow);
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    color 180ms ease;
+}
+
+.blog-journal__switcher-tab.is-active,
+.blog-journal__language-chip.is-active,
+.blog-journal__switcher-tab:hover,
+.blog-journal__language-chip:hover {
+  border-color: color-mix(in srgb, var(--color-bronze) 56%, transparent);
+  background: color-mix(in srgb, var(--color-surface) 94%, var(--color-bronze) 6%);
+  color: var(--color-bronze-deep);
+}
+
+.blog-journal__switcher-tab {
+  max-width: 18rem;
+  text-wrap: balance;
+}
+
+.blog-journal__body,
+.lesson-reader__movements {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.blog-journal__movement,
+.lesson-reader__movement {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.blog-journal__intro,
+.lesson-reader__intro {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.lesson-reader__downloads--toggle {
+  justify-content: flex-start;
+}
+
+.lesson-reader__section h3 {
+  margin: 0;
+  color: var(--color-ink);
+  font-family: var(--font-display);
+  font-size: clamp(1.65rem, 2.8vw, 2.3rem);
+  font-weight: 520;
+  font-variation-settings: "opsz" 84, "SOFT" 12, "WONK" 0;
+  letter-spacing: -0.018em;
+  line-height: 1.05;
+}
+
+.lesson-reader__document {
+  gap: var(--space-6);
+}
+
+.lesson-reader__frame {
+  margin-top: var(--space-2);
+}
+
+@media (max-width: 767px) {
+  .site-header {
+    min-height: 4.5rem;
+  }
+
+  .site-header__inner {
+    min-height: 4.5rem;
+    padding: 0.65rem 0;
+  }
+
+  .site-header__brand-mark {
+    width: 3.5rem;
+    max-height: 3.5rem;
+  }
+
+  .blog-journal__article-switcher,
+  .blog-journal__language-toggle {
+    justify-content: flex-start;
+  }
+
+  .blog-journal__switcher-tab,
+  .blog-journal__language-chip {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}

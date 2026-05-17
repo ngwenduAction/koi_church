@@ -8,7 +8,14 @@ export function HomeHero() {
   const { hero } = homeContent;
 
   return (
-    <section className="home-hero" aria-labelledby="home-hero-title">
+    <section className="home-hero home-hero--cinematic" aria-labelledby="home-hero-title">
+      <div className="home-hero__media" aria-hidden="true">
+        <video autoPlay className="home-hero__video" loop muted playsInline preload="metadata">
+          <source src="/media/Divine%20authority%20visual.mp4" type="video/mp4" />
+        </video>
+        <div className="home-hero__overlay" />
+      </div>
+
       <Container className="home-hero__inner">
         <div className="home-hero__content">
           <p className="eyebrow">{hero.eyebrow}</p>

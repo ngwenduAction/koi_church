@@ -11,7 +11,7 @@ export function KoiLogoMark({ priority = false, className = "", size = 72 }: Koi
     <Image
       src="/KOI_logo/koi_logo_b_trans.png"
       alt="Kingdom of Israel"
-      className={className}
+      className={`koi-logo-mark ${className}`.trim()}
       width={size}
       height={size}
       priority={priority}

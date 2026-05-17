@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
-import { lessonLanguageLabels, type LessonLanguage } from "../types";
+import { MediaBlock } from "../../pages/components/MediaBlock";
+import { lessonLanguageLabels, lessonLanguageOptions, type LessonLanguage } from "../types";
 import type { LessonGroup } from "../lib/library";
 
 type LessonReaderClientProps = {
@@ -57,15 +58,15 @@ export function LessonReaderClient({ lesson }: LessonReaderClientProps) {
         <div className="lesson-reader__header-top">
           <p className="lesson-row__scripture">{lesson.scriptureReference}</p>
           <ul className="lesson-row__languages" aria-label="Available languages">
-            {lesson.languages.map((language) => (
+            {Array.from(new Set(lesson.languages)).map((language) => (
               <li className="lesson-row__language" key={language}>
                 {language.toUpperCase()}
               </li>
             ))}
           </ul>
         </div>
-        <h1>{lesson.title}</h1>
-        {lesson.summary ? <p className="editorial-copy">{lesson.summary}</p> : null}
+        <h1>{activeVariant.title}</h1>
+        {activeVariant.summary ? <p className="editorial-copy">{activeVariant.summary}</p> : null}
       </header>
 
       <div className="lesson-reader__controls">
@@ -98,20 +99,22 @@ export function LessonReaderClient({ lesson }: LessonReaderClientProps) {
           ) : null}
         </div>
 
-        <div className="lesson-reader__downloads" aria-label="Lesson downloads">
-          {lesson.variants.map((variant) => (
-            <button
-              className={`lesson-reader__language-pill${variant.language === activeLanguage ? " is-active" : ""}`}
-              key={variant.id}
-              type="button"
-              onClick={() => {
-                setActiveLanguage(variant.language);
-                setActiveMode("read");
-              }}
-            >
-              {lessonLanguageLabels[variant.language]}
-            </button>
-          ))}
+        <div className="lesson-reader__downloads lesson-reader__downloads--toggle" aria-label="Lesson language selection">
+          {lessonLanguageOptions
+            .filter((language) => lesson.languages.includes(language))
+            .map((language) => (
+              <button
+                className={`lesson-reader__language-pill${language === activeLanguage ? " is-active" : ""}`}
+                key={language}
+                type="button"
+                onClick={() => {
+                  setActiveLanguage(language);
+                  setActiveMode("read");
+                }}
+              >
+                {language.toUpperCase()}
+              </button>
+            ))}
         </div>
       </div>
 
@@ -131,11 +134,38 @@ export function LessonReaderClient({ lesson }: LessonReaderClientProps) {
             <div className="lesson-reader__panel-head">
               <div>
                 <p className="section-kicker">Reading Document</p>
-                <h2>{lessonLanguageLabels[activeVariant.language]}</h2>
+                <h2>{activeVariant.title}</h2>
               </div>
               <a href={activeVariant.pdfUrl} target="_blank" rel="noopener noreferrer">
                 Download PDF
               </a>
+            </div>
+
+            <section className="lesson-reader__intro reading-prose">
+              <p className="section-kicker">{lessonLanguageLabels[activeVariant.language]}</p>
+              <p>{activeVariant.readerIntro}</p>
+            </section>
+
+            <div className="lesson-reader__movements reading-prose">
+              {activeVariant.readerSections.map((section, index) => (
+                <div className="lesson-reader__movement" key={`${activeVariant.id}-${section.heading}`}>
+                  <section className="teaching-article__section lesson-reader__section">
+                    <h3>{section.heading}</h3>
+                    {section.paragraphs.map((paragraph) => (
+                      <p key={paragraph}>{paragraph}</p>
+                    ))}
+                  </section>
+
+                  {lesson.rhythmMedia[index] ? (
+                    <MediaBlock
+                      aspectRatio={lesson.rhythmMedia[index].aspectRatio ?? "16:9"}
+                      description={lesson.rhythmMedia[index].description}
+                      imageUrl={lesson.rhythmMedia[index].src}
+                      label={lesson.rhythmMedia[index].label}
+                    />
+                  ) : null}
+                </div>
+              ))}
             </div>
 
             {lesson.relatedTeachingSlug ? (
@@ -148,7 +178,7 @@ export function LessonReaderClient({ lesson }: LessonReaderClientProps) {
               <object
                 data={activeVariant.pdfUrl}
                 type="application/pdf"
-                aria-label={`${lesson.title} PDF preview in ${lessonLanguageLabels[activeVariant.language]}`}
+                aria-label={`${activeVariant.title} PDF preview in ${lessonLanguageLabels[activeVariant.language]}`}
               >
                 <div className="lesson-reader__fallback">
                   <p>The in-browser lesson preview is unavailable on this device.</p>
