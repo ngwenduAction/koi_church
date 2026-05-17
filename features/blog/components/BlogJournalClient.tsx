@@ -8,10 +8,16 @@ import { lessonLanguageLabels, lessonLanguageOptions, type LessonLanguage } from
 
 type BlogJournalClientProps = {
   articles?: MultilingualArticle[];
+  showArticleSwitcher?: boolean;
+  initialArticleSlug?: string;
 };
 
-export function BlogJournalClient({ articles = blogArticles }: BlogJournalClientProps) {
-  const [activeArticleSlug, setActiveArticleSlug] = useState(articles[0]?.slug ?? "");
+export function BlogJournalClient({
+  articles = blogArticles,
+  showArticleSwitcher = true,
+  initialArticleSlug,
+}: BlogJournalClientProps) {
+  const [activeArticleSlug, setActiveArticleSlug] = useState(initialArticleSlug ?? articles[0]?.slug ?? "");
   const [activeLanguage, setActiveLanguage] = useState<LessonLanguage>("en");
 
   const activeArticle = useMemo(
@@ -31,24 +37,26 @@ export function BlogJournalClient({ articles = blogArticles }: BlogJournalClient
         <div className="teaching-masthead__inner blog-journal__masthead">
           <p className="teaching-masthead__eyebrow">{activeArticle.eyebrow}</p>
 
-          <div className="blog-journal__article-switcher" role="tablist" aria-label="Journal articles">
-            {articles.map((article) => {
-              const selected = article.slug === activeArticle.slug;
+          {showArticleSwitcher ? (
+            <div className="blog-journal__article-switcher" role="tablist" aria-label="Journal articles">
+              {articles.map((article) => {
+                const selected = article.slug === activeArticle.slug;
 
-              return (
-                <button
-                  key={article.slug}
-                  className={`blog-journal__switcher-tab${selected ? " is-active" : ""}`}
-                  type="button"
-                  role="tab"
-                  aria-selected={selected}
-                  onClick={() => setActiveArticleSlug(article.slug)}
-                >
-                  {article.translations.en.title}
-                </button>
-              );
-            })}
-          </div>
+                return (
+                  <button
+                    key={article.slug}
+                    className={`blog-journal__switcher-tab${selected ? " is-active" : ""}`}
+                    type="button"
+                    role="tab"
+                    aria-selected={selected}
+                    onClick={() => setActiveArticleSlug(article.slug)}
+                  >
+                    {article.translations.en.title}
+                  </button>
+                );
+              })}
+            </div>
+          ) : null}
 
           <div className="blog-journal__language-toggle" role="tablist" aria-label="Editorial language">
             {lessonLanguageOptions.map((language) => {

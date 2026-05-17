@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { lessonVariants } from "../../../content/lessons";
 import { LessonReaderClient } from "../../../features/lessons/components/LessonReaderClient";
-import { getLessonGroupBySlug } from "../../../features/lessons/lib/library";
+import { getLessonGroupBySlug, groupLessonVariants } from "../../../features/lessons/lib/library";
 import { Container } from "../../../shared/components/Container";
 
 type LessonReaderPageProps = {
@@ -10,6 +10,12 @@ type LessonReaderPageProps = {
     slug: string;
   }>;
 };
+
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return groupLessonVariants(lessonVariants).map((lesson) => ({ slug: lesson.slug }));
+}
 
 export async function generateMetadata({ params }: LessonReaderPageProps): Promise<Metadata> {
   const { slug } = await params;

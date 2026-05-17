@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
@@ -19,12 +19,38 @@ const inter = Inter({
   display: "swap",
 });
 
+const metadataBase = new URL(process.env.NEXT_PUBLIC_SITE_URL ?? process.env.NEXTAUTH_URL ?? "http://localhost:3000");
+const socialImage = "/KOI_logo/koi_logo_black.png";
+
 export const metadata: Metadata = {
+  metadataBase,
   title: {
     default: `${site.name} | Sabbath Bible Study`,
     template: `%s | ${site.name}`,
   },
   description: site.description,
+  openGraph: {
+    title: `${site.name} | Sabbath Bible Study`,
+    description: site.description,
+    siteName: site.name,
+    type: "website",
+    locale: "en_ZA",
+    url: metadataBase,
+    images: [
+      {
+        url: socialImage,
+        width: 1200,
+        height: 630,
+        alt: `${site.name} identity mark`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${site.name} | Sabbath Bible Study`,
+    description: site.description,
+    images: [socialImage],
+  },
 };
 
 export default function RootLayout({
