@@ -3,18 +3,24 @@ import Image from "next/image";
 type KoiLogoMarkProps = {
   priority?: boolean;
   className?: string;
-  size?: number;
+  sizes?: string;
 };
 
-export function KoiLogoMark({ priority = false, className = "", size = 72 }: KoiLogoMarkProps) {
+export function KoiLogoMark({
+  priority = false,
+  className = "",
+  sizes = "(max-width: 767px) 72px, 96px",
+}: KoiLogoMarkProps) {
   return (
-    <Image
-      src="/KOI_logo/koi_logo_b_trans.png"
-      alt="Kingdom of Israel"
-      className={`koi-logo-mark ${className}`.trim()}
-      width={size}
-      height={size}
-      priority={priority}
-    />
+    <span className={`koi-logo-mark ${className}`.trim()}>
+      <Image
+        src="/KOI_logo/koi_logo_b_trans.png"
+        alt="Kingdom of Israel"
+        fill
+        priority={priority}
+        sizes={sizes}
+        className="koi-logo-mark__image"
+      />
+    </span>
   );
 }

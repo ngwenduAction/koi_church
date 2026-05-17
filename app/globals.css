@@ -3139,3 +3139,66 @@ select,
     height: 3.8rem;
   }
 }
+
+.koi-logo-mark {
+  position: relative;
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.koi-logo-mark__image {
+  object-fit: contain;
+  object-position: left center;
+}
+
+.site-header__brand {
+  position: relative;
+  display: inline-flex;
+  flex: 0 0 auto;
+  inline-size: auto;
+  min-inline-size: 5rem;
+  block-size: clamp(4rem, 8vw, 5rem);
+  min-block-size: 4rem;
+  max-width: none;
+}
+
+.site-header__brand-mark {
+  display: block;
+  inline-size: auto;
+  block-size: 100%;
+  aspect-ratio: 1 / 1;
+  max-width: none;
+  max-height: none;
+}
+
+.site-footer__brand-mark-link {
+  position: relative;
+  display: inline-flex;
+  flex: 0 0 auto;
+  inline-size: auto;
+  block-size: clamp(5rem, 10vw, 6.25rem);
+  min-block-size: 5rem;
+  max-width: none;
+}
+
+.site-footer__brand-mark {
+  display: block;
+  inline-size: auto;
+  block-size: 100%;
+  aspect-ratio: 1 / 1;
+  max-width: none;
+  max-height: none;
+}
+
+@media (max-width: 767px) {
+  .site-header__brand {
+    block-size: 4.25rem;
+    min-block-size: 4.25rem;
+  }
+
+  .site-footer__brand-mark-link {
+    block-size: 5.5rem;
+    min-block-size: 5.5rem;
+  }
+}

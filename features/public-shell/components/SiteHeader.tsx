@@ -7,7 +7,7 @@ export function SiteHeader() {
     <header className="site-header">
       <div className="site-header__inner">
         <Link className="site-header__brand" href="/" aria-label="Kingdom of Israel home">
-          <KoiLogoMark className="site-header__brand-mark" priority size={90} />
+          <KoiLogoMark className="site-header__brand-mark" priority sizes="(max-width: 767px) 76px, 112px" />
         </Link>
         <MobileNav />
       </div>

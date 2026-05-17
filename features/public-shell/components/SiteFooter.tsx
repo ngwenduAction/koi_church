@@ -10,7 +10,7 @@ export function SiteFooter() {
       <Container className="site-footer__inner">
         <div className="site-footer__identity">
           <Link className="site-footer__brand-mark-link" href="/" aria-label="Kingdom of Israel home">
-            <KoiLogoMark className="site-footer__brand-mark" size={84} />
+            <KoiLogoMark className="site-footer__brand-mark" sizes="(max-width: 767px) 96px, 128px" />
           </Link>
           <p>{site.description}</p>
         </div>
