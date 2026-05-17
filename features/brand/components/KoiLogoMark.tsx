@@ -9,14 +9,15 @@ type KoiLogoMarkProps = {
 export function KoiLogoMark({
   priority = false,
   className = "",
-  sizes = "(max-width: 767px) 72px, 96px",
+  sizes = "(max-width: 767px) 176px, 240px",
 }: KoiLogoMarkProps) {
   return (
     <span className={`koi-logo-mark ${className}`.trim()}>
       <Image
         src="/KOI_logo/koi_logo_b_trans.png"
         alt="Kingdom of Israel"
-        fill
+        width={800}
+        height={150}
         priority={priority}
         sizes={sizes}
         className="koi-logo-mark__image"

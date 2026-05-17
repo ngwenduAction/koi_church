@@ -20,7 +20,7 @@ const inter = Inter({
 });
 
 const metadataBase = new URL(process.env.NEXT_PUBLIC_SITE_URL ?? process.env.NEXTAUTH_URL ?? "http://localhost:3000");
-const socialImage = "/KOI_logo/koi_logo_black.png";
+const socialImage = "/KOI_logo/KOI_Large_Site_Icon.png";
 
 export const metadata: Metadata = {
   metadataBase,
@@ -29,6 +29,10 @@ export const metadata: Metadata = {
     template: `%s | ${site.name}`,
   },
   description: site.description,
+  icons: {
+    icon: "/KOI_logo/KOI Favicon.png",
+    apple: "/KOI_logo/KOI_Apple_Touch_Icon.png",
+  },
   openGraph: {
     title: `${site.name} | Sabbath Bible Study`,
     description: site.description,
@@ -39,9 +43,9 @@ export const metadata: Metadata = {
     images: [
       {
         url: socialImage,
-        width: 1200,
-        height: 630,
-        alt: `${site.name} identity mark`,
+        width: 1024,
+        height: 1024,
+        alt: "Kingdom of Israel (KOI)",
       },
     ],
   },
