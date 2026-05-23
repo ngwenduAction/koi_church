@@ -62,7 +62,7 @@ const inferredTarget =
 
 const schemaPath =
   inferredTarget === "rds"
-    ? resolve(process.cwd(), "prisma", "schema.rds.prisma")
+    ? resolve(process.cwd(), "prisma-rds", "schema.prisma")
     : resolve(process.cwd(), "prisma", "schema.prisma");
 
 console.log(`[prisma-command] target=${inferredTarget} schema=${schemaPath}`);
@@ -82,3 +82,4 @@ if (result.error) {
 }
 
 process.exit(1);
+

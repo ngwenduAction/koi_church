@@ -37,10 +37,11 @@ npm run prisma:push
 npm run prisma:push:rds
 ```
 
-- `prisma:generate` chooses `prisma/schema.prisma` for local SQLite and `prisma/schema.rds.prisma` for PostgreSQL.
+- `prisma:generate` chooses `prisma/schema.prisma` for local SQLite and `prisma-rds/schema.prisma` for PostgreSQL.
 - `prisma:push` does the same automatic environment detection.
 - `prisma:push:rds` forces the Aurora/PostgreSQL schema explicitly.
 
 ## If using IAM database auth
 
 Generate the auth token first, then place the resolved token into the password position of the URL before running Prisma. Because the token is temporary, do the schema push immediately after generating it.
+
