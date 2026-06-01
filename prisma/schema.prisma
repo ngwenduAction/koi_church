@@ -4,7 +4,8 @@ generator client {
 
 datasource db {
   provider = "sqlite"
-  url      = "file:./dev.db"
+  // Connection URLs are configured outside the schema in Prisma v7+
+  // See https://pris.ly/d/config-datasource
 }
 
 model MembershipRequest {
