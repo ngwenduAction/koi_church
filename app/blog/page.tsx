@@ -37,7 +37,7 @@ export default async function BlogPage() {
         mediaMobileUrl="/media/blog-hero-mobile.jpg"
         pageTitleKey="hero.blogTitle"
         pageCaptionKey="hero.blogCaption"
-        bottomImage="/media/Sabbath study atmosphere in Johannesburg, warm natural light.jpg"
+        bottomImage="/media/transparent-bottom (1).png"
       />
 
       <PageHero
