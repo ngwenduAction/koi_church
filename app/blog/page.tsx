@@ -1,10 +1,12 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 import type {Metadata} from "next";
 import {getLocale, getTranslations} from "next-intl/server";
+import {blogArticles, getArticleReadingMinutes} from "../../content/blog";
+import {HeroInterface} from "../../features/home/components/HeroInterface";
+import {PageHero} from "../../features/pages/components/PageHero";
+import {isLessonLanguage, type LessonLanguage} from "../../features/lessons/types";
 import {Link} from "../../i18n/navigation";
 import {Container} from "../../shared/components/Container";
-import {blogArticles, getArticleReadingMinutes} from "../../content/blog";
-import {isLessonLanguage, type LessonLanguage} from "../../features/lessons/types";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("pages.blog");
@@ -29,38 +31,22 @@ export default async function BlogPage() {
 
   return (
     <main className="blog-page-shell blog-page-shell--premium">
-      <section className="blog-archive-hero" aria-labelledby="blog-archive-title">
-        <Container className="blog-archive-hero__inner">
-          <div className="blog-archive-hero__copy">
-            <p className="section-kicker">{t("eyebrow")}</p>
-            <h1 id="blog-archive-title">{t("title")}</h1>
-            <p>{t("body")}</p>
-          </div>
+      <HeroInterface
+        mediaUrl="/media/blog-hero.jpg"
+        mediaTabletUrl="/media/blog-hero-tablet.jpg"
+        mediaMobileUrl="/media/blog-hero-mobile.jpg"
+        pageTitleKey="hero.blogTitle"
+        pageCaptionKey="hero.blogCaption"
+        bottomImage="/media/Sabbath study atmosphere in Johannesburg, warm natural light.jpg"
+      />
 
-          <Link href={`/blog/${featuredArticle.slug}`} className="blog-featured-entry" aria-label={featuredTranslation.title}>
-            <div className="blog-featured-entry__media">
-              <Image
-                src={featuredArticle.heroImage}
-                alt=""
-                fill
-                sizes="(max-width: 900px) 100vw, 48vw"
-                priority
-              />
-            </div>
-            <div className="blog-featured-entry__content">
-              <div className="blog-featured-entry__meta">
-                <span>{featuredCategory}</span>
-                <span>{blogT("readingTime", {count: featuredReadingMinutes})}</span>
-              </div>
-              <h2>{featuredTranslation.title}</h2>
-              <p>{featuredTranslation.intro}</p>
-              <span>{t("readArticle")}</span>
-            </div>
-          </Link>
-        </Container>
-      </section>
+      <PageHero
+        eyebrow={t("eyebrow")}
+        title={t("title")}
+        description={t("body")}
+      />
 
-      <Container className="blog-archive-layout">
+      <Container className="blog-archive-layout blog-archive-layout--shared-hero">
         <aside className="blog-archive-rail" aria-label={t("archiveTitle")}>
           <p className="section-kicker">{t("archiveLabel")}</p>
           <h2>{t("archiveTitle")}</h2>
@@ -83,6 +69,27 @@ export default async function BlogPage() {
         </aside>
 
         <section className="blog-archive-feed" aria-label={t("linksLabel")}>
+          <Link href={`/blog/${featuredArticle.slug}`} className="blog-featured-entry blog-featured-entry--inline" aria-label={featuredTranslation.title}>
+            <div className="blog-featured-entry__media">
+              <Image
+                src={featuredArticle.heroImage}
+                alt=""
+                fill
+                sizes="(max-width: 900px) 100vw, 58vw"
+                priority
+              />
+            </div>
+            <div className="blog-featured-entry__content">
+              <div className="blog-featured-entry__meta">
+                <span>{featuredCategory}</span>
+                <span>{blogT("readingTime", {count: featuredReadingMinutes})}</span>
+              </div>
+              <h2>{featuredTranslation.title}</h2>
+              <p>{featuredTranslation.intro}</p>
+              <span>{t("readArticle")}</span>
+            </div>
+          </Link>
+
           {archiveArticles.map((article, index) => {
             const translation = article.translations[activeLanguage] ?? article.translations.en;
             const readingMinutes = getArticleReadingMinutes(article, activeLanguage);
