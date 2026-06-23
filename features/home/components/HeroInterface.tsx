@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useRef } from "react";
 import { useLocale, useTranslations } from "next-intl";
@@ -308,8 +308,21 @@ export function HeroInterface({
         }
 
         .koi-identity-logo {
-          width: 16rem;
+          display: inline-flex;
+          width: min(16rem, 100%);
           height: auto;
+          block-size: auto;
+          flex: 0 0 auto;
+          overflow: visible;
+        }
+
+        .koi-identity-logo .koi-logo-mark__image {
+          display: block;
+          width: 100% !important;
+          height: auto !important;
+          max-width: 100%;
+          object-fit: contain;
+          object-position: left center;
         }
 
         .koi-identity-text {
@@ -579,7 +592,8 @@ export function HeroInterface({
           }
 
           .koi-identity-logo {
-            width: min(11.5rem, 54vw);
+            width: min(10.75rem, calc(100vw - 6.5rem));
+            max-width: 100%;
           }
 
           .koi-identity-text {
@@ -707,6 +721,22 @@ export function HeroInterface({
           }
         }
 
+
+        @media (max-width: 380px) {
+          .koi-identity-card {
+            padding-inline: 0.78rem;
+          }
+
+          .koi-identity-logo {
+            width: min(9.85rem, calc(100vw - 6rem));
+          }
+        }
+
+        @media (max-width: 340px) {
+          .koi-identity-logo {
+            width: min(9.15rem, calc(100vw - 5.7rem));
+          }
+        }
         @media (min-width: 540px) and (max-width: 1023px) {
           .koi-hero-stack,
           .koi-identity-card,
@@ -720,7 +750,7 @@ export function HeroInterface({
           }
 
           .koi-identity-logo {
-            width: 11rem;
+            width: min(11.75rem, 48vw);
           }
 
           .koi-identity-title {

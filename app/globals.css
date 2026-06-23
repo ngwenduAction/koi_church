@@ -4778,3 +4778,382 @@ select,
     flex-direction: column;
   }
 }
+
+
+/* KOI global responsive fit pass */
+img,
+video,
+canvas,
+svg,
+iframe,
+object {
+  max-inline-size: 100%;
+}
+
+.blog-archive-hero__inner,
+.blog-archive-hero__copy,
+.blog-featured-entry,
+.blog-featured-entry__content,
+.blog-archive-layout,
+.blog-archive-rail,
+.blog-archive-feed,
+.blog-archive-entry,
+.blog-archive-entry__body,
+.blog-journal,
+.blog-journal__masthead,
+.blog-journal__lead,
+.blog-journal__body,
+.blog-journal__section,
+.institution-layout,
+.institution-section__heading,
+.institution-copy-block,
+.info-list,
+.detail-grid,
+.detail-grid__item,
+.intake-shell,
+.intake-form,
+.lesson-row,
+.lesson-row__body,
+.lesson-row__actions,
+.lesson-reader,
+.lesson-reader__header,
+.lesson-reader__content,
+.lesson-reader__document,
+.feasts-section,
+.feast-row,
+.preview-card {
+  min-inline-size: 0;
+}
+
+.blog-archive-hero__copy h1,
+.blog-featured-entry h2,
+.blog-archive-entry h3,
+.blog-archive-rail h2,
+.blog-journal__masthead h1,
+.blog-journal__section h2,
+.institution-hero h1,
+.institution-section__heading h2,
+.institution-copy-block h2,
+.info-list h2,
+.intake-shell h2,
+.lesson-row h2,
+.lesson-reader__header h1,
+.lesson-reader__panel-head h2,
+.feasts-section h2,
+.feast-row h3,
+.preview-card h2 {
+  max-inline-size: 100%;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  text-wrap: balance;
+}
+
+.blog-featured-entry__meta,
+.blog-archive-entry__meta,
+.blog-archive-entry__taxonomy,
+.blog-topic-stack,
+.blog-journal__byline,
+.blog-journal__lead dd,
+.lesson-row__meta-row,
+.lesson-row__languages,
+.lesson-row__actions,
+.lesson-reader__header-top,
+.lesson-reader__matrix,
+.lesson-reader__downloads,
+.detail-grid,
+.bank-block,
+.bank-block__row,
+.intake-form__footer {
+  min-inline-size: 0;
+  max-inline-size: 100%;
+}
+
+.blog-featured-entry__meta span,
+.blog-archive-entry__meta span,
+.blog-archive-entry__taxonomy span,
+.blog-topic-stack span,
+.blog-journal__byline span,
+.blog-journal__lead dd span,
+.lesson-row__language,
+.lesson-row__reader-link,
+.lesson-filter-chip,
+.detail-grid dd,
+.bank-block__row strong,
+.bank-block__row span {
+  min-inline-size: 0;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 640px) {
+  .blog-archive-hero {
+    padding-block: 3.5rem 2.75rem;
+  }
+
+  .blog-archive-hero__inner,
+  .blog-archive-layout,
+  .blog-journal__lead,
+  .institution-layout--split,
+  .institution-layout--dress-code,
+  .institution-split-list--columns,
+  .lesson-row,
+  .feast-row {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .blog-archive-hero__copy {
+    gap: var(--space-3);
+  }
+
+  .blog-archive-hero__copy h1 {
+    max-inline-size: 100%;
+    font-size: clamp(2.2rem, 11vw, 3.25rem);
+    line-height: 1;
+    letter-spacing: -0.022em;
+  }
+
+  .blog-archive-hero__copy p:not(.section-kicker),
+  .blog-archive-rail p:not(.section-kicker),
+  .blog-archive-entry p,
+  .institution-section__heading p:not(.section-kicker),
+  .institution-copy-block p:not(.section-kicker),
+  .intake-shell__intro p,
+  .lesson-row__summary,
+  .reading-prose {
+    max-inline-size: 100%;
+    font-size: 1rem;
+    line-height: 1.62;
+  }
+
+  .blog-featured-entry {
+    min-block-size: 24rem;
+    border-radius: 1rem;
+  }
+
+  .blog-featured-entry__content {
+    gap: 0.72rem;
+    padding: 1.1rem;
+  }
+
+  .blog-featured-entry h2 {
+    max-inline-size: 100%;
+    font-size: clamp(1.62rem, 8.2vw, 2.32rem);
+    line-height: 1.04;
+    letter-spacing: -0.018em;
+  }
+
+  .blog-featured-entry p {
+    display: -webkit-box;
+    max-inline-size: 100%;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
+  .blog-featured-entry__meta,
+  .blog-archive-entry__meta,
+  .blog-journal__byline {
+    gap: 0.35rem 0.7rem;
+    font-size: 0.62rem;
+    letter-spacing: 0.105em;
+  }
+
+  .blog-archive-layout {
+    gap: var(--space-7);
+    padding-block: var(--space-7);
+  }
+
+  .blog-archive-rail {
+    position: static;
+    gap: var(--space-3);
+  }
+
+  .blog-archive-rail h2,
+  .institution-section__heading h2,
+  .institution-copy-block h2,
+  .info-list h2,
+  .intake-shell h2,
+  .lesson-reader__panel-head h2,
+  .blog-journal__section h2 {
+    font-size: clamp(1.65rem, 8vw, 2.25rem);
+    line-height: 1.05;
+    letter-spacing: -0.014em;
+  }
+
+  .blog-archive-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-3);
+  }
+
+  .blog-archive-stats dd {
+    font-size: clamp(1.7rem, 8vw, 2.3rem);
+  }
+
+  .blog-topic-stack,
+  .blog-archive-entry__taxonomy,
+  .blog-journal__lead dd,
+  .lesson-row__languages {
+    gap: 0.38rem;
+  }
+
+  .blog-topic-stack span,
+  .blog-archive-entry__taxonomy span,
+  .blog-journal__lead dd span,
+  .lesson-row__language {
+    padding: 0.32rem 0.55rem;
+    font-size: 0.58rem;
+    letter-spacing: 0.08em;
+  }
+
+  .blog-archive-entry {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: var(--space-3);
+    padding-block: 1.55rem;
+  }
+
+  .blog-archive-entry__index {
+    font-size: 1.3rem;
+  }
+
+  .blog-archive-entry h3 {
+    max-inline-size: 100%;
+    font-size: clamp(1.45rem, 7.6vw, 2.05rem);
+    line-height: 1.06;
+    letter-spacing: -0.012em;
+  }
+
+  .blog-archive-entry__media {
+    grid-column: auto;
+    inline-size: min(100%, 17rem);
+    aspect-ratio: 16 / 10;
+  }
+
+  .blog-journal--premium {
+    padding-block: 3.5rem 4.5rem;
+  }
+
+  .blog-journal__masthead {
+    gap: var(--space-3);
+  }
+
+  .blog-journal__masthead h1,
+  .lesson-reader__header h1,
+  .institution-hero h1 {
+    max-inline-size: 100%;
+    font-size: clamp(2rem, 10.5vw, 3.1rem);
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+  }
+
+  .blog-journal__article-nav,
+  .blog-language-toggle,
+  .lesson-reader__matrix,
+  .lesson-reader__downloads,
+  .lesson-row__actions {
+    display: grid;
+    justify-content: stretch;
+  }
+
+  .blog-journal__article-nav button,
+  .blog-language-toggle button,
+  .blog-journal__share button,
+  .lesson-reader__matrix-item,
+  .lesson-reader__language-pill,
+  .lesson-row__reader-link,
+  .intake-submit {
+    inline-size: 100%;
+    max-inline-size: 100%;
+    justify-content: center;
+    min-block-size: 2.75rem;
+    padding-inline: 0.8rem;
+  }
+
+  .blog-journal__hero {
+    aspect-ratio: 4 / 5;
+    margin-block-start: var(--space-6);
+    border-radius: 1rem;
+  }
+
+  .blog-journal__hero figcaption,
+  .media-block__label {
+    inset-inline: 0.85rem auto;
+    max-inline-size: calc(100% - 1.7rem);
+    overflow-wrap: break-word;
+  }
+
+  .blog-journal__lead {
+    gap: var(--space-5);
+    margin-block-start: var(--space-6);
+    padding-block-end: var(--space-6);
+  }
+
+  .blog-journal__lead > p {
+    font-size: clamp(1.25rem, 6.1vw, 1.7rem);
+    line-height: 1.16;
+  }
+
+  .blog-journal__body {
+    max-inline-size: 100%;
+    margin-block-start: var(--space-6);
+  }
+
+  .blog-journal__section {
+    gap: var(--space-3);
+    padding-block: var(--space-5);
+  }
+
+  .blog-journal__footer,
+  .intake-form__footer,
+  .lesson-reader__panel-head,
+  .lesson-reader__header-top {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .detail-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .detail-grid__item,
+  .intake-shell--study,
+  .intake-success,
+  .lesson-reader__document {
+    padding: var(--space-4);
+  }
+
+  .bank-block__row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-2);
+  }
+}
+
+@media (max-width: 380px) {
+  .blog-archive-hero__copy h1,
+  .blog-journal__masthead h1,
+  .lesson-reader__header h1,
+  .institution-hero h1 {
+    font-size: clamp(1.9rem, 10vw, 2.75rem);
+  }
+
+  .blog-featured-entry h2,
+  .blog-archive-entry h3 {
+    font-size: clamp(1.38rem, 7.4vw, 1.92rem);
+  }
+
+  .blog-featured-entry__content {
+    padding: 0.95rem;
+  }
+
+  .blog-journal__article-nav button,
+  .blog-language-toggle button,
+  .blog-journal__share button,
+  .lesson-reader__matrix-item,
+  .lesson-reader__language-pill,
+  .lesson-row__reader-link,
+  .intake-submit {
+    min-block-size: 2.55rem;
+    font-size: 0.58rem;
+    letter-spacing: 0.075em;
+  }
+}
