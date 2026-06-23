@@ -1,28 +1,121 @@
-import { blogArticles } from "../../content/blog";
-import { BlogJournalClient } from "../../features/blog/components/BlogJournalClient";
-import { Container } from "../../shared/components/Container";
-import type { Metadata } from "next";
-import Link from "next/link";
+﻿import Image from "next/image";
+import type {Metadata} from "next";
+import {getLocale, getTranslations} from "next-intl/server";
+import {Link} from "../../i18n/navigation";
+import {Container} from "../../shared/components/Container";
+import {blogArticles, getArticleReadingMinutes} from "../../content/blog";
+import {isLessonLanguage, type LessonLanguage} from "../../features/lessons/types";
 
-export const metadata: Metadata = {
-  title: "Blog | Kingdom of Israel",
-  description: "Multilingual KOI editorial writings, study reflections, and doctrinal journal articles.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("pages.blog");
 
-export default function BlogPage() {
+  return {
+    title: t("metadataTitle"),
+    description: t("metadataDescription"),
+  };
+}
+
+export default async function BlogPage() {
+  const locale = await getLocale();
+  const activeLanguage: LessonLanguage = isLessonLanguage(locale) ? locale : "en";
+  const t = await getTranslations("pages.blog");
+  const blogT = await getTranslations("blog");
+  const [featuredArticle, ...archiveArticles] = blogArticles;
+  const featuredTranslation = featuredArticle.translations[activeLanguage] ?? featuredArticle.translations.en;
+  const featuredCategory = blogT(`categories.${featuredArticle.category}`);
+  const featuredReadingMinutes = getArticleReadingMinutes(featuredArticle, activeLanguage);
+  const articleCount = blogArticles.length;
+  const topicEntries = Array.from(new Set(blogArticles.flatMap((article) => article.topics)));
+
   return (
-    <section className="blog-journal-page">
-      <Container size="narrow">
-        <BlogJournalClient />
+    <main className="blog-page-shell blog-page-shell--premium">
+      <section className="blog-archive-hero" aria-labelledby="blog-archive-title">
+        <Container className="blog-archive-hero__inner">
+          <div className="blog-archive-hero__copy">
+            <p className="section-kicker">{t("eyebrow")}</p>
+            <h1 id="blog-archive-title">{t("title")}</h1>
+            <p>{t("body")}</p>
+          </div>
 
-        <nav className="blog-index-links" aria-label="Journal article links">
-          {blogArticles.map((article) => (
-            <Link key={article.slug} href={`/blog/${article.slug}`}>
-              {article.translations.en.title}
-            </Link>
-          ))}
-        </nav>
+          <Link href={`/blog/${featuredArticle.slug}`} className="blog-featured-entry" aria-label={featuredTranslation.title}>
+            <div className="blog-featured-entry__media">
+              <Image
+                src={featuredArticle.heroImage}
+                alt=""
+                fill
+                sizes="(max-width: 900px) 100vw, 48vw"
+                priority
+              />
+            </div>
+            <div className="blog-featured-entry__content">
+              <div className="blog-featured-entry__meta">
+                <span>{featuredCategory}</span>
+                <span>{blogT("readingTime", {count: featuredReadingMinutes})}</span>
+              </div>
+              <h2>{featuredTranslation.title}</h2>
+              <p>{featuredTranslation.intro}</p>
+              <span>{t("readArticle")}</span>
+            </div>
+          </Link>
+        </Container>
+      </section>
+
+      <Container className="blog-archive-layout">
+        <aside className="blog-archive-rail" aria-label={t("archiveTitle")}>
+          <p className="section-kicker">{t("archiveLabel")}</p>
+          <h2>{t("archiveTitle")}</h2>
+          <p>{t("archiveBody")}</p>
+          <dl className="blog-archive-stats">
+            <div>
+              <dt>{t("articleCountLabel")}</dt>
+              <dd>{articleCount}</dd>
+            </div>
+            <div>
+              <dt>{t("topicCountLabel")}</dt>
+              <dd>{topicEntries.length}</dd>
+            </div>
+          </dl>
+          <div className="blog-topic-stack" aria-label={blogT("topicsLabel")}>
+            {topicEntries.map((topic) => (
+              <span key={topic}>{blogT(`topics.${topic}`)}</span>
+            ))}
+          </div>
+        </aside>
+
+        <section className="blog-archive-feed" aria-label={t("linksLabel")}>
+          {archiveArticles.map((article, index) => {
+            const translation = article.translations[activeLanguage] ?? article.translations.en;
+            const readingMinutes = getArticleReadingMinutes(article, activeLanguage);
+            const category = blogT(`categories.${article.category}`);
+            const topics = article.topics.map((topic) => blogT(`topics.${topic}`));
+
+            return (
+              <Link key={article.slug} href={`/blog/${article.slug}`} className="blog-archive-entry">
+                <div className="blog-archive-entry__index">{String(index + 2).padStart(2, "0")}</div>
+                <div className="blog-archive-entry__body">
+                  <div className="blog-archive-entry__meta">
+                    <span>{category}</span>
+                    <span>{blogT("readingTime", {count: readingMinutes})}</span>
+                  </div>
+                  <h3>{translation.title}</h3>
+                  <p>{translation.intro}</p>
+                  <div className="blog-archive-entry__taxonomy">
+                    {article.scriptureReferences.map((reference) => (
+                      <span key={reference}>{reference}</span>
+                    ))}
+                    {topics.map((topic) => (
+                      <span key={topic}>{topic}</span>
+                    ))}
+                  </div>
+                </div>
+                <div className="blog-archive-entry__media" aria-hidden="true">
+                  <Image src={article.heroImage} alt="" fill sizes="220px" />
+                </div>
+              </Link>
+            );
+          })}
+        </section>
       </Container>
-    </section>
+    </main>
   );
 }

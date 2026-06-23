@@ -1,9 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { membershipForm } from "../../../content/institutional";
+import { useTranslations } from "next-intl";
 
 export function MembershipForm() {
+  const t = useTranslations("forms");
   const [values, setValues] = useState({
     fullName: "",
     email: "",
@@ -41,15 +42,15 @@ export function MembershipForm() {
 
     const nextErrors: typeof errors = {};
 
-    if (!values.fullName.trim()) nextErrors.fullName = "This field is required.";
-    if (!values.email.trim()) nextErrors.email = "This field is required.";
-    if (!values.phone.trim()) nextErrors.phone = "This field is required.";
-    if (!values.city.trim()) nextErrors.city = "This field is required.";
+    if (!values.fullName.trim()) nextErrors.fullName = t("common.required");
+    if (!values.email.trim()) nextErrors.email = t("common.required");
+    if (!values.phone.trim()) nextErrors.phone = t("common.required");
+    if (!values.city.trim()) nextErrors.city = t("common.required");
     if (!values.foundationAcknowledgment) {
-      nextErrors.foundationAcknowledgment = "This acknowledgement is required.";
+      nextErrors.foundationAcknowledgment = t("common.ackRequired");
     }
     if (values.email.trim() && !validateEmail(values.email)) {
-      nextErrors.email = "Enter a valid email address.";
+      nextErrors.email = t("common.emailInvalid");
     }
 
     setErrors(nextErrors);
@@ -79,14 +80,14 @@ export function MembershipForm() {
       const payload = (await response.json()) as { error?: string };
 
       if (!response.ok) {
-        setSubmitError(payload.error ?? "Unable to submit membership request.");
+        setSubmitError(payload.error ?? t("membership.submitError"));
         setSubmitted(false);
         return;
       }
 
       setSubmitted(true);
     } catch {
-      setSubmitError("Unable to submit membership request.");
+      setSubmitError(t("membership.submitError"));
       setSubmitted(false);
     } finally {
       setIsSubmitting(false);
@@ -96,9 +97,9 @@ export function MembershipForm() {
   if (submitted) {
     return (
       <section className="intake-success" aria-live="polite">
-        <p className="section-kicker">Received</p>
-        <h2>{membershipForm.successTitle}</h2>
-        <p>{membershipForm.successBody}</p>
+        <p className="section-kicker">{t("common.received")}</p>
+        <h2>{t("membership.successTitle")}</h2>
+        <p>{t("membership.successBody")}</p>
       </section>
     );
   }
@@ -106,19 +107,19 @@ export function MembershipForm() {
   return (
     <section className="intake-shell intake-shell--study">
       <div className="intake-shell__intro">
-        <p className="section-kicker">Interview Request</p>
-        <h2>{membershipForm.title}</h2>
-        <p>{membershipForm.description}</p>
+        <p className="section-kicker">{t("membership.kicker")}</p>
+        <h2>{t("membership.title")}</h2>
+        <p>{t("membership.description")}</p>
       </div>
 
       <form className="intake-form" noValidate onSubmit={handleSubmit}>
         <div className="form-field">
-          <label htmlFor="membership-full-name">Full Name</label>
+          <label htmlFor="membership-full-name">{t("membership.fields.fullName.label")}</label>
           <input
             aria-invalid={errors.fullName ? "true" : "false"}
             id="membership-full-name"
             onChange={(event) => handleChange("fullName", event.target.value)}
-            placeholder="Your full name"
+            placeholder={t("membership.fields.fullName.placeholder")}
             type="text"
             value={values.fullName}
           />
@@ -126,7 +127,7 @@ export function MembershipForm() {
         </div>
 
         <div className="form-field">
-          <label htmlFor="membership-email">Email Address</label>
+          <label htmlFor="membership-email">{t("membership.fields.email.label")}</label>
           <input
             aria-invalid={errors.email ? "true" : "false"}
             id="membership-email"
@@ -139,7 +140,7 @@ export function MembershipForm() {
         </div>
 
         <div className="form-field">
-          <label htmlFor="membership-phone">Phone Number</label>
+          <label htmlFor="membership-phone">{t("membership.fields.phone.label")}</label>
           <input
             aria-invalid={errors.phone ? "true" : "false"}
             id="membership-phone"
@@ -152,12 +153,12 @@ export function MembershipForm() {
         </div>
 
         <div className="form-field">
-          <label htmlFor="membership-city">City/Location</label>
+          <label htmlFor="membership-city">{t("membership.fields.city.label")}</label>
           <input
             aria-invalid={errors.city ? "true" : "false"}
             id="membership-city"
             onChange={(event) => handleChange("city", event.target.value)}
-            placeholder="Johannesburg"
+            placeholder={t("membership.fields.city.placeholder")}
             type="text"
             value={values.city}
           />
@@ -172,7 +173,7 @@ export function MembershipForm() {
               onChange={(event) => handleChange("foundationAcknowledgment", event.target.checked)}
               type="checkbox"
             />
-            <span>I confirm my commitment to the doctrinal foundation of KOI.</span>
+            <span>{t("membership.fields.foundationAcknowledgment.label")}</span>
           </label>
           {errors.foundationAcknowledgment ? (
             <p className="form-field__error">{errors.foundationAcknowledgment}</p>
@@ -183,13 +184,13 @@ export function MembershipForm() {
 
         <div className="intake-form__footer">
           <button className="intake-submit" disabled={isSubmitting} type="submit">
-            {isSubmitting ? "Submitting..." : "Request Membership Interview"}
+            {isSubmitting ? t("common.submitting") : t("membership.submitLabel")}
           </button>
-          <p className="intake-form__note">
-            This request will be stored for KOI&apos;s institutional review workflow.
-          </p>
+          <p className="intake-form__note">{t("membership.note")}</p>
         </div>
       </form>
     </section>
   );
 }
+
+

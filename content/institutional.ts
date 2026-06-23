@@ -59,9 +59,9 @@ export const givingDetails = {
   title: "Stewardship in seriousness and order",
   description:
     "Giving is handled plainly, with gratitude before God and without display. Use the banking details below if you wish to support the work.",
-  accountHolder: "Yochanan Israel",
+  accountHolder: "KOI Finance",
   bank: "FNB",
-  accountNumber: "63809512834",
+  accountNumber: "63809500034",
   branch: "250655",
 };
 

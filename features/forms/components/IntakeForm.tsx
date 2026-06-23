@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { useTranslations } from "next-intl";
 import type { IntakeConfig, IntakeField } from "../../../content/institutional";
 
 type IntakeValue = string | boolean;
@@ -8,6 +9,7 @@ type IntakeValue = string | boolean;
 type IntakeFormProps = {
   config: IntakeConfig;
   tone?: "default" | "study";
+  translationNamespace?: "visit" | "contact";
 };
 
 function buildInitialValues(fields: IntakeField[]) {
@@ -21,12 +23,30 @@ function validateEmail(value: string) {
   return /.+@.+\..+/.test(value);
 }
 
-export function IntakeForm({ config, tone = "default" }: IntakeFormProps) {
+export function IntakeForm({ config, tone = "default", translationNamespace }: IntakeFormProps) {
+  const t = useTranslations("forms");
   const initialValues = useMemo(() => buildInitialValues(config.fields), [config.fields]);
   const [values, setValues] = useState<Record<string, IntakeValue>>(initialValues);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState(false);
   const shellClassName = tone === "study" ? "intake-shell intake-shell--study" : "intake-shell";
+
+  function translate(key: string, fallback: string) {
+    try {
+      return t(key);
+    } catch {
+      return fallback;
+    }
+  }
+
+  function scoped(key: string, fallback: string) {
+    return translationNamespace ? translate(`${translationNamespace}.${key}`, fallback) : fallback;
+  }
+
+  function fieldCopy(field: IntakeField, key: "label" | "placeholder" | "helpText", fallback = "") {
+    if (!translationNamespace) return fallback;
+    return translate(`${translationNamespace}.fields.${field.name}.${key}`, fallback);
+  }
 
   function setFieldValue(name: string, value: IntakeValue) {
     setValues((current) => ({ ...current, [name]: value }));
@@ -46,16 +66,16 @@ export function IntakeForm({ config, tone = "default" }: IntakeFormProps) {
 
       if (field.required) {
         if (field.type === "checkbox" && value !== true) {
-          accumulator[field.name] = "This acknowledgement is required.";
+          accumulator[field.name] = t("common.ackRequired");
         }
 
         if (field.type !== "checkbox" && String(value).trim() === "") {
-          accumulator[field.name] = "This field is required.";
+          accumulator[field.name] = t("common.required");
         }
       }
 
       if (field.type === "email" && String(value).trim() !== "" && !validateEmail(String(value))) {
-        accumulator[field.name] = "Enter a valid email address.";
+        accumulator[field.name] = t("common.emailInvalid");
       }
 
       return accumulator;
@@ -74,9 +94,9 @@ export function IntakeForm({ config, tone = "default" }: IntakeFormProps) {
   if (submitted) {
     return (
       <section className="intake-success" aria-live="polite">
-        <p className="section-kicker">Prepared</p>
-        <h2>{config.successTitle}</h2>
-        <p>{config.successBody}</p>
+        <p className="section-kicker">{t("common.prepared")}</p>
+        <h2>{scoped("successTitle", config.successTitle)}</h2>
+        <p>{scoped("successBody", config.successBody)}</p>
       </section>
     );
   }
@@ -84,15 +104,18 @@ export function IntakeForm({ config, tone = "default" }: IntakeFormProps) {
   return (
     <section className={shellClassName}>
       <div className="intake-shell__intro">
-        <p className="section-kicker">Form</p>
-        <h2>{config.title}</h2>
-        <p>{config.description}</p>
+        <p className="section-kicker">{t("common.form")}</p>
+        <h2>{scoped("title", config.title)}</h2>
+        <p>{scoped("description", config.description)}</p>
       </div>
 
       <form className="intake-form" noValidate onSubmit={handleSubmit}>
         {config.fields.map((field) => {
           const error = errors[field.name];
           const fieldId = `field-${field.name}`;
+          const label = fieldCopy(field, "label", field.label);
+          const placeholder = field.placeholder ? fieldCopy(field, "placeholder", field.placeholder) : undefined;
+          const helpText = field.helpText ? fieldCopy(field, "helpText", field.helpText) : undefined;
 
           if (field.type === "checkbox") {
             return (
@@ -105,7 +128,7 @@ export function IntakeForm({ config, tone = "default" }: IntakeFormProps) {
                     onChange={(event) => setFieldValue(field.name, event.target.checked)}
                     type="checkbox"
                   />
-                  <span>{field.label}</span>
+                  <span>{label}</span>
                 </label>
                 {error ? <p className="form-field__error">{error}</p> : null}
               </div>
@@ -114,14 +137,14 @@ export function IntakeForm({ config, tone = "default" }: IntakeFormProps) {
 
           return (
             <div className="form-field" key={field.name}>
-              <label htmlFor={fieldId}>{field.label}</label>
+              <label htmlFor={fieldId}>{label}</label>
               {field.type === "textarea" ? (
                 <textarea
                   aria-invalid={error ? "true" : "false"}
                   id={fieldId}
                   name={field.name}
                   onChange={(event) => setFieldValue(field.name, event.target.value)}
-                  placeholder={field.placeholder}
+                  placeholder={placeholder}
                   rows={6}
                   value={String(values[field.name])}
                 />
@@ -135,7 +158,9 @@ export function IntakeForm({ config, tone = "default" }: IntakeFormProps) {
                 >
                   {field.options?.map((option) => (
                     <option key={`${field.name}-${option.value}`} value={option.value}>
-                      {option.label}
+                      {translationNamespace
+                        ? translate(`${translationNamespace}.fields.${field.name}.options.${option.value || "empty"}`, option.label)
+                        : option.label}
                     </option>
                   ))}
                 </select>
@@ -145,12 +170,12 @@ export function IntakeForm({ config, tone = "default" }: IntakeFormProps) {
                   id={fieldId}
                   name={field.name}
                   onChange={(event) => setFieldValue(field.name, event.target.value)}
-                  placeholder={field.placeholder}
+                  placeholder={placeholder}
                   type={field.type}
                   value={String(values[field.name])}
                 />
               )}
-              {field.helpText ? <p className="form-field__help">{field.helpText}</p> : null}
+              {helpText ? <p className="form-field__help">{helpText}</p> : null}
               {error ? <p className="form-field__error">{error}</p> : null}
             </div>
           );
@@ -158,11 +183,9 @@ export function IntakeForm({ config, tone = "default" }: IntakeFormProps) {
 
         <div className="intake-form__footer">
           <button className="intake-submit" type="submit">
-            {config.submitLabel}
+            {scoped("submitLabel", config.submitLabel)}
           </button>
-          <p className="intake-form__note">
-            This phase validates and resolves locally while KOI's delivery workflow is prepared for the next batch.
-          </p>
+          <p className="intake-form__note">{t("common.localNote")}</p>
         </div>
       </form>
     </section>

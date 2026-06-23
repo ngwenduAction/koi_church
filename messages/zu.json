@@ -1,0 +1,520 @@
+{
+  "common": {
+    "brandHome": "Kingdom of Israel ikhaya",
+    "openNavigation": "Vula ukuhamba",
+    "closeNavigation": "Vala ukuhamba",
+    "sideNavigation": "Ukuhamba eceleni",
+    "languageOptions": "Izinketho zolimi",
+    "english": "English",
+    "zulu": "IsiZulu",
+    "sesotho": "Sesotho",
+    "showAll": "Bonisa konke"
+  },
+  "navigation": {
+    "home": "Ikhaya",
+    "membership": "Ubulungu",
+    "lessons": "Izifundo",
+    "visit": "Vakashela",
+    "giving": "Ukunikela",
+    "blog": "Ibhulogi",
+    "contact": "Xhumana",
+    "lessonLibrary": "Umtapo Wezifundo",
+    "flagshipTeaching": "Isifundo Esikhulu"
+  },
+  "hero": {
+    "title": "Indlu Yokufunda YeSabatha",
+    "meta": "NgoMgqibelo, 12:00 EMINI / Sandton, Johannesburg, 2196",
+    "mediaCaption": "AmaKristu Okuqala",
+    "mediaTitle": "Umthetho, ubufakazi, amanzi aphilayo.",
+    "lessonsTitle": "Joyina Isifundo",
+    "lessonsCaption": "Isango Lezifundo",
+    "visitTitle": "Vakashela Ibandla",
+    "visitCaption": "Isango Lokuvakasha",
+    "givingTitle": "Joyina Ibandla",
+    "givingCaption": "Isango Lokunikela",
+    "membershipTitle": "Joyina Ibandla",
+    "membershipCaption": "Isango Lobulungu",
+    "contactTitle": "Xhumana Nebandla",
+    "contactCaption": "Thintana Nathi",
+    "blogTitle": "Joyina Ibandla",
+    "blogCaption": "Isango Lebhulogi"
+  },
+  "home": {
+    "sabbath": {
+      "eyebrow": "ISabatha Lamasonto Onke",
+      "title": "Sihlangana ngosuku lwesikhombisa ukufunda imibhalo.",
+      "body": "KOI ihlangana ngeSabatha ngalinye ukuze kufundwe ibhayibheli ngokuhleleka, kufundwe imfundiso ngomthetho, abaprofethi, uKristu, nabaphostoli.",
+      "link": "Hlela ukuvakasha kwakho",
+      "metadataLabel": "Imininingwane yeSabatha lamasonto onke",
+      "dayLabel": "Usuku",
+      "dayValue": "NgoMgqibelo",
+      "timeLabel": "Isikhathi",
+      "timeValue": "12:00 emini",
+      "placeLabel": "Indawo",
+      "placeValue": "Sandton, Johannesburg, 2196"
+    },
+    "foundation": {
+      "eyebrow": "Isisekelo",
+      "title": "Yakhiwe phezu kwabaphostoli nabaprofethi, uJesu Kristu uqobo eyitshe legumbi eliyinhloko.",
+      "body": "KOI ingumphakathi wokufunda ibhayibheli ngeSabatha ofundisa izwi likaNkulunkulu elingasikiwe ngokwabaprofethi nabaphostoli. Sigcina iSabatha leNkosi, imikhosi kaLevitikusi 23, umthetho wokudla kaLevitikusi 11, nomthetho wobukhosi weMiyalo Eyishumi.",
+      "pillars": [
+        "UNkulunkulu ka-Israyeli",
+        "uJesu Kristu",
+        "Abaprofethi",
+        "Abaphostoli"
+      ]
+    },
+    "feasts": {
+      "eyebrow": "Imikhosi YeNkosi",
+      "title": "Isikhathi esingcwele, esimisiwe emibhalweni.",
+      "body": "Ukugcinwa okumisiwe kuLevitikusi 23, kumakwe ekhalendeni lika-2026.",
+      "spring": "Imikhosi Yasentwasahlobo",
+      "springRange": "Mashi kuya kuMeyi",
+      "fall": "Imikhosi Yasekwindla",
+      "fallRange": "Septhemba kuya ku-Okthoba",
+      "note": "Ukugcinwa kulandela imibhalo nokubalwa kwesikhathi kwendabuko. Izikhathi zenkonzo zibhaliwe nge-Central ne-Eastern time."
+    },
+    "teaching": {
+      "eyebrow": "Isifundo Sakamuva",
+      "meta": "Isaya 8:20 � Isifundo SeBhayibheli"
+    },
+    "lessonsPreview": {
+      "eyebrow": "Umtapo Wezifundo",
+      "title": "Izinto zokufunda zemfundiso zilungiselelwe ngesiNgisi, isiZulu, neSesotho.",
+      "body": "Izinto zokufunda zeSabatha ngezilimi ezintathu, zilungiselelwe ukufundwa kusayithi.",
+      "link": "Vula Umtapo Wezifundo"
+    }
+  },
+  "footer": {
+    "weekly": "ISabatha Lamasonto Onke",
+    "library": "Umtapo",
+    "channels": "Iziteshi",
+    "lowerBrand": "Kingdom of Israel",
+    "lowerText": "Yakhelwe ukufunda kweSabatha, imfundiso, izifundo, nokuhleleka komphakathi."
+  },
+  "lessons": {
+    "metadataTitle": "Izifundo | Kingdom of Israel",
+    "metadataDescription": "Imibhalo yezifundo zeSabatha ngezilimi eziningi evela ku-Kingdom of Israel, ilungiselelwe ukufundwa kusayithi.",
+    "eyebrow": "Umtapo Wezifundo",
+    "title": "Izinto zokufunda zeSabatha",
+    "body": "Umtapo wezifundo ngezilimi eziningi wemfundiso, ukulungiselela kwamasonto onke, nokufunda ngokucophelela ngesiNgisi, isiZulu, neSesotho.",
+    "filtersLabel": "Izihlungi zolimi lwezifundo",
+    "all": "Konke",
+    "empty": "Azikho izifundo ngalolu limi okwamanje.",
+    "downloadsLabel": "Ukulanda izifundo",
+    "archiveEyebrow": "Umtapo Wokufunda",
+    "archiveTitle": "Umtapo oqala ngomfundi wemfundiso nokufunda kweSabatha.",
+    "archiveBody": "Isifundo ngasinye sihlelwe ngesikhombo sombhalo, isihloko semfundiso, izilimi ezikhona, nezenzo zokufunda kusayithi ukuze izazi nabafundi abasha bahambe ngokucacile.",
+    "archiveCountLabel": "Izifundo emtapweni",
+    "languageCountLabel": "Izilimi ezisekelwayo",
+    "readerFirstLabel": "Ukufunda kuqala",
+    "scriptureAnchorLabel": "Isikhombo sombhalo",
+    "availableLanguages": "Izilimi ezikhona",
+    "studyActions": "Izenzo zokufunda",
+    "readIn": "Funda {language}",
+    "openReader": "Vula umfundi",
+    "noDownloadNote": "Imibhalo ivuleka kumfundi ovikelekile wesayithi. Izilawuli zokulanda aziboniswa ngamabomu.",
+    "showAll": "Bonisa konke",
+    "languageNames": {
+      "en": "English",
+      "zu": "IsiZulu",
+      "st": "Sesotho"
+    },
+    "languages": {
+      "en": "English",
+      "zu": "IsiZulu",
+      "st": "Sesotho"
+    }
+  },
+  "pages": {
+    "visit": {
+      "eyebrow": "Vakashela",
+      "title": "Ikilasi LeSabatha Lamasonto Onke",
+      "description": "Imininingwane yezivakashi yekilasi leSabatha lamasonto onke e-Kingdom of Israel, kufaka okulindelekile, okumele kulethwe, ukuhleleka kokugqoka, nokuhlela ukuvakasha.",
+      "guide": "Umhlahlandlela Wesivakashi",
+      "expectTitle": "Okulindelekile ngeSabatha",
+      "expectBody": "Ikilasi lamasonto onke lihlelekile, lisemibhalweni, futhi liyasebenza. Izivakashi zamukelwa ukufunda, ukulalela, nokuhlanganyela nebandla.",
+      "whatToExpect": "Okulindelekile",
+      "whatToBring": "Okumele ukulethe",
+      "practicalOrder": "Ukuhleleka okusebenzayo",
+      "conduct": "Ukuziphatha",
+      "conductTitle": "Sondela ekilasini ngesizotha nangohlelo.",
+      "conductBody": "Ukugqoka nokuziphatha kufanele kubonise inhlonipho ebandleni. Lezi ziqondiso zilandelwa esakhiweni ngesikhathi sekilasi.",
+      "dressCode": "Indlela Yokugqoka",
+      "dressTitle": "Ukugqoka ngesizotha kuyadingeka kwabesilisa nabesifazane.",
+      "dressBody": "Lezi zimfuneko zabelwa ngokucacile ukuze izivakashi zifike zilungile futhi zingenakungabaza.",
+      "men": "Abesilisa",
+      "women": "Abesifazane",
+      "request": "Isicelo Sokuvakasha",
+      "requestTitle": "Tshela KOI ukuthi uhlela ukuza.",
+      "requestBody": "Lokhu kusiza ikilasi lamukele izivakashi ngokucacile, ikakhulukazi uma unemibuzo ngesikhatsi, ukufinyeleleka, noma ukuza nomndeni.",
+      "essentials": {
+        "day": "Usuku",
+        "dayValue": "NgoMgqibelo",
+        "time": "Isikhathi",
+        "timeValue": "12:00 emini",
+        "city": "Idolobha",
+        "cityValue": "Johannesburg",
+        "teacher": "Umfundisi",
+        "teacherValue": "Umdala ofundisayo",
+        "reader": "Umfundi weBhayibheli",
+        "readerValue": "Abazalwane"
+      },
+      "practical": {
+        "parking": "Indawo yokupaka",
+        "accessibility": "Ukufinyeleleka",
+        "children": "Izingane",
+        "yes": "Yebo"
+      },
+      "media": {
+        "arrivalLabel": "Ukufika",
+        "studyLabel": "Isifundo seSabatha",
+        "studyDescription": "Indawo enesizotha yokufunda umbhalo, ukuhleleka, nobudlelwane.",
+        "dressLabel": "Ukugqoka ngesizotha",
+        "dressDescription": "Izingubo ezihloniphekile lapho sibuthana phambi kukaNkulunkulu ka-Israyeli."
+      },
+      "whatToExpectItems": [
+        "Umkhuleko wokuvula nokufundwa kombhalo ngokuhleleka.",
+        "Ukufundisa okuholwa umdala ofundisayo, abazalwane befunda iBhayibheli.",
+        "Ubudlelwane ngemva kwekilasi nabazalwane nodadewethu kuKristu."
+      ],
+      "whatToBringItems": [
+        "IBhayibheli",
+        "Ipeni",
+        "Incwadi yokubhala",
+        "Ukudla kwasemini kobudlelwane ngemva kwekilasi"
+      ],
+      "fellowshipNote": "Ngemva kwekilasi, letha ukudla kwakho kwasemini ukuze uhlanganyele nabazalwane nodadewethu kuKristu.",
+      "dressCodeMen": [
+        "Susa noma iyiphi into yokumboza ikhanda lapho ungena naphakathi kwesakhiwo.",
+        "Ungagqoki izikibha ezingenamikhono, izikhindi, amabhulukwe aqinile, amafleece jogging pants, noma amabhulukwe aveza umzimba.",
+        "Abazalwane abancane kufanele bagqoke amabhande, badonse amabhulukwe abe okhalweni, bafake ihembe ngaphakathi, futhi bagqoke izintambo zama-overall emahlombe uma begqoke ama-overall."
+      ],
+      "dressCodeWomen": [
+        "Ukumboza ikhanda kuyadingeka.",
+        "Ungagqoki amabhulukwe, izikhindi, ama-skort, iziketi ezimfishane noma eziqinile, ama-halter top, noma izingubo ezinezikhala eziveza umzimba.",
+        "Izingubo ezinesizotha kuphela."
+      ]
+    },
+    "giving": {
+      "eyebrow": "Ukunakekela",
+      "title": "Dumisa iNkosi ngempahla yakho",
+      "description": "Ukunikela e-KOI kuphathwa ngobuqotho, ukubonga, nokuhleleka. Ukusekelwa komsebenzi kwamukelwa ngaphandle kombukiso nangokucacile phambi kukaNkulunkulu.",
+      "mandate": "Umyalo",
+      "mandateTitle": "Indlu yokugcina igcwaliswa ngokulalela, hhayi ngokuziveza.",
+      "mandateBody": "Ukunikela akuphathwa njengombukiso, ingcindezi, noma isiqhwaga. Kusondelwa njengesenzo sohlelo phambi kukaNkulunkulu, ngokwezwi nangenxa yendlu.",
+      "work": "Umsebenzi",
+      "workTitle": "Ukusekelwa kuqondiswa kwabampofu nasekugcinweni kwendlu.",
+      "workBody1": "Okunikwayo kuhloswe ukuqinisa impilo esebenzayo yebandla: ukugcinwa kwendawo, ukuqhubeka komsebenzi, nokusiza lapho kunesidingo khona.",
+      "workBody2": "KOI igcina le ndaba icacile. Ukuphatha kuphathwa ngobuqotho ukuze umsebenzi uhlale usehlelweni futhi indlu ingaswele okudingekayo.",
+      "bankName": "First National Bank (FNB)"
+    },
+    "membership": {
+      "eyebrow": "Ubulungu",
+      "title": "Isisekelo Sabaprofethi",
+      "description": "Ubulungu e-KOI bamukelwa njengendaba yesivumelwano. Buhlanganisa imfundiso, ukuhleleka, nobudlelwano ngaphansi kwezwi elifundiswa ngabaprofethi, abaphostoli, noKristu itshe legumbi eliyinhloko.",
+      "covenant": "Isivumelwano",
+      "covenantTitle": "Abamukelwayo abasengabafokazi, kodwa bayizakhamuzi kanye nabangcwele endlini.",
+      "covenantBody": "Ubulungu akusona isikhokhelo esijwayelekile. Kuyisicelo esihlelekile sokuhamba ebudlelwaneni, ekuphendukeni, nasekulaleleni endlini evuma uNkulunkulu ka-Israyeli.",
+      "observances": "Ukugcinwa Kwebandla",
+      "observancesTitle": "Ubulungu bugcinwa ngaphakathi kohlelo olubonakalayo lwemfundiso nokusebenza.",
+      "observancesBody": "Lezi zinsika ziphawula impilo yebandla futhi zakha uhlaka olulindelekile lokuqhubeka kwesivumelwano e-KOI.",
+      "preparation": "Ukulungiselela",
+      "preparationTitle": "Lesi yisenzo esinzima sokuphenduka nokuzinikela kuNkulunkulu ka-Israyeli.",
+      "preparationBody1": "Isicelo sobulungu kufanele senziwe ngokuzithoba. Siyisitatimende sokuthi umuntu ufisa ukwamukelwa ngaphansi kwemfundiso, izahlulelo, izimiso, nobudlelwane obugcinwa kuleli bandla.",
+      "preparationBody2": "KOI ayiphathi ubulungu njengesikhokhelo esijwayelekile. Kusondelwa ngeqiniso, ngomthandazo, nangokuzimisela ukuhlolwa ekukhanyeni kwezwi.",
+      "pillars": {
+        "sabbath": {
+          "label": "ISabatha",
+          "value": "Ukugcina usuku lwesikhombisa nokufunda ngokuhleleka."
+        },
+        "feasts": {
+          "label": "Imikhosi yeNkosi",
+          "value": "Izikhathi ezimisiwe kuLevitikusi 23."
+        },
+        "dietary": {
+          "label": "Umthetho wokudla",
+          "value": "Okuhlanzekile nokungahlanzekile ngokukaLevitikusi 11."
+        },
+        "royal": {
+          "label": "Imiyalo yobukhosi",
+          "value": "Umthetho wokuziphatha, izahlulelo, izimiso, nemfundiso."
+        }
+      }
+    },
+    "prayer": {
+      "eyebrow": "Ukuncengela",
+      "title": "Umthandazo Wolungileyo",
+      "description": "Izicelo ezilethwa lapha ziphathwa ngokuzithoba, uzwelo, nokunakekela. Ukuncengela kusondelwa njengomsebenzi onzima phambi kukaNkulunkulu, hhayi njengombukiso womphakathi.",
+      "mandate": "Umyalo",
+      "mandateTitle": "Umthandazo wabelwana ukuze umzimba uthwale, uvume, futhi ufune ukuphulukiswa ndawonye.",
+      "mandateBody": "KOI yamukela izicelo zomthandazo njengezindaba zokuncengela, ukuphenduka, nokunakekelana. Okulethwa phambi kweNkosi kufanele kulethwe ngeqiniso, ngenhlonipho, nangokholo.",
+      "burdens": "Thwalisanani Imithwalo",
+      "burdensTitle": "Umdala nebandla bayancengela ukuze imithwalo ingathwalwa yedwa.",
+      "burdensBody": "Umdala ofundisayo wamukela izicelo zomthandazo ngobuhlakani, futhi ibandla lihlanganyela lapho kufanelekile ekuncengeleni okuhlangene. Lo msebenzi uhloswe ukududuza abahluphekayo, ukuqinisa abakhathele, nokuletha izindaba phambi kweNkosi ngomoya ohlelekile.",
+      "form": "Ifomu Lokuncengela",
+      "formTitle": "Thumela isicelo sakho ngokucophelela futhi sizokwamukelwa ngokuyimfihlo.",
+      "formBody": "Shiya igama lakho kuphela uma uthanda. Uma kudingeka impendulo, faka ikheli le-imeyili ukuze umdala aphendule ngokuhleleka.",
+      "note": "Izicelo zomkhuleko zamukelwa ngokucophelela. Ezimfihlo zigcinelwa ukunakekelwa komdala kuphela."
+    },
+    "contact": {
+      "inquiry": "Umbuzo",
+      "title": "Bhala ngokucacile ukuze KOI ikwazi ukuphendula ngokuhleleka.",
+      "body": "Sebenzisa ifomu lokuzethula, imibuzo esebenzayo, noma izicelo zolwazi olwengeziwe ngekilasi leSabatha nomsebenzi.",
+      "heroTitle": "Khuluma ne-KOI",
+      "heroDescription": "Thumela umbuzo ocacile ebandleni, bese umzalwane ephendula lapho ekwazi."
+    },
+    "blog": {
+      "title": "Ijenali ye-KOI",
+      "linksLabel": "Izixhumanisi zezindatshana",
+      "metadataTitle": "Ibhulogi | Kingdom of Israel",
+      "metadataDescription": "Imibhalo yamasonto onke nezindatshana zemfundiso ze-Kingdom of Israel.",
+      "eyebrow": "Umbhalo wamasonto onke",
+      "archiveLabel": "Ingobo yokufunda",
+      "archiveTitle": "Ijenali ehlelekile yemfundiso nenkumbulo.",
+      "archiveBody": "Funda izindatshana ngesihloko, isikhombo sombhalo, nolimi. Yonke ingxenye ilungiselwe ukufunda ngokucophelela.",
+      "articleCountLabel": "Izindatshana",
+      "topicCountLabel": "Izihloko",
+      "readArticle": "Funda indatshana",
+      "body": "Imibhalo ye-KOI ngezilimi eziningi, ukuzindla ngokufunda, nezindatshana zemfundiso ezilungiselwe ukufunda ngokucophelela."
+    }
+  },
+  "reader": {
+    "metadataEyebrow": "Injini Yesifundo",
+    "metadataBody": "Indawo yokufunda evikelekile yeSabatha yemibhalo yezifundo, imidiya eqinisekisiwe, nokufinyelela ngezilimi eziningi.",
+    "availableLanguages": "Izilimi ezikhona",
+    "mediaOptions": "Izinketho zemidiya yesifundo",
+    "read": "Funda",
+    "watchVideo": "Buka Ividiyo",
+    "listenAudio": "Lalela Umsindo",
+    "audioLesson": "Isifundo Somsindo",
+    "readingDocument": "Umbhalo Wokufunda",
+    "languageSelection": "Ukukhetha ulimi lwesifundo",
+    "readingSurface": "Indawo yokufunda yesifundo",
+    "protectedView": "Ukubuka okufundwayo kuvikelekile. Sicela ufunde kusayithi; ukukopisha, ukuphrinta, nokulanda kuvinjelwe ngamabomu.",
+    "pdfPreview": "Ukubuka kuqala kwe-PDF",
+    "pdfUnavailable": "Ukubuka isifundo ku-PDF akutholakali kule divayisi. Sebenzisa umfundi ohlelekile ngenhla.",
+    "flagship": "Vula ijenali yemfundiso enkulu",
+    "browserAudio": "Isiphequluli sakho asisekeli ukudlala umsindo lapha."
+  },
+  "forms": {
+    "common": {
+      "required": "Le nkambu iyadingeka.",
+      "ackRequired": "Lokhu kuvuma kuyadingeka.",
+      "emailInvalid": "Faka ikheli le-imeyili elivumelekile.",
+      "prepared": "Kulungisiwe",
+      "received": "Kwamukelwe",
+      "form": "Ifomu",
+      "submitting": "Kuthunyelwa...",
+      "localNote": "Lesi sigaba siqinisekisa imininingwane lapha ngesikhathi ukuhanjiswa kwe-KOI kulungiselelwa isigaba esilandelayo."
+    },
+    "visit": {
+      "title": "Hlela ukuvakasha",
+      "description": "Tshela KOI kancane ngokuvakasha kwakho ukuze ikilasi likwamukele ngokuhleleka nangokunakekela.",
+      "submitLabel": "Thumela isicelo sokuvakasha",
+      "successTitle": "Isicelo sokuvakasha silungisiwe",
+      "successBody": "Isicelo sakho sokuvakasha siqinisekisiwe futhi silungele ukuhanjiswa kwe-KOI.",
+      "fields": {
+        "fullName": {
+          "label": "Igama eligcwele",
+          "placeholder": "Igama lakho eligcwele"
+        },
+        "email": {
+          "label": "Ikheli le-imeyili",
+          "placeholder": "name@example.com"
+        },
+        "phone": {
+          "label": "Inombolo yocingo",
+          "placeholder": "+27 ..."
+        },
+        "city": {
+          "label": "Idolobha noma indawo",
+          "placeholder": "Johannesburg"
+        },
+        "firstVisit": {
+          "label": "Ingabe lokhu ukuvakasha kwakho kokuqala?",
+          "options": {
+            "empty": "Khetha okukodwa",
+            "yes": "Yebo",
+            "no": "Cha"
+          }
+        },
+        "attendingCount": {
+          "label": "Inani labazohambela",
+          "placeholder": "1"
+        },
+        "plannedDate": {
+          "label": "Usuku oluhleliwe lokuvakasha"
+        },
+        "notes": {
+          "label": "Imibuzo noma izidingo zokufinyelela",
+          "placeholder": "Yabelana ngemibuzo noma izidingo ezisebenzayo."
+        },
+        "venueAcknowledgment": {
+          "label": "Ngiyaqonda ukuthi imininingwane yendawo ingaqinisekiswa ngemva kokuxhumana."
+        }
+      }
+    },
+    "contact": {
+      "title": "Thumela umbuzo",
+      "description": "Sebenzisa leli fomu ngemibuzo, ukuzethula, noma izicelo zolwazi.",
+      "submitLabel": "Thumela umbuzo",
+      "successTitle": "Umbuzo ulungisiwe",
+      "successBody": "Umbuzo wakho uqinisekisiwe futhi ulungele ukuhanjiswa kwe-KOI.",
+      "fields": {
+        "fullName": {
+          "label": "Igama eligcwele",
+          "placeholder": "Igama lakho eligcwele"
+        },
+        "email": {
+          "label": "Ikheli le-imeyili",
+          "placeholder": "name@example.com"
+        },
+        "phone": {
+          "label": "Inombolo yocingo",
+          "placeholder": "+27 ..."
+        },
+        "subject": {
+          "label": "Isihloko",
+          "placeholder": "Isizathu sokuxhumana"
+        },
+        "message": {
+          "label": "Umlayezo",
+          "placeholder": "Bhala umlayezo wakho."
+        }
+      }
+    },
+    "membership": {
+      "kicker": "Isicelo Sengxoxo",
+      "title": "Cela ingxoxo yobulungu",
+      "description": "Sebenzisa leli fomu uma ufuna ubudlelwane besivumelwano ne-KOI futhi ulungele ukwamukelwa esisekelweni semfundiso efundiswa lapha.",
+      "submitLabel": "Cela Ingxoxo Yobulungu",
+      "submitError": "Ayikwazanga ukuthumela isicelo sobulungu.",
+      "successTitle": "Isicelo sobulungu samukelwe",
+      "successBody": "Isicelo sakho sobulungu samukelwe ukuze sibuyekezwe kuhlelo lwezingxoxo lwe-KOI.",
+      "note": "Lesi sicelo sizogcinwa kuhlelo lokubuyekeza lwe-KOI.",
+      "fields": {
+        "fullName": {
+          "label": "Igama Eligcwele",
+          "placeholder": "Igama lakho eligcwele"
+        },
+        "email": {
+          "label": "Ikheli Le-imeyili"
+        },
+        "phone": {
+          "label": "Inombolo Yocingo"
+        },
+        "city": {
+          "label": "Idolobha/Indawo",
+          "placeholder": "Johannesburg"
+        },
+        "foundationAcknowledgment": {
+          "label": "Ngiqinisekisa ukuzibophezela kwami esisekelweni semfundiso se-KOI."
+        }
+      }
+    },
+    "prayer": {
+      "kicker": "Isicelo",
+      "title": "Thumela isicelo sokuncengela",
+      "description": "Yabelana ngesicelo sakho ngokucophelela. Uma ufuna impendulo, ungashiya ikheli le-imeyili ukuze umdala aphendule ngokuhleleka.",
+      "submitLabel": "Thumela Isicelo",
+      "submitError": "Ayikwazanga ukuthumela isicelo somthandazo.",
+      "successTitle": "Isicelo sokuncengela samukelwe",
+      "successBody": "Isicelo sakho somthandazo samukelwe kuhlelo lokuncengela lwe-KOI.",
+      "note": "Lesi sicelo sizogcinwa kuhlelo lokuncengela lwe-KOI futhi sibuyekezwe ngokunakekela.",
+      "fields": {
+        "name": {
+          "label": "Igama",
+          "placeholder": "Ongakukhetha"
+        },
+        "email": {
+          "label": "I-imeyili",
+          "placeholder": "Uma ufuna impendulo"
+        },
+        "requestBody": {
+          "label": "Isicelo Somthandazo",
+          "placeholder": "Bhala isicelo sakho ngokunakekela nangokucacile."
+        },
+        "confidentiality": {
+          "label": "Gcina lesi sicelo siyimfihlo (Umdala kuphela)"
+        }
+      }
+    }
+  },
+  "scriptures": {
+    "malachi3_10": {
+      "reference": "Malaki 3:10",
+      "text": "Lethani konke okweshumi endlini yengcebo, ukuze kube nokudla endlini yami; ningivivinye ngalokhu, isho iNkosi yamabandla."
+    },
+    "ephesians2_19": {
+      "reference": "Efesu 2:19",
+      "text": "Ngakho-ke aniseyibo abafokazi nabazihambi, kodwa seniyizakhamuzi kanye nabangcwele, ningabendlu kaNkulunkulu."
+    },
+    "james5_16": {
+      "reference": "Jakobe 5:16",
+      "text": "Vumani iziphambeko omunye komunye, nikhulekelane ukuze niphiliswe. Umkhuleko oqotho womuntu olungileyo unamandla kakhulu."
+    }
+  },
+  "giving": {
+    "bank": {
+      "kicker": "Imininingwane yasebhange",
+      "title": "Umnikelo ngokudlulisa ebhange",
+      "accountHolder": "Umnikazi we-akhawunti",
+      "bank": "Ibhange",
+      "accountNumber": "Inombolo ye-akhawunti",
+      "branchCode": "Ikhodi yegatsha",
+      "copyAccount": "Kopisha inombolo ye-akhawunti",
+      "copy": "Kopisha",
+      "copied": "Ikopishiwe",
+      "note": "Sebenzisa igama lakho njengereferensi lapho kungenzeka."
+    },
+    "paystack": {
+      "idle": "Ukupha okuphephile ngekhadi kuyatholakala kusukela ku-{amount}.",
+      "verifying": "Kuyaqinisekiswa...",
+      "verifyError": "Asikwazanga ukuqinisekisa lo mnikelo.",
+      "success": "Umnikelo wamukelwe: {amount}.",
+      "missingKey": "Ukhiye wePaystack awukahlelwa.",
+      "invalidEmail": "Faka ikheli le-imeyili ngaphambi kokuqhubeka.",
+      "unavailable": "IPaystack ayitholakali okwamanje.",
+      "launching": "Kuvulwa isango eliphephile lePaystack...",
+      "cancelled": "Iwindi lomnikelo livaliwe.",
+      "startError": "Asikwazanga ukuqala isango.",
+      "kicker": "Isango eliphephile",
+      "title": "Qedela umnikelo ka-{amount}",
+      "note": "Ukudlulisa ebhange kuseyindlela eyinhloko yokupha.",
+      "emailLabel": "I-imeyili yerisidi",
+      "processing": "Kuyaqhubeka...",
+      "button": "Qedela Umnikelo"
+    }
+  },
+  "blog": {
+    "kicker": "Ijenali yemfundiso",
+    "author": "NguMdala Ofundisayo",
+    "metadataLabel": "Imininingwane yendatshana",
+    "journalArticles": "Izindatshana zejenali",
+    "editorialLanguage": "Ulimi lokufunda",
+    "mediaLabel": "Isithombe sokufunda",
+    "summaryLabel": "Isifinyezo sendatshana",
+    "scripture": "Umbhalo",
+    "topicsLabel": "Izihloko",
+    "readingTime": "imizuzu engu-{count} yokufunda",
+    "shareTeaching": "Yabelana ngalesi sifundo",
+    "copyLink": "Kopisha isixhumanisi",
+    "email": "I-imeyili",
+    "returnToLibrary": "Buyela Elabhulali",
+    "rhythmMediaLabel": "Isithombe sokufunda {number}",
+    "rhythmMediaDescription": "Ikhefu elithule lokuzindla phakathi kokufunda.",
+    "categories": {
+      "sabbathDoctrine": "Imfundiso yeSabatha",
+      "foundation": "Isisekelo"
+    },
+    "topics": {
+      "sabbath": "ISabatha",
+      "study": "Ukufunda",
+      "holyOrder": "Ukuhleleka okungcwele",
+      "law": "Umthetho",
+      "testimony": "Ubufakazi",
+      "doctrine": "Imfundiso"
+    }
+  }
+}

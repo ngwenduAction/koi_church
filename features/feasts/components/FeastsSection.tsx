@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { useTranslations } from "next-intl";
 import { feasts2026 } from "../../../content/feasts";
 import { Container } from "../../../shared/components/Container";
 import { groupBySeason } from "../lib/groupBySeason";
@@ -13,6 +14,7 @@ const romanNumerals = ["I.", "II.", "III.", "IV.", "V.", "VI.", "VII.", "VIII.",
 export function FeastsSection() {
   const sectionRef = useRef<HTMLElement>(null);
   const groupedFeasts = groupBySeason(feasts2026);
+  const t = useTranslations("home.feasts");
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -51,13 +53,13 @@ export function FeastsSection() {
     <section className="feasts-section" aria-labelledby="feasts-title" ref={sectionRef}>
       <Container>
         <div className="feasts-section__intro">
-          <p className="section-kicker">The Feasts of the Lord</p>
-          <h2 id="feasts-title">Sacred time, appointed in scripture.</h2>
-          <p>Observances appointed in Leviticus 23, marked on the calendar of 2026.</p>
+          <p className="section-kicker">{t("eyebrow")}</p>
+          <h2 id="feasts-title">{t("title")}</h2>
+          <p>{t("body")}</p>
         </div>
 
-        <div className="feast-season" aria-label="Spring feasts, March to May">
-          <SeasonDivider title="Spring Feasts" range="March to May" />
+        <div className="feast-season" aria-label={`${t("spring")}, ${t("springRange")}`}>
+          <SeasonDivider title={t("spring")} range={t("springRange")} />
           {groupedFeasts.spring.map((feast) => {
             revealIndex += 1;
 
@@ -77,8 +79,8 @@ export function FeastsSection() {
           })}
         </div>
 
-        <div className="feast-season feast-season--fall" aria-label="Fall feasts, September to October">
-          <SeasonDivider title="Fall Feasts" range="September to October" />
+        <div className="feast-season feast-season--fall" aria-label={`${t("fall")}, ${t("fallRange")}`}>
+          <SeasonDivider title={t("fall")} range={t("fallRange")} />
           {groupedFeasts.fall.map((feast) => {
             revealIndex += 1;
 
@@ -99,9 +101,11 @@ export function FeastsSection() {
         </div>
 
         <p className="feasts-section__note">
-          Observances follow scripture and traditional reckoning. Service times are listed in Central and Eastern time.
+          {t("note")}
         </p>
       </Container>
     </section>
   );
 }
+
+

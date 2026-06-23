@@ -1,9 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { prayerForm } from "../../../content/institutional";
+import { useTranslations } from "next-intl";
 
 export function PrayerForm() {
+  const t = useTranslations("forms");
   const [values, setValues] = useState({
     name: "",
     email: "",
@@ -35,11 +36,11 @@ export function PrayerForm() {
     const nextErrors: { email?: string; requestBody?: string } = {};
 
     if (!values.requestBody.trim()) {
-      nextErrors.requestBody = "This field is required.";
+      nextErrors.requestBody = t("common.required");
     }
 
     if (values.email.trim() && !validateEmail(values.email)) {
-      nextErrors.email = "Enter a valid email address.";
+      nextErrors.email = t("common.emailInvalid");
     }
 
     setErrors(nextErrors);
@@ -69,14 +70,14 @@ export function PrayerForm() {
       const payload = (await response.json()) as { error?: string };
 
       if (!response.ok) {
-        setSubmitError(payload.error ?? "Unable to submit prayer request.");
+        setSubmitError(payload.error ?? t("prayer.submitError"));
         setSubmitted(false);
         return;
       }
 
       setSubmitted(true);
     } catch {
-      setSubmitError("Unable to submit prayer request.");
+      setSubmitError(t("prayer.submitError"));
       setSubmitted(false);
     } finally {
       setIsSubmitting(false);
@@ -86,9 +87,9 @@ export function PrayerForm() {
   if (submitted) {
     return (
       <section className="intake-success" aria-live="polite">
-        <p className="section-kicker">Received</p>
-        <h2>{prayerForm.successTitle}</h2>
-        <p>{prayerForm.successBody}</p>
+        <p className="section-kicker">{t("common.received")}</p>
+        <h2>{t("prayer.successTitle")}</h2>
+        <p>{t("prayer.successBody")}</p>
       </section>
     );
   }
@@ -96,32 +97,32 @@ export function PrayerForm() {
   return (
     <section className="intake-shell intake-shell--study prayer-form-shell">
       <div className="intake-shell__intro">
-        <p className="section-kicker">Request</p>
-        <h2>{prayerForm.title}</h2>
-        <p>{prayerForm.description}</p>
+        <p className="section-kicker">{t("prayer.kicker")}</p>
+        <h2>{t("prayer.title")}</h2>
+        <p>{t("prayer.description")}</p>
       </div>
 
       <form className="intake-form prayer-form" noValidate onSubmit={handleSubmit}>
         <div className="form-field">
-          <label htmlFor="prayer-name">Name</label>
+          <label htmlFor="prayer-name">{t("prayer.fields.name.label")}</label>
           <input
             id="prayer-name"
             name="name"
             onChange={(event) => handleChange("name", event.target.value)}
-            placeholder="Optional"
+            placeholder={t("prayer.fields.name.placeholder")}
             type="text"
             value={values.name}
           />
         </div>
 
         <div className="form-field">
-          <label htmlFor="prayer-email">Email</label>
+          <label htmlFor="prayer-email">{t("prayer.fields.email.label")}</label>
           <input
             aria-invalid={errors.email ? "true" : "false"}
             id="prayer-email"
             name="email"
             onChange={(event) => handleChange("email", event.target.value)}
-            placeholder="If you wish for a response"
+            placeholder={t("prayer.fields.email.placeholder")}
             type="email"
             value={values.email}
           />
@@ -129,13 +130,13 @@ export function PrayerForm() {
         </div>
 
         <div className="form-field">
-          <label htmlFor="prayer-request">Prayer Request</label>
+          <label htmlFor="prayer-request">{t("prayer.fields.requestBody.label")}</label>
           <textarea
             aria-invalid={errors.requestBody ? "true" : "false"}
             id="prayer-request"
             name="requestBody"
             onChange={(event) => handleChange("requestBody", event.target.value)}
-            placeholder="Write your request with care and clarity."
+            placeholder={t("prayer.fields.requestBody.placeholder")}
             rows={8}
             value={values.requestBody}
           />
@@ -151,7 +152,7 @@ export function PrayerForm() {
               onChange={(event) => handleChange("confidentiality", event.target.checked)}
               type="checkbox"
             />
-            <span>Keep this request confidential (Elder only)</span>
+            <span>{t("prayer.fields.confidentiality.label")}</span>
           </label>
         </div>
 
@@ -159,11 +160,9 @@ export function PrayerForm() {
 
         <div className="intake-form__footer">
           <button className="intake-submit" disabled={isSubmitting} type="submit">
-            {isSubmitting ? "Submitting..." : "Submit Request"}
+            {isSubmitting ? t("common.submitting") : t("prayer.submitLabel")}
           </button>
-          <p className="intake-form__note">
-            This request will be stored for KOI&apos;s intercession workflow and reviewed with care.
-          </p>
+          <p className="intake-form__note">{t("prayer.note")}</p>
         </div>
       </form>
     </section>

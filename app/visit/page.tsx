@@ -1,60 +1,84 @@
 import type { Metadata } from "next";
-import {
-  visitDetails,
-  visitRequestForm,
-} from "../../content/institutional";
+import { getTranslations } from "next-intl/server";
+import { visitRequestForm } from "../../content/institutional";
 import { IntakeForm } from "../../features/forms/components/IntakeForm";
 import { DetailGrid } from "../../features/pages/components/DetailGrid";
 import { InfoList } from "../../features/pages/components/InfoList";
 import { MediaBlock } from "../../features/pages/components/MediaBlock";
 import { PageHero } from "../../features/pages/components/PageHero";
 import { Container } from "../../shared/components/Container";
+import { HeroInterface } from "../../features/home/components/HeroInterface";
 
-export const metadata: Metadata = {
-  title: "Visit | Kingdom of Israel",
-  description:
-    "Visitor information for the weekly Sabbath class at Kingdom of Israel, including what to expect, what to bring, dress order, and visit planning.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("pages.visit");
 
-export default function VisitPage() {
+  return {
+    title: `${t("eyebrow")} | Kingdom of Israel`,
+    description: t("description"),
+  };
+}
+
+export default async function VisitPage() {
+  const t = await getTranslations("pages.visit");
+
+  const essentials = [
+    { label: t("essentials.day"), value: t("essentials.dayValue") },
+    { label: t("essentials.time"), value: t("essentials.timeValue") },
+    { label: t("essentials.city"), value: t("essentials.cityValue") },
+    { label: t("essentials.teacher"), value: t("essentials.teacherValue") },
+    { label: t("essentials.reader"), value: t("essentials.readerValue") },
+  ];
+
+  const practicalNotes = [
+    { label: t("practical.parking"), value: t("practical.yes") },
+    { label: t("practical.accessibility"), value: t("practical.yes") },
+    { label: t("practical.children"), value: t("practical.yes") },
+  ];
+
   return (
-    <>
+    <main>
+      <HeroInterface
+        mediaUrl="/media/visit-hero.jpg"
+        mediaTabletUrl="/media/visit-hero-tablet.jpg"
+        mediaMobileUrl="/media/visit-hero-mobile.jpg"
+        pageTitleKey="hero.visitTitle"
+        pageCaptionKey="hero.visitCaption"
+        bottomImage="/media/transparent-bottom (1).png"
+      />
+
       <PageHero
-        eyebrow={visitDetails.eyebrow}
-        title={visitDetails.title}
-        description={visitDetails.description}
+        eyebrow={t("eyebrow")}
+        title={t("title")}
+        description={t("description")}
         videoUrl="/media/Homepage%20hero%20atmosphere.mp4"
-        mediaLabel="Sabbath arrival atmosphere"
+        mediaLabel={t("media.arrivalLabel")}
       />
 
       <section className="institution-section" aria-labelledby="visit-essentials-title">
         <Container className="institution-layout institution-layout--stack">
           <div className="institution-section__heading">
-            <p className="section-kicker">Visitor Guide</p>
-            <h2 id="visit-essentials-title">What to expect on the Sabbath</h2>
-            <p>
-              The weekly class is orderly, scriptural, and practical. Visitors are received for study,
-              listening, and fellowship with the assembly.
-            </p>
+            <p className="section-kicker">{t("guide")}</p>
+            <h2 id="visit-essentials-title">{t("expectTitle")}</h2>
+            <p>{t("expectBody")}</p>
           </div>
-          <DetailGrid items={visitDetails.essentials} />
+          <DetailGrid items={essentials} />
         </Container>
       </section>
 
       <section className="institution-section institution-section--ruled" aria-labelledby="visit-preparation-title">
         <Container className="institution-layout institution-layout--split">
-          <InfoList title="What to expect" items={visitDetails.whatToExpect} />
-          <InfoList title="What to bring" items={visitDetails.whatToBring} />
+          <InfoList title={t("whatToExpect")} items={t.raw("whatToExpectItems") as string[]} />
+          <InfoList title={t("whatToBring")} items={t.raw("whatToBringItems") as string[]} />
         </Container>
       </section>
 
-      <section className="institution-section institution-section--media" aria-label="Sabbath study atmosphere">
+      <section className="institution-section institution-section--media" aria-label={t("media.studyLabel")}>
         <Container size="narrow">
           <MediaBlock
             aspectRatio="3:2"
-            description="Sabbath study atmosphere in Johannesburg, warm natural light."
+            description={t("media.studyDescription")}
             imageUrl="/media/Sabbath%20study%20atmosphere%20in%20Johannesburg,%20warm%20natural%20light.jpg"
-            label="Johannesburg Sabbath study"
+            label={t("media.studyLabel")}
           />
         </Container>
       </section>
@@ -62,17 +86,14 @@ export default function VisitPage() {
       <section className="institution-section" aria-labelledby="visit-order-title">
         <Container className="institution-layout institution-layout--split institution-layout--top">
           <div className="info-list">
-            <h2 id="visit-order-title">Practical order</h2>
-            <DetailGrid items={visitDetails.practicalNotes} />
-            <p className="institution-note">{visitDetails.fellowshipNote}</p>
+            <h2 id="visit-order-title">{t("practicalOrder")}</h2>
+            <DetailGrid items={practicalNotes} />
+            <p className="institution-note">{t("fellowshipNote")}</p>
           </div>
           <div className="institution-copy-block">
-            <p className="section-kicker">Conduct</p>
-            <h2>Approach the class in modesty and order.</h2>
-            <p>
-              Dress and conduct should reflect reverence in the assembly. The following guidance is observed in
-              the building during class.
-            </p>
+            <p className="section-kicker">{t("conduct")}</p>
+            <h2>{t("conductTitle")}</h2>
+            <p>{t("conductBody")}</p>
           </div>
         </Container>
       </section>
@@ -82,21 +103,19 @@ export default function VisitPage() {
           <MediaBlock
             aspectRatio="4:5"
             className="visit-dress-code__media"
-            description="Close-up of modest textures, linen, and respectful attire."
+            description={t("media.dressDescription")}
             imageUrl="/media/Close-up%20of%20modest%20textures,%20linen,%20and%20respectful%20attire.jpg"
-            label="Modest textures"
+            label={t("media.dressLabel")}
           />
           <div className="visit-dress-code__content">
             <div className="institution-copy-block">
-              <p className="section-kicker">Dress Code</p>
-              <h2 id="dress-code-title">Modest apparel is required for men and women.</h2>
-              <p>
-                These requirements are shared plainly so visitors can arrive prepared and without uncertainty.
-              </p>
+              <p className="section-kicker">{t("dressCode")}</p>
+              <h2 id="dress-code-title">{t("dressTitle")}</h2>
+              <p>{t("dressBody")}</p>
             </div>
             <div className="institution-split-list institution-split-list--columns">
-              <InfoList title="Men" items={visitDetails.dressCodeMen} />
-              <InfoList title="Women" items={visitDetails.dressCodeWomen} />
+              <InfoList title={t("men")} items={t.raw("dressCodeMen") as string[]} />
+              <InfoList title={t("women")} items={t.raw("dressCodeWomen") as string[]} />
             </div>
           </div>
         </Container>
@@ -105,16 +124,13 @@ export default function VisitPage() {
       <section className="institution-section" aria-labelledby="visit-form-title">
         <Container className="institution-layout institution-layout--split institution-layout--top">
           <div className="institution-copy-block">
-            <p className="section-kicker">Visit Request</p>
-            <h2 id="visit-form-title">Tell KOI you are planning to attend.</h2>
-            <p>
-              This helps the class receive visitors with clarity, especially if you have questions about timing,
-              accessibility, or family attendance.
-            </p>
+            <p className="section-kicker">{t("request")}</p>
+            <h2 id="visit-form-title">{t("requestTitle")}</h2>
+            <p>{t("requestBody")}</p>
           </div>
-          <IntakeForm config={visitRequestForm} tone="study" />
+          <IntakeForm config={visitRequestForm} tone="study" translationNamespace="visit" />
         </Container>
       </section>
-    </>
+    </main>
   );
 }

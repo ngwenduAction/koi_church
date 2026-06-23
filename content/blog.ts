@@ -4,6 +4,9 @@ export type MultilingualArticle = {
   slug: string;
   eyebrow: string;
   author: string;
+  category: string;
+  topics: string[];
+  scriptureReferences: string[];
   heroImage: string;
   heroLabel: string;
   translations: Record<
@@ -21,7 +24,7 @@ export type MultilingualArticle = {
     src: string;
     label: string;
     description: string;
-    aspectRatio?: "16:9" | "3:2" | "4:5";
+    aspectRatio: "16:9" | "3:2" | "4:5";
   }[];
 };
 
@@ -30,6 +33,9 @@ export const blogArticles: MultilingualArticle[] = [
     slug: "why-the-sabbath-remains",
     eyebrow: "Journal / May 2026",
     author: "By The Teaching Elder",
+    category: "sabbathDoctrine",
+    topics: ["sabbath", "study", "holyOrder"],
+    scriptureReferences: ["Genesis 2:2-3", "Exodus 20:8-11", "Isaiah 58:13-14"],
     heroImage: "/media/cinematic-manuscript.jpg",
     heroLabel: "Editorial manuscript still",
     translations: {
@@ -137,6 +143,9 @@ export const blogArticles: MultilingualArticle[] = [
     slug: "the-law-and-the-testimony",
     eyebrow: "Journal / May 2026",
     author: "By The Teaching Elder",
+    category: "foundation",
+    topics: ["law", "testimony", "doctrine"],
+    scriptureReferences: ["Isaiah 8:20"],
     heroImage: "/media/cinematic-manuscript.jpg",
     heroLabel: "Doctrinal manuscript still",
     translations: {
@@ -241,3 +250,17 @@ export const blogArticles: MultilingualArticle[] = [
     ],
   },
 ];
+
+export function getArticleReadingMinutes(article: MultilingualArticle, language: LessonLanguage) {
+  const translation = article.translations[language] ?? article.translations.en;
+  const words = [
+    translation.title,
+    translation.intro,
+    ...translation.sections.flatMap((section) => [section.heading, ...section.paragraphs]),
+  ]
+    .join(" ")
+    .trim()
+    .split(/\s+/).length;
+
+  return Math.max(1, Math.ceil(words / 210));
+}

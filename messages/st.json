@@ -1,0 +1,520 @@
+{
+  "common": {
+    "brandHome": "Lehae la Kingdom of Israel",
+    "openNavigation": "Bula tsamaiso",
+    "closeNavigation": "Koala tsamaiso",
+    "sideNavigation": "Tsamaiso ya lehlakore",
+    "languageOptions": "Dikgetho tsa puo",
+    "english": "English",
+    "zulu": "isiZulu",
+    "sesotho": "Sesotho",
+    "showAll": "Bontsha tsohle"
+  },
+  "navigation": {
+    "home": "Lehae",
+    "membership": "Botho",
+    "lessons": "Dithuto",
+    "visit": "Etela",
+    "giving": "Ho Nehelana",
+    "blog": "Blog",
+    "contact": "Ikopanye",
+    "lessonLibrary": "Laeborari ya Dithuto",
+    "flagshipTeaching": "Thuto e Kgolo"
+  },
+  "hero": {
+    "title": "Ntlo ya Thuto ya Sabatha",
+    "meta": "Moqebelo, 12:00 MOTSHEHARE / Sandton, Johannesburg, 2196",
+    "mediaCaption": "Bakreste ba Pele",
+    "mediaTitle": "Molao, bopaki, metsi a phelang.",
+    "lessonsTitle": "Kena Thutong",
+    "lessonsCaption": "Sebaka sa Dithuto",
+    "visitTitle": "Etela Phutheho",
+    "visitCaption": "Sebaka sa Ketelo",
+    "givingTitle": "Kena Phuthehong",
+    "givingCaption": "Sebaka sa Ho Nehelana",
+    "membershipTitle": "Kena Phuthehong",
+    "membershipCaption": "Sebaka sa Botho",
+    "contactTitle": "Ikopanye le Phutheho",
+    "contactCaption": "Ikopanye le Rona",
+    "blogTitle": "Kena Phuthehong",
+    "blogCaption": "Sebaka sa Blog"
+  },
+  "home": {
+    "sabbath": {
+      "eyebrow": "Sabatha ya Beke le Beke",
+      "title": "Re bokana ka letsatsi la bosupa ho ithuta mangolo.",
+      "body": "KOI e kopana Sabatha e nngwe le e nngwe bakeng sa thuto ya Bibele e hlophisehileng, e bala thuto ka molao, baprofeta, Kreste, le baapostola.",
+      "link": "Rera ketelo ya hao",
+      "metadataLabel": "Dintlha tsa Sabatha ya beke le beke",
+      "dayLabel": "Letsatsi",
+      "dayValue": "Moqebelo",
+      "timeLabel": "Nako",
+      "timeValue": "12:00 motshehare",
+      "placeLabel": "Sebaka",
+      "placeValue": "Sandton, Johannesburg, 2196"
+    },
+    "foundation": {
+      "eyebrow": "Motheo",
+      "title": "E hahilwe hodima baapostola le baprofeta, Jesu Kreste ka boyena e le lejwe le leholo la sekhutlo.",
+      "body": "KOI ke setjhaba sa thuto ya Bibele ya Sabatha se rutang lentswe la Modimo le sa kgaolwang ho ya ka baprofeta le baapostola. Re boloka Sabatha ya Morena, mekete ya Levitike 23, molao wa dijo wa Levitike 11, le molao wa borena wa Melao e Leshome.",
+      "pillars": [
+        "Modimo wa Iseraele",
+        "Jesu Kreste",
+        "Baprofeta",
+        "Baapostola"
+      ]
+    },
+    "feasts": {
+      "eyebrow": "Mekete ya Morena",
+      "title": "Nako e halalelang, e beilweng mangolong.",
+      "body": "Ditebello tse beilweng ho Levitike 23, tse tshwauweng khalendareng ya 2026.",
+      "spring": "Mekete ya Selemo",
+      "springRange": "Tlhakubele ho isa Motsheanong",
+      "fall": "Mekete ya Hoetla",
+      "fallRange": "Loetse ho isa Mphalane",
+      "note": "Ditebello di latela mangolo le palo ya setso. Dinako tsa tshebeletso di ngotswe ka Central le Eastern time."
+    },
+    "teaching": {
+      "eyebrow": "Thuto ya Morao-rao",
+      "meta": "Esaia 8:20 � Thuto ya Bibele"
+    },
+    "lessonsPreview": {
+      "eyebrow": "Laeborari ya Dithuto",
+      "title": "Dintho tsa thuto ya thuto di lokiseditswe ka Senyesemane, isiZulu, le Sesotho.",
+      "body": "Dintho tsa thuto ya Sabatha ka dipuo tse tharo, tse lokiseditsweng thuto ya kahare ho sebaka sena.",
+      "link": "Bula Laeborari ya Dithuto"
+    }
+  },
+  "footer": {
+    "weekly": "Sabatha ya Beke le Beke",
+    "library": "Laeborari",
+    "channels": "Dikanale",
+    "lowerBrand": "Kingdom of Israel",
+    "lowerText": "E hahilwe bakeng sa thuto ya Sabatha, thuto, dithuto, le taolo ya setjhaba."
+  },
+  "lessons": {
+    "metadataTitle": "Dithuto | Kingdom of Israel",
+    "metadataDescription": "Ditokomane tsa dithuto tsa Sabatha ka dipuo tse ngata tse tswang ho Kingdom of Israel, tse lokiseditsweng thuto ya kahare ho sebaka sena.",
+    "eyebrow": "Laeborari ya Dithuto",
+    "title": "Dintho tsa thuto bakeng sa thuto ya Sabatha",
+    "body": "Laeborari ya thuto ka dipuo tse ngata bakeng sa thuto, tokisetso ya beke le beke, le ho bala ka hloko ka Senyesemane, isiZulu, le Sesotho.",
+    "filtersLabel": "Difilthara tsa puo ya dithuto",
+    "all": "Tsohle",
+    "empty": "Ha ho dithuto ka puo ena hajoale.",
+    "downloadsLabel": "Dijarollo tsa dithuto",
+    "archiveEyebrow": "Laeborari ya Thuto",
+    "archiveTitle": "Laeborari e qalang ka mmadi bakeng sa thuto le ho ithuta Sabatha.",
+    "archiveBody": "Thuto e nngwe le e nngwe e hlophisitswe ka kgokahano ya mangolo, sehlooho sa thuto, dipuo tse teng, le diketso tsa ho bala sebakeng sena hore barutehi le babadi ba bacha ba tsamaye ka ho hlaka.",
+    "archiveCountLabel": "Dithuto laeboraring",
+    "languageCountLabel": "Dipuo tse tshehetswang",
+    "readerFirstLabel": "Ho bala pele",
+    "scriptureAnchorLabel": "Kgokahano ya mangolo",
+    "availableLanguages": "Dipuo tse teng",
+    "studyActions": "Diketso tsa thuto",
+    "readIn": "Bala {language}",
+    "openReader": "Bula mmadi",
+    "noDownloadNote": "Ditokomane di bulwa mmading o sireleditsweng wa sebaka sena. Ditaolo tsa ho jarolla ha di bontshwe ka boomo.",
+    "showAll": "Bontsha tsohle",
+    "languageNames": {
+      "en": "English",
+      "zu": "IsiZulu",
+      "st": "Sesotho"
+    },
+    "languages": {
+      "en": "English",
+      "zu": "IsiZulu",
+      "st": "Sesotho"
+    }
+  },
+  "pages": {
+    "visit": {
+      "eyebrow": "Etela",
+      "title": "Sehlopha sa Sabatha sa Beke le Beke",
+      "description": "Tlhahisoleseding ya moeti bakeng sa sehlopha sa Sabatha sa beke le beke ho Kingdom of Israel, ho kenyeletswa seo o ka se lebellang, seo o ka se tlisang, taelo ya moaparo, le moralo wa ketelo.",
+      "guide": "Tataiso ya Moeti",
+      "expectTitle": "Seo o ka se lebellang ka Sabatha",
+      "expectBody": "Sehlopha sa beke le beke se hlophisehile, se thehilwe mangolong, mme se sebetsa. Baeti ba amohelwa bakeng sa thuto, ho mamela, le kopano le phutheho.",
+      "whatToExpect": "Seo o ka se lebellang",
+      "whatToBring": "Seo o lokelang ho se tlisa",
+      "practicalOrder": "Taelo e sebetsang",
+      "conduct": "Boitshwaro",
+      "conductTitle": "Atamela sehlopha ka boikokobetso le taelo.",
+      "conductBody": "Moaparo le boitshwaro di lokela ho bontsha tlhompho phuthehong. Tataiso ena e bolokwa mohahong nakong ya sehlopha.",
+      "dressCode": "Molao wa Moaparo",
+      "dressTitle": "Moaparo o itekanetseng o hlokahala ho banna le basadi.",
+      "dressBody": "Dintho tsena di arolelanwa ka ho hlaka hore baeti ba fihle ba lokile mme ba se na pherekano.",
+      "men": "Banna",
+      "women": "Basadi",
+      "request": "Kopo ya Ketelo",
+      "requestTitle": "Bolella KOI hore o rera ho tla.",
+      "requestBody": "Sena se thusa sehlopha ho amohela baeti ka ho hlaka, haholoholo haeba o na le dipotso ka nako, phihlello, kapa ho tla le lelapa.",
+      "essentials": {
+        "day": "Letsatsi",
+        "dayValue": "Moqebelo",
+        "time": "Nako",
+        "timeValue": "12:00 motshehare",
+        "city": "Toropo",
+        "cityValue": "Johannesburg",
+        "teacher": "Moruti",
+        "teacherValue": "Moholo ya rutang",
+        "reader": "Mmadi wa Bibele",
+        "readerValue": "Barababo rona"
+      },
+      "practical": {
+        "parking": "Sebaka sa ho paka",
+        "accessibility": "Phihlello",
+        "children": "Bana",
+        "yes": "E"
+      },
+      "media": {
+        "arrivalLabel": "Ho fihla",
+        "studyLabel": "Thuto ya Sabatha",
+        "studyDescription": "Sebaka se nang le seriti bakeng sa mangolo, taolo, le kopano.",
+        "dressLabel": "Moaparo o hlomphehang",
+        "dressDescription": "Moaparo o hlomphehang ha re bokana pela Modimo wa Iseraele."
+      },
+      "whatToExpectItems": [
+        "Thapelo ya ho bula le ho balwa ha mangolo ka taolo.",
+        "Thuto e etelletsweng pele ke moholo ya rutang, barababo rona ba bala Bibele.",
+        "Kopano kamora thuto le bara le baradi babo rona ho Kreste."
+      ],
+      "whatToBringItems": [
+        "Bibele",
+        "Pene",
+        "Buka ya dintlha",
+        "Dijo tsa motshehare bakeng sa kopano kamora thuto"
+      ],
+      "fellowshipNote": "Kamora thuto, tlisa dijo tsa hao tsa motshehare mme o kopane le bara le baradi babo rona ho Kreste.",
+      "dressCodeMen": [
+        "Tlosa sekoahelo sefe kapa sefe sa hlooho ha o kena le ha o le kahare ho moaho.",
+        "O se ke wa apara diaparo tse se nang matsoho, marikgwe a makgutshwane, marikgwe a tiileng, fleece jogging pants, kapa diaparo tse senolang mmele.",
+        "Barababo rona ba banyenyane ba lokela ho apara mabanta, ho phahamisa marikgwe thekeng, ho kenya hempe ka hare, le ho beha marapo a overalls mahetleng ha ba apere overalls."
+      ],
+      "dressCodeWomen": [
+        "Ho kwahela hlooho hoa hlokahala.",
+        "O se ke wa apara marikgwe, marikgwe a makgutshwane, skorts, mese e mekgutshwane kapa e tiileng, halter tops, kapa diaparo tse nang le dikheo tse senolang.",
+        "Moaparo o hlomphehang feela."
+      ]
+    },
+    "giving": {
+      "eyebrow": "Botshepehi",
+      "title": "Hlompha Morena ka thepa ya hao",
+      "description": "Ho nehelana ho KOI ho tshwarwa ka botebo, teboho, le taelo. Tshehetso ya mosebetsi e amohelwa ntle le pontsho le ka ho hlaka pela Modimo.",
+      "mandate": "Taelo",
+      "mandateTitle": "Ntlo ya polokelo e tlatsoa ka kutlo, eseng ka pontsho.",
+      "mandateBody": "Ho nehelana ha ho tshwarwe jwalo ka pontsho, kgatello, kapa lerata. Ho atamelwa jwalo ka ketso ya taelo pela Modimo, ho ya ka lentswe le molemong wa ntlo.",
+      "work": "Mosebetsi",
+      "workTitle": "Tshehetso e lebiswa ho mafutsana le tlhokomelo ya ntlo.",
+      "workBody1": "Se nehelwang se reretswe ho matlafatsa bophelo bo sebetsang ba phutheho: ho boloka sebaka, ho tswela pele ha mosebetsi, le thuso moo tlhoko e leng teng.",
+      "workBody2": "KOI e boloka taba ena e hlakile. Botshepehi bo tshwarwa ka botebo hore mosebetsi o nne o be taelong mme ntlo e se ke ya hloka tse hlokahalang.",
+      "bankName": "First National Bank (FNB)"
+    },
+    "membership": {
+      "eyebrow": "Botho",
+      "title": "Motheo wa Baprofeta",
+      "description": "Botho ho KOI bo amohelwa jwalo ka taba ya selekane. Bo kopanya thuto, taelo, le kopano tlasa lentswe le rutoang ke baprofeta, baapostola, le Kreste lejwe le leholo la sekhutlo.",
+      "covenant": "Selekane",
+      "covenantTitle": "Ba amohetsweng ha ba sa le basele, empa ke baahi mmoho ka tlung.",
+      "covenantBody": "Botho ha se ngodiso e sa tebang. Ke kopo e hlophisehileng ya ho tsamaya kopanong, pako, le kutlo kahare ho ntlo e ipolelang Modimo wa Iseraele.",
+      "observances": "Ditebello tsa Setheo",
+      "observancesTitle": "Botho bo bolokwa kahare ho taelo e bonahalang ya thuto le tshebetso.",
+      "observancesBody": "Dikholomo tsena di tshwaya bophelo ba phutheho mme di bopa moralo o lebelletsweng wa tswelopele ya selekane ho KOI.",
+      "preparation": "Tokisetso",
+      "preparationTitle": "Ena ke ketso e tebileng ya pako le boinehelo ho Modimo wa Iseraele.",
+      "preparationBody1": "Kopo ya botho e lokela ho etswa ka boikokobetso. Ke polelo ya hore motho o batla ho amohelwa tlasa thuto, dikahlolo, melao, le kopano e bolokwang phuthehong ena.",
+      "preparationBody2": "KOI ha e tshware botho jwalo ka ngodiso e sa tebang. E atamelwa ka nnete, thapelo, le boikemisetso ba ho hlahlojwa leseding la lentswe.",
+      "pillars": {
+        "sabbath": {
+          "label": "Sabatha",
+          "value": "Ho boloka letsatsi la bosupa le thuto e hlophisitsweng."
+        },
+        "feasts": {
+          "label": "Mekete ya Morena",
+          "value": "Dinako tse behilweng ho Levitike 23."
+        },
+        "dietary": {
+          "label": "Molao wa dijo",
+          "value": "Tse hlwekileng le tse sa hlwekang ho ya ka Levitike 11."
+        },
+        "royal": {
+          "label": "Melao ya borena",
+          "value": "Molao wa boitshwaro, dikahlolo, melao, le thuto."
+        }
+      }
+    },
+    "prayer": {
+      "eyebrow": "Thapello",
+      "title": "Thapelo ya Ya Lokileng",
+      "description": "Dikopo tse tliswang mona di tshwarwa ka boikokobetso, kutlwelo-bohloko, le tlhokomelo. Thapello e atamelwa jwalo ka mosebetsi o tebileng pela Modimo, eseng pontsho ya sechaba.",
+      "mandate": "Taelo",
+      "mandateTitle": "Thapelo e arolelanwa hore mmele o ka jara, wa ipolela, mme wa batla phodiso mmoho.",
+      "mandateBody": "KOI e amohela dikopo tsa thapelo e le ditaba tsa thapello, pako, le tlhokomelo ya bonngwe. Se tliswang pela Morena se lokela ho tliswa ka nnete, tlhompho, le tumelo.",
+      "burdens": "Jaranang Meroalo",
+      "burdensTitle": "Moholo le phutheho ba rapella hore meroalo e se ke ya jarwa motho a le mong.",
+      "burdensBody": "Moholo ya rutang o amohela dikopo tsa thapelo ka tlhokomelo, mme phutheho e kenella moo ho loketseng thapellong e kopanetsweng. Mosebetsi ona o reretswe ho kgothatsa ba mahlomoleng, ho matlafatsa ba kgathetseng, le ho tlisa ditaba pela Morena ka moya o hlophisehileng.",
+      "form": "Foromo ya Thapello",
+      "formTitle": "Romela kopo ya hao ka hloko mme e tla amohelwa ka lekunutu.",
+      "formBody": "Tlohela lebitso la hao feela haeba o batla. Haeba karabo e hlokahala, fana ka aterese ya imeile hore moholo a arabe ka taelo.",
+      "note": "Dikopo tsa thapelo di amohelwa ka hloko. Tse sephiring di tshwarwa bakeng sa tlhokomelo ya moholo feela."
+    },
+    "contact": {
+      "inquiry": "Potso",
+      "title": "Ngola ka ho hlaka hore KOI e kgone ho araba ka taelo.",
+      "body": "Sebedisa foromo bakeng sa ho itsebisa, dipotso tse sebetsang, kapa dikopo tsa tlhahisoleseding e eketsehileng ka sehlopha sa Sabatha le mosebetsi.",
+      "heroTitle": "Bua le KOI",
+      "heroDescription": "Romela potso e hlokolosi phuthehong, mme morababo rona o tla araba ha a kgona."
+    },
+    "blog": {
+      "title": "Journale ya KOI",
+      "linksLabel": "Dihokelo tsa dihlooho tsa koranta",
+      "metadataTitle": "Blog | Kingdom of Israel",
+      "metadataDescription": "Dingolwa tsa beke le beke le dithuto tsa Kingdom of Israel.",
+      "eyebrow": "Mongolo wa beke",
+      "archiveLabel": "Polokelo ya thuto",
+      "archiveTitle": "Journale e hlophisitsweng bakeng sa thuto le kgopotso.",
+      "archiveBody": "Bala dingolwa ka sehlooho, sesupo sa mangolo, le puo. Sengolwa ka seng se lokiseditswe thuto e hlokolosi.",
+      "articleCountLabel": "Dingolwa",
+      "topicCountLabel": "Dihlooho",
+      "readArticle": "Bala sengolwa",
+      "body": "Dingolwa tsa KOI ka dipuo tse ngata, mehopolo ya thuto, le dihlooho tsa koranta ya thuto tse lokiseditsweng ho balwa ka hloko."
+    }
+  },
+  "reader": {
+    "metadataEyebrow": "Enjene ya Thuto",
+    "metadataBody": "Sebaka se sireleditsweng sa ho bala sa Sabatha bakeng sa ditokomane tsa dithuto, media e netefaditsweng, le phihlello ya dipuo tse ngata.",
+    "availableLanguages": "Dipuo tse teng",
+    "mediaOptions": "Dikgetho tsa media ya thuto",
+    "read": "Bala",
+    "watchVideo": "Shebella Video",
+    "listenAudio": "Mamela Audio",
+    "audioLesson": "Thuto ya Audio",
+    "readingDocument": "Tokomane ya ho Bala",
+    "languageSelection": "Kgetho ya puo ya thuto",
+    "readingSurface": "Sebaka sa ho bala thuto",
+    "protectedView": "Ponahalo ya thuto e sireleditswe. Ka kopo bala sebakeng sena; ho kopitsa, ho printa, le ho jarolla di lekanyeditswe ka boomo.",
+    "pdfPreview": "Ponelopele ya PDF",
+    "pdfUnavailable": "Ponelopele ya PDF ha e fumanehe sesebedisweng sena. Sebedisa mmadi o hlophisitsweng hodimo.",
+    "flagship": "Bula koranta e kgolo ya thuto",
+    "browserAudio": "Sebatli sa hao ha se tshehetse ho bapala audio mona."
+  },
+  "forms": {
+    "common": {
+      "required": "Karolo ena e a hlokahala.",
+      "ackRequired": "Tumello ena e a hlokahala.",
+      "emailInvalid": "Kenya aterese ya imeile e nepahetseng.",
+      "prepared": "E lokisitswe",
+      "received": "E amohetswe",
+      "form": "Foromo",
+      "submitting": "E romelwa...",
+      "localNote": "Karolo ena e netefatsa tlhahisoleseding mona ha phallo ya KOI e lokisetswa mohato o latelang."
+    },
+    "visit": {
+      "title": "Rera ketelo",
+      "description": "Bolella KOI hanyane ka ketelo ya hao hore sehlopha se o amohele ka taelo le tlhokomelo.",
+      "submitLabel": "Romela kopo ya ketelo",
+      "successTitle": "Kopo ya ketelo e lokisitswe",
+      "successBody": "Kopo ya hao ya ketelo e netefaditswe mme e loketse phallo ya KOI.",
+      "fields": {
+        "fullName": {
+          "label": "Lebitso le felletseng",
+          "placeholder": "Lebitso la hao le felletseng"
+        },
+        "email": {
+          "label": "Aterese ya imeile",
+          "placeholder": "name@example.com"
+        },
+        "phone": {
+          "label": "Nomoro ya mohala",
+          "placeholder": "+27 ..."
+        },
+        "city": {
+          "label": "Toropo kapa sebaka",
+          "placeholder": "Johannesburg"
+        },
+        "firstVisit": {
+          "label": "Na ena ke ketelo ya hao ya pele?",
+          "options": {
+            "empty": "Kgetha e le nngwe",
+            "yes": "Ee",
+            "no": "Tjhe"
+          }
+        },
+        "attendingCount": {
+          "label": "Palo ya ba tlang",
+          "placeholder": "1"
+        },
+        "plannedDate": {
+          "label": "Letsatsi la ketelo le rerilweng"
+        },
+        "notes": {
+          "label": "Dipotso kapa ditlhoko tsa phihlello",
+          "placeholder": "Arolelana dipotso kapa ditlhoko tse sebetsang."
+        },
+        "venueAcknowledgment": {
+          "label": "Ke a utlwisisa hore dintlha tsa sebaka di ka netefatswa kamora puisano."
+        }
+      }
+    },
+    "contact": {
+      "title": "Romela potso",
+      "description": "Sebedisa foromo ena bakeng sa dipotso, ho itsebisa, kapa dikopo tsa tlhahisoleseding.",
+      "submitLabel": "Romela potso",
+      "successTitle": "Potso e lokisitswe",
+      "successBody": "Potso ya hao e netefaditswe mme e loketse phallo ya KOI.",
+      "fields": {
+        "fullName": {
+          "label": "Lebitso le felletseng",
+          "placeholder": "Lebitso la hao le felletseng"
+        },
+        "email": {
+          "label": "Aterese ya imeile",
+          "placeholder": "name@example.com"
+        },
+        "phone": {
+          "label": "Nomoro ya mohala",
+          "placeholder": "+27 ..."
+        },
+        "subject": {
+          "label": "Sehlooho",
+          "placeholder": "Lebaka la ho ikopanya"
+        },
+        "message": {
+          "label": "Molaetsa",
+          "placeholder": "Ngola molaetsa wa hao."
+        }
+      }
+    },
+    "membership": {
+      "kicker": "Kopo ya Puisano",
+      "title": "Kopa puisano ya botho",
+      "description": "Sebedisa foromo ena haeba o batla kopano ya selekane le KOI mme o ikemiseditse ho amohelwa motheong wa thuto e rutwang mona.",
+      "submitLabel": "Kopa Puisano ya Botho",
+      "submitError": "Ha ho kgonehe ho romela kopo ya botho.",
+      "successTitle": "Kopo ya botho e amohetswe",
+      "successBody": "Kopo ya hao ya botho e amohetswe bakeng sa phallo ya puisano ya KOI.",
+      "note": "Kopo ena e tla bolokwa bakeng sa phallo ya tlhahlobo ya KOI.",
+      "fields": {
+        "fullName": {
+          "label": "Lebitso le Felletseng",
+          "placeholder": "Lebitso la hao le felletseng"
+        },
+        "email": {
+          "label": "Aterese ya Imeile"
+        },
+        "phone": {
+          "label": "Nomoro ya Mohala"
+        },
+        "city": {
+          "label": "Toropo/Sebaka",
+          "placeholder": "Johannesburg"
+        },
+        "foundationAcknowledgment": {
+          "label": "Ke tiisa boitlamo ba ka motheong wa thuto wa KOI."
+        }
+      }
+    },
+    "prayer": {
+      "kicker": "Kopo",
+      "title": "Romela kopo ya thapello",
+      "description": "Arolelana kopo ya hao ka hloko. Haeba o batla karabo, o ka siea aterese ya imeile hore moholo a arabe ka taelo.",
+      "submitLabel": "Romela Kopo",
+      "submitError": "Ha ho kgonehe ho romela kopo ya thapelo.",
+      "successTitle": "Kopo ya thapello e amohetswe",
+      "successBody": "Kopo ya hao ya thapelo e amohetswe bakeng sa phallo ya thapello ya KOI.",
+      "note": "Kopo ena e tla bolokwa bakeng sa phallo ya thapello ya KOI mme e hlahlojwe ka hloko.",
+      "fields": {
+        "name": {
+          "label": "Lebitso",
+          "placeholder": "Ha se tlamo"
+        },
+        "email": {
+          "label": "Imeile",
+          "placeholder": "Haeba o batla karabo"
+        },
+        "requestBody": {
+          "label": "Kopo ya Thapelo",
+          "placeholder": "Ngola kopo ya hao ka tlhokomelo le ka ho hlaka."
+        },
+        "confidentiality": {
+          "label": "Boloka kopo ena e le lekunutu (Moholo feela)"
+        }
+      }
+    }
+  },
+  "scriptures": {
+    "malachi3_10": {
+      "reference": "Malakia 3:10",
+      "text": "Tlisang karolo ya leshome yohle ntlong ya polokelo, hore ho be le dijo ka tlung ya ka; ntekeng ka hona, ho rialo Morena wa mabotho."
+    },
+    "ephesians2_19": {
+      "reference": "Baefese 2:19",
+      "text": "Ka hona ha le sa le basele le bajaki, empa le baahi mmoho le bahalaledi, le ba ntlo ya Modimo."
+    },
+    "james5_16": {
+      "reference": "Jakobo 5:16",
+      "text": "Ipolelaneng diphoso, le rapellane, hore le tle le fodiswe. Thapelo e matla ya motho ya lokileng e sebetsa haholo."
+    }
+  },
+  "giving": {
+    "bank": {
+      "kicker": "Dintlha tsa banka",
+      "title": "Monehelo ka phetiso ya banka",
+      "accountHolder": "Mong wa akhaonto",
+      "bank": "Banka",
+      "accountNumber": "Nomoro ya akhaonto",
+      "branchCode": "Khoutu ya lekala",
+      "copyAccount": "Kopitsa nomoro ya akhaonto",
+      "copy": "Kopitsa",
+      "copied": "E kopitsitswe",
+      "note": "Sebedisa lebitso la hao e le reference moo ho kgonehang."
+    },
+    "paystack": {
+      "idle": "Ho fana ka karete ho bolokehile ho tloha ho {amount}.",
+      "verifying": "Ho netefatswa monehelo...",
+      "verifyError": "Ha rea kgona ho netefatsa monehelo ona.",
+      "success": "Monehelo o amohetswe: {amount}.",
+      "missingKey": "Senotlolo sa Paystack ha se eso hlophiswe.",
+      "invalidEmail": "Kenya imeile pele o tswela pele.",
+      "unavailable": "Paystack ha e fumanehe jwale.",
+      "launching": "Ho bulwa kgoro e bolokehileng ya Paystack...",
+      "cancelled": "Fensetere ya monehelo e kwetswe.",
+      "startError": "Ha rea kgona ho qala kgoro.",
+      "kicker": "Kgoro e bolokehileng",
+      "title": "Qetella monehelo wa {amount}",
+      "note": "Phetiso ya banka e sala e le tsela ya mantlha ya ho fana.",
+      "emailLabel": "Imeile ya rasiti",
+      "processing": "E sebetsa...",
+      "button": "Qetella Monehelo"
+    }
+  },
+  "blog": {
+    "kicker": "Journale ya thuto",
+    "author": "Ka Moholo ya Rutang",
+    "metadataLabel": "Dintlha tsa sengolwa",
+    "journalArticles": "Dingolwa tsa journale",
+    "editorialLanguage": "Puo ya ho bala",
+    "mediaLabel": "Setshwantsho sa thuto",
+    "summaryLabel": "Kakaretso ya sengolwa",
+    "scripture": "Lengolo",
+    "topicsLabel": "Dihlooho",
+    "readingTime": "metsotso e {count} ya ho bala",
+    "shareTeaching": "Arolelana thuto ena",
+    "copyLink": "Kopitsa sehokelo",
+    "email": "Imeile",
+    "returnToLibrary": "Kgutlela Laeboraring",
+    "rhythmMediaLabel": "Setshwantsho sa thuto {number}",
+    "rhythmMediaDescription": "Khefu e kgutsitseng ya ho nahanisisa nakong ya ho bala.",
+    "categories": {
+      "sabbathDoctrine": "Thuto ya Sabatha",
+      "foundation": "Motheo"
+    },
+    "topics": {
+      "sabbath": "Sabatha",
+      "study": "Thuto",
+      "holyOrder": "Taolo e halalelang",
+      "law": "Molao",
+      "testimony": "Bopaki",
+      "doctrine": "Thuto"
+    }
+  }
+}

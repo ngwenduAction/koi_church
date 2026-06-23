@@ -1,6 +1,10 @@
-import type { NextRequest } from "next/server";
-import { NextResponse } from "next/server";
-import { hasValidAdminAuthorization } from "./lib/adminAuth";
+import createIntlMiddleware from "next-intl/middleware";
+import type {NextRequest} from "next/server";
+import {NextResponse} from "next/server";
+import {routing} from "./i18n/routing";
+import {hasValidAdminAuthorization} from "./lib/adminAuth";
+
+const intlMiddleware = createIntlMiddleware(routing);
 
 function unauthorizedResponse() {
   return new NextResponse("Authentication required.", {
@@ -11,22 +15,32 @@ function unauthorizedResponse() {
   });
 }
 
+function isAdminPath(pathname: string) {
+  return pathname.startsWith("/admin") || pathname.startsWith("/api/admin");
+}
+
 export function middleware(request: NextRequest) {
-  const expectedPassword = process.env.ADMIN_PASSWORD;
+  const {pathname} = request.nextUrl;
 
-  if (!expectedPassword) {
-    return new NextResponse("ADMIN_PASSWORD is not configured.", {
-      status: 503,
-    });
+  if (isAdminPath(pathname)) {
+    const expectedPassword = process.env.ADMIN_PASSWORD;
+
+    if (!expectedPassword) {
+      return new NextResponse("ADMIN_PASSWORD is not configured.", {
+        status: 503,
+      });
+    }
+
+    if (!hasValidAdminAuthorization(request.headers.get("authorization"))) {
+      return unauthorizedResponse();
+    }
+
+    return NextResponse.next();
   }
 
-  if (!hasValidAdminAuthorization(request.headers.get("authorization"))) {
-    return unauthorizedResponse();
-  }
-
-  return NextResponse.next();
+  return intlMiddleware(request);
 }
 
 export const config = {
-  matcher: ["/admin/:path*", "/api/admin/:path*"],
+  matcher: ["/((?!api|_next|_vercel|.*\\..*).*)", "/admin/:path*", "/api/admin/:path*"],
 };

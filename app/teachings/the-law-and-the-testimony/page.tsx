@@ -1,4 +1,4 @@
-import Link from "next/link";
+import {Link} from "../../../i18n/navigation";
 import type { Metadata } from "next";
 import { lawAndTestimonyArticle, teachings } from "../../../content/teachings";
 import { TeachingLanguageReader } from "../../../features/teachings/components/TeachingLanguageReader";
@@ -51,3 +51,4 @@ export default function TheLawAndTheTestimonyPage() {
     </article>
   );
 }
+

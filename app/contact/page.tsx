@@ -1,26 +1,35 @@
 import type { Metadata } from "next";
-import {
-  contactDetails,
-  contactForm,
-} from "../../content/institutional";
+import { getTranslations } from "next-intl/server";
+import { contactDetails, contactForm } from "../../content/institutional";
 import { IntakeForm } from "../../features/forms/components/IntakeForm";
 import { PageHero } from "../../features/pages/components/PageHero";
 import { Container } from "../../shared/components/Container";
+import { HeroInterface } from "../../features/home/components/HeroInterface";
 
-export const metadata: Metadata = {
-  title: "Contact | Kingdom of Israel",
-  description:
-    "General contact page for Kingdom of Israel, including direct email contact and a structured inquiry form.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("pages.contact");
 
-export default function ContactPage() {
+  return {
+    title: `${t("inquiry")} | Kingdom of Israel`,
+    description: t("body"),
+  };
+}
+
+export default async function ContactPage() {
+  const t = await getTranslations("pages.contact");
+
   return (
-    <>
-      <PageHero
-        eyebrow={contactDetails.eyebrow}
-        title={contactDetails.title}
-        description={contactDetails.description}
-      >
+    <main>
+      <HeroInterface
+        mediaUrl="/media/contact-hero.jpg"
+        mediaTabletUrl="/media/contact-hero-tablet.jpg"
+        mediaMobileUrl="/media/contact-hero-mobile.jpg"
+        pageTitleKey="hero.contactTitle"
+        pageCaptionKey="hero.contactCaption"
+        bottomImage="/media/transparent-bottom (1).png"
+      />
+
+      <PageHero eyebrow={t("inquiry")} title={t("heroTitle")} description={t("heroDescription")}>
         <a className="institution-direct-link" href={`mailto:${contactDetails.email}`}>
           {contactDetails.email}
         </a>
@@ -29,16 +38,13 @@ export default function ContactPage() {
       <section className="institution-section" aria-labelledby="contact-form-title">
         <Container className="institution-layout institution-layout--split institution-layout--top">
           <div className="institution-copy-block">
-            <p className="section-kicker">Inquiry</p>
-            <h2 id="contact-form-title">Write with clarity and KOI will be able to respond in order.</h2>
-            <p>
-              Use the form for introductions, practical questions, or requests for further information about the
-              Sabbath class and the work.
-            </p>
+            <p className="section-kicker">{t("inquiry")}</p>
+            <h2 id="contact-form-title">{t("title")}</h2>
+            <p>{t("body")}</p>
           </div>
-          <IntakeForm config={contactForm} />
+          <IntakeForm config={contactForm} translationNamespace="contact" />
         </Container>
       </section>
-    </>
+    </main>
   );
 }

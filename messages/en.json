@@ -1,0 +1,520 @@
+{
+  "common": {
+    "brandHome": "Kingdom of Israel home",
+    "openNavigation": "Open navigation",
+    "closeNavigation": "Close navigation overlay",
+    "sideNavigation": "Side navigation",
+    "languageOptions": "Language options",
+    "english": "English",
+    "zulu": "isiZulu",
+    "sesotho": "Sesotho",
+    "showAll": "Show all"
+  },
+  "navigation": {
+    "home": "Home",
+    "membership": "Membership",
+    "lessons": "Lessons",
+    "visit": "Visit",
+    "giving": "Giving",
+    "blog": "Blog",
+    "contact": "Contact",
+    "lessonLibrary": "Lesson Library",
+    "flagshipTeaching": "Flagship Teaching"
+  },
+  "hero": {
+    "title": "Sabbath Study House",
+    "meta": "Saturday, 12:00 NOON / Sandton, Johannesburg, 2196",
+    "mediaCaption": "Original Christians",
+    "mediaTitle": "Law, testimony, living water.",
+    "lessonsTitle": "Join The Study",
+    "lessonsCaption": "Lessons Portal",
+    "visitTitle": "Visit The Assembly",
+    "visitCaption": "Visit Portal",
+    "givingTitle": "Join The Assembly",
+    "givingCaption": "Giving Portal",
+    "membershipTitle": "Join The Assembly",
+    "membershipCaption": "Membership Portal",
+    "contactTitle": "Contact The Assembly",
+    "contactCaption": "Get In Touch",
+    "blogTitle": "Join The Assembly",
+    "blogCaption": "Blog Portal"
+  },
+  "home": {
+    "sabbath": {
+      "eyebrow": "Weekly Sabbath",
+      "title": "We gather on the seventh day to study the scriptures.",
+      "body": "KOI meets each Sabbath for ordered bible study, reading doctrine through the law, the prophets, Christ, and the apostles.",
+      "link": "Plan your visit",
+      "metadataLabel": "Weekly Sabbath details",
+      "dayLabel": "Day",
+      "dayValue": "Saturday",
+      "timeLabel": "Time",
+      "timeValue": "12:00 noon",
+      "placeLabel": "Place",
+      "placeValue": "Sandton, Johannesburg, 2196"
+    },
+    "foundation": {
+      "eyebrow": "Foundation",
+      "title": "Built upon the apostles and prophets, Jesus Christ himself being the chief cornerstone.",
+      "body": "KOI is a Sabbath bible study community teaching the uncut word of God according to the prophets and the apostles. We observe the Lord's Sabbath, the feast days of Leviticus 23, the dietary law of Leviticus 11, and the royal law of the Ten Commandments.",
+      "pillars": [
+        "The God of Israel",
+        "Jesus Christ",
+        "The Prophets",
+        "The Apostles"
+      ]
+    },
+    "feasts": {
+      "eyebrow": "The Feasts of the Lord",
+      "title": "Sacred time, appointed in scripture.",
+      "body": "Observances appointed in Leviticus 23, marked on the calendar of 2026.",
+      "spring": "Spring Feasts",
+      "springRange": "March to May",
+      "fall": "Fall Feasts",
+      "fallRange": "September to October",
+      "note": "Observances follow scripture and traditional reckoning. Service times are listed in Central and Eastern time."
+    },
+    "teaching": {
+      "eyebrow": "Latest Teaching",
+      "meta": "Isaiah 8:20 � Bible Study"
+    },
+    "lessonsPreview": {
+      "eyebrow": "Lesson Library",
+      "title": "Doctrinal study materials prepared in English, IsiZulu, and Sesotho.",
+      "body": "Sabbath teaching materials in three languages, prepared for on-site study.",
+      "link": "Open Lesson Library"
+    }
+  },
+  "footer": {
+    "weekly": "Weekly Sabbath",
+    "library": "Library",
+    "channels": "Channels",
+    "lowerBrand": "Kingdom of Israel",
+    "lowerText": "Built for Sabbath study, doctrine, lessons, and community order."
+  },
+  "lessons": {
+    "metadataTitle": "Lessons | Kingdom of Israel",
+    "metadataDescription": "Multilingual Sabbath lesson documents from Kingdom of Israel, prepared in English, IsiZulu, and Sesotho for on-site study.",
+    "eyebrow": "Lesson Library",
+    "title": "Study materials for Sabbath learning",
+    "body": "A multilingual study archive for doctrine, weekly preparation, and close reading in English, IsiZulu, and Sesotho.",
+    "filtersLabel": "Lesson language filters",
+    "all": "All",
+    "empty": "No lessons in this language yet.",
+    "downloadsLabel": "Lesson downloads",
+    "archiveEyebrow": "Study Archive",
+    "archiveTitle": "A reader-first library for doctrine and Sabbath learning.",
+    "archiveBody": "Each lesson is organized by scripture anchor, doctrinal theme, available languages, and on-site reader actions so scholars and first-time readers can move through the material with clarity.",
+    "archiveCountLabel": "Lessons in archive",
+    "languageCountLabel": "Languages supported",
+    "readerFirstLabel": "Reader-first access",
+    "scriptureAnchorLabel": "Scripture anchor",
+    "availableLanguages": "Available languages",
+    "studyActions": "Study actions",
+    "readIn": "Read {language}",
+    "openReader": "Open reader",
+    "noDownloadNote": "Documents open in the protected on-site reader. Direct download controls are intentionally not shown.",
+    "showAll": "Show all",
+    "languageNames": {
+      "en": "English",
+      "zu": "IsiZulu",
+      "st": "Sesotho"
+    },
+    "languages": {
+      "en": "English",
+      "zu": "IsiZulu",
+      "st": "Sesotho"
+    }
+  },
+  "pages": {
+    "visit": {
+      "eyebrow": "Visit",
+      "title": "Weekly Sabbath Class",
+      "description": "Visitor information for the weekly Sabbath class at Kingdom of Israel, including what to expect, what to bring, dress order, and visit planning.",
+      "guide": "Visitor Guide",
+      "expectTitle": "What to expect on the Sabbath",
+      "expectBody": "The weekly class is orderly, scriptural, and practical. Visitors are received for study, listening, and fellowship with the assembly.",
+      "whatToExpect": "What to expect",
+      "whatToBring": "What to bring",
+      "practicalOrder": "Practical order",
+      "conduct": "Conduct",
+      "conductTitle": "Approach the class in modesty and order.",
+      "conductBody": "Dress and conduct should reflect reverence in the assembly. The following guidance is observed in the building during class.",
+      "dressCode": "Dress Code",
+      "dressTitle": "Modest apparel is required for men and women.",
+      "dressBody": "These requirements are shared plainly so visitors can arrive prepared and without uncertainty.",
+      "men": "Men",
+      "women": "Women",
+      "request": "Visit Request",
+      "requestTitle": "Tell KOI you are planning to attend.",
+      "requestBody": "This helps the class receive visitors with clarity, especially if you have questions about timing, accessibility, or family attendance.",
+      "essentials": {
+        "day": "Day",
+        "dayValue": "Saturday",
+        "time": "Time",
+        "timeValue": "12:00 noon",
+        "city": "City",
+        "cityValue": "Johannesburg",
+        "teacher": "Teacher",
+        "teacherValue": "The teaching elder",
+        "reader": "Bible reader",
+        "readerValue": "Brothers"
+      },
+      "practical": {
+        "parking": "Parking",
+        "accessibility": "Accessibility",
+        "children": "Children",
+        "yes": "Yes"
+      },
+      "media": {
+        "arrivalLabel": "Arrival",
+        "studyLabel": "Sabbath Study",
+        "studyDescription": "A reverent class setting for scripture, order, and fellowship.",
+        "dressLabel": "Modest Apparel",
+        "dressDescription": "Respectful attire for gathering before the God of Israel."
+      },
+      "whatToExpectItems": [
+        "Opening prayer and ordered scripture reading.",
+        "Teaching led by the teaching elder with brothers reading the Bible.",
+        "Fellowship after class with brothers and sisters in Christ."
+      ],
+      "whatToBringItems": [
+        "Bible",
+        "Pen",
+        "Notebook",
+        "Lunch for fellowship after class"
+      ],
+      "fellowshipNote": "After class, bring your lunch and fellowship with your brothers and sisters in Christ.",
+      "dressCodeMen": [
+        "Remove any head covering upon entering and while in the building.",
+        "Do not wear sleeveless shirts, short pants, tight-fitting pants, fleece jogging pants, or revealing pants.",
+        "Younger brothers should wear belts, pull pants to the waist, tuck shirts in, and wear overall straps on the shoulders if wearing overalls."
+      ],
+      "dressCodeWomen": [
+        "Head covering is required.",
+        "Do not wear pants, shorts, skorts, mini or tight-fitting bottoms, halter tops, or revealing splits.",
+        "Modest apparel only."
+      ]
+    },
+    "giving": {
+      "eyebrow": "Stewardship",
+      "title": "Honour the Lord with thy Substance",
+      "description": "Giving at KOI is handled in seriousness, gratitude, and order. The support of the work is received without spectacle and with plainness before God.",
+      "mandate": "The Mandate",
+      "mandateTitle": "The storehouse is supplied in obedience, not performance.",
+      "mandateBody": "Giving is not treated as display, pressure, or spectacle. It is approached as an act of order before God, according to the word and for the sake of the house.",
+      "work": "The Work",
+      "workTitle": "Support is directed toward the poor and the maintenance of the house.",
+      "workBody1": "What is given is meant to strengthen the practical life of the assembly: the keeping of the place, the continuance of the work, and the relief of need where need is present.",
+      "workBody2": "KOI keeps this matter plain. Stewardship is handled with seriousness so that the work may remain in order and the house may not lack what is necessary.",
+      "bankName": "First National Bank (FNB)"
+    },
+    "membership": {
+      "eyebrow": "Membership",
+      "title": "The Foundation of the Prophets",
+      "description": "Membership at KOI is received as a covenant matter. It joins doctrine, order, and fellowship under the word taught by the prophets, the apostles, and Christ the chief cornerstone.",
+      "covenant": "The Covenant",
+      "covenantTitle": "Those received are no longer strangers, but fellow citizens in the household.",
+      "covenantBody": "Membership is not casual subscription. It is an ordered request to walk in fellowship, repentance, and obedience within the household that confesses the God of Israel.",
+      "observances": "Institutional Observances",
+      "observancesTitle": "Membership is kept within a visible order of doctrine and practice.",
+      "observancesBody": "These pillars mark the life of the assembly and form the expected frame of covenant continuity at KOI.",
+      "preparation": "Preparation",
+      "preparationTitle": "This is a serious act of repentance and dedication to the God of Israel.",
+      "preparationBody1": "A membership request should be made soberly. It is a declaration that a person desires to be received under the doctrine, judgments, statutes, and fellowship observed in this assembly.",
+      "preparationBody2": "KOI does not treat membership as a casual subscription. It is approached with truthfulness, prayer, and a willingness to be examined in the light of the word.",
+      "pillars": {
+        "sabbath": {
+          "label": "The Sabbath",
+          "value": "Seventh-day observance and ordered study."
+        },
+        "feasts": {
+          "label": "The Feasts of the Lord",
+          "value": "Leviticus 23 appointed times."
+        },
+        "dietary": {
+          "label": "The Dietary Law",
+          "value": "Clean and unclean according to Leviticus 11."
+        },
+        "royal": {
+          "label": "The Royal Commandments",
+          "value": "The moral law, judgments, statutes, and doctrine."
+        }
+      }
+    },
+    "prayer": {
+      "eyebrow": "Intercession",
+      "title": "The Prayer of the Righteous",
+      "description": "Requests brought here are handled with sobriety, compassion, and care. Intercession is approached as a serious labor before God, not as public display.",
+      "mandate": "The Mandate",
+      "mandateTitle": "Prayer is shared so the body may bear, confess, and seek healing together.",
+      "mandateBody": "KOI receives prayer requests as matters of intercession, repentance, and mutual care. What is brought before the Lord should be brought truthfully, with reverence and with faith.",
+      "burdens": "Bear One Another's Burdens",
+      "burdensTitle": "The elder and the assembly intercede so burdens need not be carried alone.",
+      "burdensBody": "The teaching elder receives prayer requests with discretion, and the assembly joins where appropriate in collective intercession. This work is meant to comfort the afflicted, strengthen the weary, and bring matters before the Lord in an ordered spirit.",
+      "form": "Intercession Form",
+      "formTitle": "Submit your request carefully and it will be received in confidence.",
+      "formBody": "Leave your name only if you wish. If a response is needed, provide an email address so the elder may reply in order.",
+      "note": "Prayer requests are received carefully. Confidential requests are held for elder attention only."
+    },
+    "contact": {
+      "inquiry": "Inquiry",
+      "title": "Write with clarity and KOI will be able to respond in order.",
+      "body": "Use the form for introductions, practical questions, or requests for further information about the Sabbath class and the work.",
+      "heroTitle": "Speak with KOI",
+      "heroDescription": "Send a careful inquiry to the assembly and a brother will respond when able."
+    },
+    "blog": {
+      "title": "The KOI Journal",
+      "linksLabel": "Journal article links",
+      "metadataTitle": "Blog | Kingdom of Israel",
+      "metadataDescription": "Weekly writings and doctrinal articles from the Kingdom of Israel study house.",
+      "eyebrow": "Weekly Writing",
+      "archiveLabel": "Study Archive",
+      "archiveTitle": "A disciplined journal for doctrine and remembrance.",
+      "archiveBody": "Read weekly articles by topic, scripture anchor, and language. Each entry is prepared for careful study rather than casual browsing.",
+      "articleCountLabel": "Articles",
+      "topicCountLabel": "Topics",
+      "readArticle": "Read article",
+      "body": "Multilingual KOI editorial writings, study reflections, and doctrinal journal articles prepared for careful reading."
+    }
+  },
+  "reader": {
+    "metadataEyebrow": "Lesson Engine",
+    "metadataBody": "A protected Sabbath reading surface for lesson documents, verified media, and multilingual study access.",
+    "availableLanguages": "Available languages",
+    "mediaOptions": "Lesson media options",
+    "read": "Read",
+    "watchVideo": "Watch Video",
+    "listenAudio": "Listen Audio",
+    "audioLesson": "Audio Lesson",
+    "readingDocument": "Reading Document",
+    "languageSelection": "Lesson language selection",
+    "readingSurface": "Lesson reading surface",
+    "protectedView": "Protected study view. Please read on-site; copying, printing, and direct download controls are intentionally limited.",
+    "pdfPreview": "PDF preview",
+    "pdfUnavailable": "The in-browser lesson preview is unavailable on this device. Use the structured reader above for on-site study.",
+    "flagship": "Open the flagship teaching journal",
+    "browserAudio": "Your browser does not support inline audio playback."
+  },
+  "forms": {
+    "common": {
+      "required": "This field is required.",
+      "ackRequired": "This acknowledgement is required.",
+      "emailInvalid": "Enter a valid email address.",
+      "prepared": "Prepared",
+      "received": "Received",
+      "form": "Form",
+      "submitting": "Submitting...",
+      "localNote": "This phase validates and resolves locally while KOI's delivery workflow is prepared for the next batch."
+    },
+    "visit": {
+      "title": "Plan a visit",
+      "description": "Tell KOI a little about your intended visit so the class can receive you with order and care.",
+      "submitLabel": "Send visit request",
+      "successTitle": "Visit request prepared",
+      "successBody": "Your visit request passed validation and is ready for KOI's delivery workflow.",
+      "fields": {
+        "fullName": {
+          "label": "Full name",
+          "placeholder": "Your full name"
+        },
+        "email": {
+          "label": "Email address",
+          "placeholder": "name@example.com"
+        },
+        "phone": {
+          "label": "Phone number",
+          "placeholder": "+27 ..."
+        },
+        "city": {
+          "label": "City or area",
+          "placeholder": "Johannesburg"
+        },
+        "firstVisit": {
+          "label": "Is this your first visit?",
+          "options": {
+            "empty": "Select one",
+            "yes": "Yes",
+            "no": "No"
+          }
+        },
+        "attendingCount": {
+          "label": "Number attending",
+          "placeholder": "1"
+        },
+        "plannedDate": {
+          "label": "Planned visit date"
+        },
+        "notes": {
+          "label": "Questions or access needs",
+          "placeholder": "Share any practical questions or needs."
+        },
+        "venueAcknowledgment": {
+          "label": "I understand that exact venue details may be confirmed after contact."
+        }
+      }
+    },
+    "contact": {
+      "title": "Send an inquiry",
+      "description": "Use this form for questions, introductions, or requests for information.",
+      "submitLabel": "Send inquiry",
+      "successTitle": "Inquiry prepared",
+      "successBody": "Your inquiry passed validation and is ready for KOI's delivery workflow.",
+      "fields": {
+        "fullName": {
+          "label": "Full name",
+          "placeholder": "Your full name"
+        },
+        "email": {
+          "label": "Email address",
+          "placeholder": "name@example.com"
+        },
+        "phone": {
+          "label": "Phone number",
+          "placeholder": "+27 ..."
+        },
+        "subject": {
+          "label": "Subject",
+          "placeholder": "Reason for contact"
+        },
+        "message": {
+          "label": "Message",
+          "placeholder": "Write your message."
+        }
+      }
+    },
+    "membership": {
+      "kicker": "Interview Request",
+      "title": "Request membership interview",
+      "description": "Use this form if you are seeking covenant fellowship with KOI and are prepared to be received on the doctrinal foundation taught here.",
+      "submitLabel": "Request Membership Interview",
+      "submitError": "Unable to submit membership request.",
+      "successTitle": "Membership request received",
+      "successBody": "Your membership request has been received for KOI's interview workflow.",
+      "note": "This request will be stored for KOI's institutional review workflow.",
+      "fields": {
+        "fullName": {
+          "label": "Full Name",
+          "placeholder": "Your full name"
+        },
+        "email": {
+          "label": "Email Address"
+        },
+        "phone": {
+          "label": "Phone Number"
+        },
+        "city": {
+          "label": "City/Location",
+          "placeholder": "Johannesburg"
+        },
+        "foundationAcknowledgment": {
+          "label": "I confirm my commitment to the doctrinal foundation of KOI."
+        }
+      }
+    },
+    "prayer": {
+      "kicker": "Request",
+      "title": "Submit an intercession request",
+      "description": "Share your request carefully. If you are seeking a response, you may leave an email address for the elder or the assembly to reply in order.",
+      "submitLabel": "Submit Request",
+      "submitError": "Unable to submit prayer request.",
+      "successTitle": "Intercession request received",
+      "successBody": "Your prayer request has been received for KOI's intercession workflow.",
+      "note": "This request will be stored for KOI's intercession workflow and reviewed with care.",
+      "fields": {
+        "name": {
+          "label": "Name",
+          "placeholder": "Optional"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "If you wish for a response"
+        },
+        "requestBody": {
+          "label": "Prayer Request",
+          "placeholder": "Write your request with care and clarity."
+        },
+        "confidentiality": {
+          "label": "Keep this request confidential (Elder only)"
+        }
+      }
+    }
+  },
+  "scriptures": {
+    "malachi3_10": {
+      "reference": "Malachi 3:10",
+      "text": "Bring ye all the tithes into the storehouse, that there may be meat in mine house, and prove me now herewith, saith the LORD of hosts."
+    },
+    "ephesians2_19": {
+      "reference": "Ephesians 2:19",
+      "text": "Now therefore ye are no more strangers and foreigners, but fellowcitizens with the saints, and of the household of God."
+    },
+    "james5_16": {
+      "reference": "James 5:16",
+      "text": "Confess your faults one to another, and pray one for another, that ye may be healed. The effectual fervent prayer of a righteous man availeth much."
+    }
+  },
+  "giving": {
+    "bank": {
+      "kicker": "Bank Details",
+      "title": "Offering by bank transfer",
+      "accountHolder": "Account Holder",
+      "bank": "Bank",
+      "accountNumber": "Account Number",
+      "branchCode": "Branch Code",
+      "copyAccount": "Copy account number",
+      "copy": "Copy",
+      "copied": "Copied",
+      "note": "Please use your name as reference where possible."
+    },
+    "paystack": {
+      "idle": "Secure card giving available from {amount}.",
+      "verifying": "Verifying offering...",
+      "verifyError": "We could not verify this offering. Please try again or use the bank details.",
+      "success": "Offering received: {amount}.",
+      "missingKey": "Paystack public key is not configured yet.",
+      "invalidEmail": "Enter an email address before continuing.",
+      "unavailable": "Paystack is not available yet. Please refresh and try again.",
+      "launching": "Opening secure Paystack gateway...",
+      "cancelled": "Offering window closed.",
+      "startError": "We could not start the gateway. Please try again.",
+      "kicker": "Secure Gateway",
+      "title": "Complete an offering of {amount}",
+      "note": "Bank transfer remains the primary giving method while card giving is configured.",
+      "emailLabel": "Email for receipt",
+      "processing": "Processing...",
+      "button": "Complete Offering"
+    }
+  },
+  "blog": {
+    "kicker": "Teaching Journal",
+    "author": "By The Teaching Elder",
+    "metadataLabel": "Article details",
+    "journalArticles": "Journal articles",
+    "editorialLanguage": "Editorial language",
+    "mediaLabel": "Editorial image",
+    "summaryLabel": "Article summary",
+    "scripture": "Scripture",
+    "topicsLabel": "Topics",
+    "readingTime": "{count} min read",
+    "shareTeaching": "Share this teaching",
+    "copyLink": "Copy Link",
+    "email": "Email",
+    "returnToLibrary": "Return to Library",
+    "rhythmMediaLabel": "Study image {number}",
+    "rhythmMediaDescription": "A quiet visual pause for reflection within the reading.",
+    "categories": {
+      "sabbathDoctrine": "Sabbath Doctrine",
+      "foundation": "Foundation"
+    },
+    "topics": {
+      "sabbath": "Sabbath",
+      "study": "Study",
+      "holyOrder": "Holy Order",
+      "law": "Law",
+      "testimony": "Testimony",
+      "doctrine": "Doctrine"
+    }
+  }
+}

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 type BankDetailCardProps = {
   accountHolder: string;
@@ -10,6 +11,7 @@ type BankDetailCardProps = {
 };
 
 export function BankDetailCard({ accountHolder, bank, accountNumber, branchCode }: BankDetailCardProps) {
+  const t = useTranslations("giving.bank");
   const [copied, setCopied] = useState(false);
 
   async function handleCopy() {
@@ -25,35 +27,30 @@ export function BankDetailCard({ accountHolder, bank, accountNumber, branchCode 
   return (
     <section className="bank-detail-card" aria-labelledby="bank-details-title">
       <div className="bank-detail-card__header">
-        <p className="section-kicker">Bank Details</p>
-        <h2 id="bank-details-title">Orderly support for the work</h2>
+        <p className="section-kicker">{t("kicker")}</p>
+        <h2 id="bank-details-title">{t("title")}</h2>
       </div>
 
       <dl className="bank-detail-card__grid">
         <div className="bank-detail-card__row">
-          <dt>Account holder</dt>
+          <dt>{t("accountHolder")}</dt>
           <dd>{accountHolder}</dd>
         </div>
         <div className="bank-detail-card__row">
-          <dt>Bank</dt>
+          <dt>{t("bank")}</dt>
           <dd>{bank}</dd>
         </div>
         <div className="bank-detail-card__row bank-detail-card__row--account">
-          <dt>Account number</dt>
+          <dt>{t("accountNumber")}</dt>
           <dd>
             <span className="bank-detail-card__mono">{accountNumber}</span>
-            <button
-              aria-label="Copy account number"
-              className="bank-detail-card__copy"
-              onClick={handleCopy}
-              type="button"
-            >
-              Copy
+            <button aria-label={t("copyAccount")} className="bank-detail-card__copy" onClick={handleCopy} type="button">
+              {t("copy")}
             </button>
           </dd>
         </div>
         <div className="bank-detail-card__row">
-          <dt>Branch code</dt>
+          <dt>{t("branchCode")}</dt>
           <dd>
             <span className="bank-detail-card__mono">{branchCode}</span>
           </dd>
@@ -61,7 +58,7 @@ export function BankDetailCard({ accountHolder, bank, accountNumber, branchCode 
       </dl>
 
       <p className="bank-detail-card__status" aria-live="polite">
-        {copied ? "Account number copied." : "Use these details plainly and with care."}
+        {copied ? t("copied") : t("note")}
       </p>
     </section>
   );

@@ -1,14 +1,16 @@
 "use client";
 
 import { startTransition } from "react";
+import { useTranslations } from "next-intl";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { lessonLanguageLabels, lessonLanguageOptions, type LessonLanguage } from "../types";
+import { lessonLanguageOptions, type LessonLanguage } from "../types";
 
 type LessonLanguageFiltersProps = {
   activeLanguage: "all" | LessonLanguage;
 };
 
 export function LessonLanguageFilters({ activeLanguage }: LessonLanguageFiltersProps) {
+  const t = useTranslations("lessons");
   const pathname = usePathname();
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -30,15 +32,15 @@ export function LessonLanguageFilters({ activeLanguage }: LessonLanguageFiltersP
   }
 
   return (
-    <div className="lesson-filter-bar" aria-label="Lesson language filters">
-      <div className="lesson-filter-list" role="toolbar" aria-label="Language filters">
+    <div className="lesson-filter-bar" aria-label={t("filtersLabel")}>
+      <div className="lesson-filter-list" role="toolbar" aria-label={t("filtersLabel")}>
         <button
           className={`lesson-filter-chip${activeLanguage === "all" ? " is-active" : ""}`}
           type="button"
           aria-pressed={activeLanguage === "all"}
           onClick={() => updateLanguage("all")}
         >
-          All
+          {t("all")}
         </button>
         {lessonLanguageOptions.map((language) => (
           <button
@@ -48,10 +50,12 @@ export function LessonLanguageFilters({ activeLanguage }: LessonLanguageFiltersP
             aria-pressed={activeLanguage === language}
             onClick={() => updateLanguage(language)}
           >
-            {lessonLanguageLabels[language]}
+            {t(`languageNames.${language}`)}
           </button>
         ))}
       </div>
     </div>
   );
 }
+
+

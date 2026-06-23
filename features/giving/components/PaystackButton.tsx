@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { useTranslations } from "next-intl";
 
 declare global {
   interface Window {
@@ -38,12 +39,15 @@ function createReference() {
 }
 
 export function PaystackButton() {
+  const t = useTranslations("giving.paystack");
   const publicKey = process.env.NEXT_PUBLIC_PAYSTACK_PUBLIC_KEY ?? "";
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "launching" | "verifying" | "success" | "error">("idle");
-  const [message, setMessage] = useState(
-    `Provide an email address to continue with a ${formatCurrency(OFFERING_AMOUNT)} offering through Paystack.`,
-  );
+  const [message, setMessage] = useState(t("idle", { amount: formatCurrency(OFFERING_AMOUNT) }));
+
+  useEffect(() => {
+    setMessage(t("idle", { amount: formatCurrency(OFFERING_AMOUNT) }));
+  }, [t]);
 
   useEffect(() => {
     if (document.querySelector('script[data-paystack="koi-v2"]')) {
@@ -65,7 +69,7 @@ export function PaystackButton() {
 
   async function handleSuccess(reference: string) {
     setStatus("verifying");
-    setMessage("Confirming your offering with Paystack...");
+    setMessage(t("verifying"));
 
     try {
       const response = await fetch("/api/paystack/verify", {
@@ -80,28 +84,28 @@ export function PaystackButton() {
 
       if (!response.ok) {
         setStatus("error");
-        setMessage(payload.error ?? "Unable to verify your offering.");
+        setMessage(payload.error ?? t("verifyError"));
         return;
       }
 
       setStatus("success");
-      setMessage(`Offering received and verified for ${formatCurrency(payload.amount ?? OFFERING_AMOUNT)}.`);
+      setMessage(t("success", { amount: formatCurrency(payload.amount ?? OFFERING_AMOUNT) }));
     } catch {
       setStatus("error");
-      setMessage("Unable to verify your offering.");
+      setMessage(t("verifyError"));
     }
   }
 
   function handleClick() {
     if (!publicKey) {
       setStatus("error");
-      setMessage("Paystack public key is not configured.");
+      setMessage(t("missingKey"));
       return;
     }
 
     if (!isValidEmail(email)) {
       setStatus("error");
-      setMessage("Enter a valid email address before continuing.");
+      setMessage(t("invalidEmail"));
       return;
     }
 
@@ -109,12 +113,12 @@ export function PaystackButton() {
 
     if (!PaystackConstructor) {
       setStatus("error");
-      setMessage("Paystack checkout is not available yet. Please try again.");
+      setMessage(t("unavailable"));
       return;
     }
 
     setStatus("launching");
-    setMessage("Opening Paystack secure checkout...");
+    setMessage(t("launching"));
 
     const popup = new PaystackConstructor();
 
@@ -129,11 +133,11 @@ export function PaystackButton() {
       },
       onCancel: () => {
         setStatus("idle");
-        setMessage("Offering window closed. You are still on the giving page.");
+        setMessage(t("cancelled"));
       },
       onError: (error) => {
         setStatus("error");
-        setMessage(error.message ?? "Paystack could not start the transaction.");
+        setMessage(error.message ?? t("startError"));
       },
     });
   }
@@ -141,13 +145,13 @@ export function PaystackButton() {
   return (
     <div className="paystack-shell">
       <div className="paystack-shell__intro">
-        <p className="section-kicker">Secure Gateway</p>
-        <h3>Complete a guided offering of {formatCurrency(OFFERING_AMOUNT)}</h3>
-        <p className="paystack-shell__note">Paystack requires an email address for the secure checkout session.</p>
+        <p className="section-kicker">{t("kicker")}</p>
+        <h3>{t("title", { amount: formatCurrency(OFFERING_AMOUNT) })}</h3>
+        <p className="paystack-shell__note">{t("note")}</p>
       </div>
 
       <div className="paystack-shell__field form-field">
-        <label htmlFor="paystack-email">Email address</label>
+        <label htmlFor="paystack-email">{t("emailLabel")}</label>
         <input
           id="paystack-email"
           type="email"
@@ -159,7 +163,7 @@ export function PaystackButton() {
       </div>
 
       <button className="paystack-button" type="button" onClick={handleClick} disabled={isDisabled}>
-        {status === "launching" || status === "verifying" ? "Processing..." : "Complete Offering"}
+        {status === "launching" || status === "verifying" ? t("processing") : t("button")}
       </button>
 
       <p className={`paystack-shell__status paystack-shell__status--${status}`}>{message}</p>

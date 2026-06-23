@@ -1,10 +1,10 @@
-import type { Metadata } from "next";
-import type { ReactNode } from "react";
-import { Fraunces, Inter } from "next/font/google";
+import type {Metadata} from "next";
+import type {ReactNode} from "react";
+import {Fraunces, Inter} from "next/font/google";
+import {NextIntlClientProvider} from "next-intl";
 import "./globals.css";
-import { SiteFooter } from "../features/public-shell/components/SiteFooter";
-import { SiteHeader } from "../features/public-shell/components/SiteHeader";
-import { site } from "../content/site";
+import {site} from "../content/site";
+import enMessages from "../messages/en.json";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -57,20 +57,15 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: ReactNode;
-}>) {
+export default function RootLayout({children}: Readonly<{children: ReactNode}>) {
   return (
     <html lang="en">
       <body className={`${fraunces.variable} ${inter.variable}`} suppressHydrationWarning>
-        <div className="site-frame">
-          <SiteHeader />
-          <main className="site-main">{children}</main>
-          <SiteFooter />
-        </div>
+        <NextIntlClientProvider locale="en" messages={enMessages}>
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );
 }
+

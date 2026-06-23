@@ -1,19 +1,29 @@
 "use client";
 
-import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, type SyntheticEvent } from "react";
+import { useTranslations } from "next-intl";
+import { Link } from "../../../i18n/navigation";
 import { MediaBlock } from "../../pages/components/MediaBlock";
-import { lessonLanguageLabels, lessonLanguageOptions, type LessonLanguage } from "../types";
+import { lessonLanguageOptions, type LessonLanguage } from "../types";
 import type { LessonGroup } from "../lib/library";
 
 type LessonReaderClientProps = {
   lesson: LessonGroup;
+  initialLanguage?: LessonLanguage;
 };
 
 type ReaderMode = "read" | "audio";
 
-export function LessonReaderClient({ lesson }: LessonReaderClientProps) {
-  const [activeLanguage, setActiveLanguage] = useState<LessonLanguage>(lesson.languages[0] ?? "en");
+function deterCopy(event: SyntheticEvent) {
+  event.preventDefault();
+}
+
+export function LessonReaderClient({ lesson, initialLanguage }: LessonReaderClientProps) {
+  const t = useTranslations("reader");
+  const lessonT = useTranslations("lessons");
+  const [activeLanguage, setActiveLanguage] = useState<LessonLanguage>(
+    initialLanguage ?? lesson.languages[0] ?? "en",
+  );
   const [activeMode, setActiveMode] = useState<ReaderMode>("read");
 
   const activeVariant = useMemo(
@@ -25,7 +35,8 @@ export function LessonReaderClient({ lesson }: LessonReaderClientProps) {
     document.body.classList.add("lesson-reader-locked");
 
     const handleKeyDown = (event: KeyboardEvent) => {
-      if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "p") {
+      const key = event.key.toLowerCase();
+      if ((event.ctrlKey || event.metaKey) && (key === "p" || key === "s" || key === "c")) {
         event.preventDefault();
       }
     };
@@ -51,13 +62,15 @@ export function LessonReaderClient({ lesson }: LessonReaderClientProps) {
   const hasAudio = Boolean(activeVariant.audioUrl ?? lesson.audioUrl);
   const hasVideo = Boolean(lesson.videoUrl);
   const audioSource = activeVariant.audioUrl ?? lesson.audioUrl;
+  const pdfPreviewUrl = `${activeVariant.pdfUrl}#toolbar=0&navpanes=0&scrollbar=1`;
+  const languageName = lessonT(`languageNames.${activeVariant.language}`);
 
   return (
-    <div className="lesson-reader" onContextMenu={(event) => event.preventDefault()}>
+    <div className="lesson-reader">
       <header className="lesson-reader__header">
         <div className="lesson-reader__header-top">
           <p className="lesson-row__scripture">{lesson.scriptureReference}</p>
-          <ul className="lesson-row__languages" aria-label="Available languages">
+          <ul className="lesson-row__languages" aria-label={t("availableLanguages")}>
             {Array.from(new Set(lesson.languages)).map((language) => (
               <li className="lesson-row__language" key={language}>
                 {language.toUpperCase()}
@@ -70,13 +83,13 @@ export function LessonReaderClient({ lesson }: LessonReaderClientProps) {
       </header>
 
       <div className="lesson-reader__controls">
-        <div className="lesson-reader__matrix" role="toolbar" aria-label="Lesson media options">
+        <div className="lesson-reader__matrix" role="toolbar" aria-label={t("mediaOptions")}>
           <button
             className={`lesson-reader__matrix-item${activeMode === "read" ? " is-active" : ""}`}
             type="button"
             onClick={() => setActiveMode("read")}
           >
-            Read
+            {t("read")}
           </button>
           {hasVideo ? (
             <a
@@ -85,7 +98,7 @@ export function LessonReaderClient({ lesson }: LessonReaderClientProps) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Watch Video
+              {t("watchVideo")}
             </a>
           ) : null}
           {hasAudio ? (
@@ -94,12 +107,12 @@ export function LessonReaderClient({ lesson }: LessonReaderClientProps) {
               type="button"
               onClick={() => setActiveMode("audio")}
             >
-              Listen Audio
+              {t("listenAudio")}
             </button>
           ) : null}
         </div>
 
-        <div className="lesson-reader__downloads lesson-reader__downloads--toggle" aria-label="Lesson language selection">
+        <div className="lesson-reader__downloads lesson-reader__downloads--toggle" aria-label={t("languageSelection")}>
           {lessonLanguageOptions
             .filter((language) => lesson.languages.includes(language))
             .map((language) => (
@@ -118,31 +131,36 @@ export function LessonReaderClient({ lesson }: LessonReaderClientProps) {
         </div>
       </div>
 
-      <section className="lesson-reader__content select-none" aria-label="Lesson reading surface">
+      <section
+        className="lesson-reader__content select-none"
+        aria-label={t("readingSurface")}
+        onContextMenu={deterCopy}
+        onCopy={deterCopy}
+        onCut={deterCopy}
+        onDragStart={deterCopy}
+      >
         {activeMode === "audio" && audioSource ? (
           <div className="lesson-reader__audio surface-panel">
             <div className="lesson-reader__panel-head">
-              <p className="section-kicker">Audio Lesson</p>
-              <h2>{lessonLanguageLabels[activeVariant.language]}</h2>
+              <p className="section-kicker">{t("audioLesson")}</p>
+              <h2>{languageName}</h2>
             </div>
             <audio controls preload="none" src={audioSource}>
-              Your browser does not support inline audio playback.
+              {t("browserAudio")}
             </audio>
           </div>
         ) : (
           <div className="lesson-reader__document surface-panel">
             <div className="lesson-reader__panel-head">
               <div>
-                <p className="section-kicker">Reading Document</p>
+                <p className="section-kicker">{t("readingDocument")}</p>
                 <h2>{activeVariant.title}</h2>
               </div>
-              <a href={activeVariant.pdfUrl} target="_blank" rel="noopener noreferrer">
-                Download PDF
-              </a>
+              <p className="lesson-reader__protection-note">{t("protectedView")}</p>
             </div>
 
             <section className="lesson-reader__intro reading-prose">
-              <p className="section-kicker">{lessonLanguageLabels[activeVariant.language]}</p>
+              <p className="section-kicker">{languageName}</p>
               <p>{activeVariant.readerIntro}</p>
             </section>
 
@@ -170,21 +188,14 @@ export function LessonReaderClient({ lesson }: LessonReaderClientProps) {
 
             {lesson.relatedTeachingSlug ? (
               <p className="lesson-reader__related">
-                <Link href={`/teachings/${lesson.relatedTeachingSlug}`}>Open the flagship teaching journal</Link>
+                <Link href={`/teachings/${lesson.relatedTeachingSlug}`}>{t("flagship")}</Link>
               </p>
             ) : null}
 
             <div className="lesson-reader__frame">
-              <object
-                data={activeVariant.pdfUrl}
-                type="application/pdf"
-                aria-label={`${activeVariant.title} PDF preview in ${lessonLanguageLabels[activeVariant.language]}`}
-              >
+              <object data={pdfPreviewUrl} type="application/pdf" aria-label={`${activeVariant.title} ${t("pdfPreview")}`}>
                 <div className="lesson-reader__fallback">
-                  <p>The in-browser lesson preview is unavailable on this device.</p>
-                  <a href={activeVariant.pdfUrl} target="_blank" rel="noopener noreferrer">
-                    Open the lesson PDF
-                  </a>
+                  <p>{t("pdfUnavailable")}</p>
                 </div>
               </object>
             </div>
@@ -194,3 +205,4 @@ export function LessonReaderClient({ lesson }: LessonReaderClientProps) {
     </div>
   );
 }
+
