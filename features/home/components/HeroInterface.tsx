@@ -780,7 +780,7 @@ export function HeroInterface({
           }
 
           .koi-identity-logo {
-            width: 8.6rem;
+            width: 11.6rem;
           }
 
           .koi-identity-title {
