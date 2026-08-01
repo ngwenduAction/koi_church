@@ -42,19 +42,19 @@ export const blogArticles: MultilingualArticle[] = [
       en: {
         title: "Why the Sabbath remains a day of study, remembrance, and holy order.",
         intro:
-          "The Sabbath is not treated at KOI as a decorative tradition. It is appointed time in which study, remembrance, obedience, and peace are held together before God.",
+          "The Sabbath is not treated at IOG as a decorative tradition. It is appointed time in which study, remembrance, obedience, and peace are held together before God.",
         sections: [
           {
             heading: "The Sabbath as appointed time",
             paragraphs: [
               "The Sabbath is not received as an empty pause at the end of a working week. It is appointed time, sanctified by God and ordered for remembrance, study, and obedience.",
-              "KOI keeps the seventh day not as a private lifestyle marker, but as a holy convocation in which the word is opened carefully and heard in order.",
+              "IOG keeps the seventh day not as a private lifestyle marker, but as a holy convocation in which the word is opened carefully and heard in order.",
             ],
           },
           {
             heading: "Study instead of spectacle",
             paragraphs: [
-              "In a noisy age, serious study is itself a witness. KOI treats the Sabbath as a day for disciplined hearing, scriptural examination, and mutual edification rather than religious performance.",
+              "In a noisy age, serious study is itself a witness. IOG treats the Sabbath as a day for disciplined hearing, scriptural examination, and mutual edification rather than religious performance.",
               "Pens, notebooks, questions, and careful listening belong here because worship is not severed from understanding.",
             ],
           },
@@ -62,7 +62,7 @@ export const blogArticles: MultilingualArticle[] = [
             heading: "Remembering the covenant in practice",
             paragraphs: [
               "To keep the Sabbath is to remember that sacred time must be ordered by the word of God. The gathering of the assembly, the teaching of the elder, and the fellowship after class all become part of a visible covenant life.",
-              "This is why the Sabbath remains central to KOI: it is the weekly return to doctrine, correction, remembrance, and peace.",
+              "This is why the Sabbath remains central to IOG: it is the weekly return to doctrine, correction, remembrance, and peace.",
             ],
           },
         ],
@@ -70,7 +70,7 @@ export const blogArticles: MultilingualArticle[] = [
       zu: {
         title: "Kungani iSabatha lisalokhu liyisikhathi sokufunda, ukukhumbula, nokuhleleka okungcwele.",
         intro:
-          "ESabatheni, i-KOI ayibheki usuku njengomkhuba wokuhlobisa. Luyisikhathi esibekwe nguNkulunkulu lapho ukufunda, ukukhumbula, ukulalela, nokuthula kubanjwa ndawonye phambi kwakhe.",
+          "ESabatheni, i-IOG ayibheki usuku njengomkhuba wokuhlobisa. Luyisikhathi esibekwe nguNkulunkulu lapho ukufunda, ukukhumbula, ukulalela, nokuthula kubanjwa ndawonye phambi kwakhe.",
         sections: [
           {
             heading: "ISabatha njengexesha elibekiwe",
@@ -98,19 +98,19 @@ export const blogArticles: MultilingualArticle[] = [
       st: {
         title: "Hobaneng Sabatha e ntse e le letsatsi la thuto, kgopotso, le taolo e halalelang.",
         intro:
-          "Sabatha ha e nkoe ke KOI e le moetlo wa mokgabiso. Ke nako e beilweng eo ho yona thuto, kgopotso, kutlo, le kgotso di emang hammoho pela Modimo.",
+          "Sabatha ha e nkoe ke IOG e le moetlo wa mokgabiso. Ke nako e beilweng eo ho yona thuto, kgopotso, kutlo, le kgotso di emang hammoho pela Modimo.",
         sections: [
           {
             heading: "Sabatha e le nako e beilweng",
             paragraphs: [
               "Sabatha ha se phomolo e se nang moelelo qetellong ya beke. Ke nako e halalelang e arotsoeng bakeng sa kgopotso, thuto, le kutlo.",
-              "KOI e boloka letsatsi la bosupa e le kopano e halalelang moo lentswe le bulwang ka hloko le ka taolo.",
+              "IOG e boloka letsatsi la bosupa e le kopano e halalelang moo lentswe le bulwang ka hloko le ka taolo.",
             ],
           },
           {
             heading: "Thuto ho ena le pontsho",
             paragraphs: [
-              "Mehleng e lerata, thuto e tebileng ke bopaki ka boona. KOI e tshwara Sabatha e le letsatsi la kutlo e hlophisitsweng, ho sekaseka mangolo, le ho hahana ha phutheho.",
+              "Mehleng e lerata, thuto e tebileng ke bopaki ka boona. IOG e tshwara Sabatha e le letsatsi la kutlo e hlophisitsweng, ho sekaseka mangolo, le ho hahana ha phutheho.",
               "Dipene, dibuka, dipotso, le ho mamela ka hloko di tshwanetse ho ba teng hobane borapedi ha bo kgaolehe kutlwisisong.",
             ],
           },
@@ -118,7 +118,7 @@ export const blogArticles: MultilingualArticle[] = [
             heading: "Ho hopola selekane ka ketso",
             paragraphs: [
               "Ho boloka Sabatha ke ho hopola hore nako e halalelang e tshwanetse ho laolwa ke lentswe la Modimo. Ho bokana ha phutheho, thuto ya moholo, le kopano kamora tlelaseng di ba karolo ya bophelo ba selekane bo bonahalang.",
-              "Ke ka baka leo Sabatha e salang e le bohareng ho KOI: ke ho kgutlela bekeng le beke thutong, khalemelong, kgopotsong, le kgotso.",
+              "Ke ka baka leo Sabatha e salang e le bohareng ho IOG: ke ho kgutlela bekeng le beke thutong, khalemelong, kgopotsong, le kgotso.",
             ],
           },
         ],
@@ -169,7 +169,7 @@ export const blogArticles: MultilingualArticle[] = [
             ],
           },
           {
-            heading: "Why this remains central at KOI",
+            heading: "Why this remains central at IOG",
             paragraphs: [
               "The assembly is preserved by returning again and again to the law and to the testimony. That discipline prevents doctrine from drifting into sentiment, novelty, or the authority of men.",
               "What does not speak according to this word is not received, however polished, modern, or inherited it may appear.",
@@ -225,7 +225,7 @@ export const blogArticles: MultilingualArticle[] = [
             ],
           },
           {
-            heading: "Hobaneng sena se le bohareng ho KOI",
+            heading: "Hobaneng sena se le bohareng ho IOG",
             paragraphs: [
               "Phutheho e sireletswa ke ho kgutlela kamehla molaong le bopaking. Taolo ena e thibela thuto ho thekesela maikutlong, bocha, kapa taolong ya batho.",
               "Se sa bueng ho ya ka lentswe lena ha se amohelwe, leha se ka bonahala se bentshitswe, se le sa mehleng ena, kapa se futsitswe.",

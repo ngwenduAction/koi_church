@@ -45,7 +45,7 @@ export const metadata: Metadata = {
         url: socialImage,
         width: 1024,
         height: 1024,
-        alt: "Kingdom of Israel (KOI)",
+        alt: "Israel of God (IOG)",
       },
     ],
   },

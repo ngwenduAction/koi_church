@@ -8,9 +8,9 @@ import { Container } from "../../../shared/components/Container";
 const teaching = teachings.find((entry) => entry.slug === "the-law-and-the-testimony");
 
 export const metadata: Metadata = {
-  title: "The Law and the Testimony | Kingdom of Israel",
+  title: "The Law and the Testimony | Israel of God",
   description:
-    "A flagship KOI teaching presented as a trilingual study journal with English reading prose and source lesson PDFs in English, IsiZulu, and Sesotho.",
+    "A flagship IOG teaching presented as a trilingual study journal with English reading prose and source lesson PDFs in English, IsiZulu, and Sesotho.",
 };
 
 export default function TheLawAndTheTestimonyPage() {

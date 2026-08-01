@@ -13,7 +13,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("pages.giving");
 
   return {
-    title: `${t("eyebrow")} | Kingdom of Israel`,
+    title: `${t("eyebrow")} | Israel of God`,
     description: t("description"),
   };
 }

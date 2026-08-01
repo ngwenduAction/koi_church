@@ -1,6 +1,6 @@
 {
   "common": {
-    "brandHome": "Kingdom of Israel home",
+    "brandHome": "Israel of God home",
     "openNavigation": "Open navigation",
     "closeNavigation": "Close navigation overlay",
     "sideNavigation": "Side navigation",
@@ -22,7 +22,7 @@
     "flagshipTeaching": "Flagship Teaching"
   },
   "hero": {
-    "title": "Sabbath Study House",
+    "title": "Bible Study Class",
     "meta": "Saturday, 12:00 NOON / Sandton, Johannesburg, 2196",
     "mediaCaption": "Original Christians",
     "mediaTitle": "Law, testimony, living water.",
@@ -43,7 +43,7 @@
     "sabbath": {
       "eyebrow": "Weekly Sabbath",
       "title": "We gather on the seventh day to study the scriptures.",
-      "body": "KOI meets each Sabbath for ordered bible study, reading doctrine through the law, the prophets, Christ, and the apostles.",
+      "body": "IOG meets each Sabbath for ordered bible study, reading doctrine through the law, the prophets, Christ, and the apostles.",
       "link": "Plan your visit",
       "metadataLabel": "Weekly Sabbath details",
       "dayLabel": "Day",
@@ -56,7 +56,7 @@
     "foundation": {
       "eyebrow": "Foundation",
       "title": "Built upon the apostles and prophets, Jesus Christ himself being the chief cornerstone.",
-      "body": "KOI is a Sabbath bible study community teaching the uncut word of God according to the prophets and the apostles. We observe the Lord's Sabbath, the feast days of Leviticus 23, the dietary law of Leviticus 11, and the royal law of the Ten Commandments.",
+      "body": "IOG is a Sabbath bible study community teaching the uncut word of God according to the prophets and the apostles. We observe the Lord's Sabbath, the feast days of Leviticus 23, the dietary law of Leviticus 11, and the royal law of the Ten Commandments.",
       "pillars": [
         "The God of Israel",
         "Jesus Christ",
@@ -89,12 +89,12 @@
     "weekly": "Weekly Sabbath",
     "library": "Library",
     "channels": "Channels",
-    "lowerBrand": "Kingdom of Israel",
+    "lowerBrand": "Israel of God",
     "lowerText": "Built for Sabbath study, doctrine, lessons, and community order."
   },
   "lessons": {
-    "metadataTitle": "Lessons | Kingdom of Israel",
-    "metadataDescription": "Multilingual Sabbath lesson documents from Kingdom of Israel, prepared in English, IsiZulu, and Sesotho for on-site study.",
+    "metadataTitle": "Lessons | Israel of God",
+    "metadataDescription": "Multilingual Sabbath lesson documents from Israel of God, prepared in English, IsiZulu, and Sesotho for on-site study.",
     "eyebrow": "Lesson Library",
     "title": "Study materials for Sabbath learning",
     "body": "A multilingual study archive for doctrine, weekly preparation, and close reading in English, IsiZulu, and Sesotho.",
@@ -130,7 +130,7 @@
     "visit": {
       "eyebrow": "Visit",
       "title": "Weekly Sabbath Class",
-      "description": "Visitor information for the weekly Sabbath class at Kingdom of Israel, including what to expect, what to bring, dress order, and visit planning.",
+      "description": "Visitor information for the weekly Sabbath class at Israel of God, including what to expect, what to bring, dress order, and visit planning.",
       "guide": "Visitor Guide",
       "expectTitle": "What to expect on the Sabbath",
       "expectBody": "The weekly class is orderly, scriptural, and practical. Visitors are received for study, listening, and fellowship with the assembly.",
@@ -146,7 +146,7 @@
       "men": "Men",
       "women": "Women",
       "request": "Visit Request",
-      "requestTitle": "Tell KOI you are planning to attend.",
+      "requestTitle": "Tell IOG you are planning to attend.",
       "requestBody": "This helps the class receive visitors with clarity, especially if you have questions about timing, accessibility, or family attendance.",
       "essentials": {
         "day": "Day",
@@ -199,30 +199,30 @@
     "giving": {
       "eyebrow": "Stewardship",
       "title": "Honour the Lord with thy Substance",
-      "description": "Giving at KOI is handled in seriousness, gratitude, and order. The support of the work is received without spectacle and with plainness before God.",
+      "description": "Giving at IOG is handled in seriousness, gratitude, and order. The support of the work is received without spectacle and with plainness before God.",
       "mandate": "The Mandate",
       "mandateTitle": "The storehouse is supplied in obedience, not performance.",
       "mandateBody": "Giving is not treated as display, pressure, or spectacle. It is approached as an act of order before God, according to the word and for the sake of the house.",
       "work": "The Work",
       "workTitle": "Support is directed toward the poor and the maintenance of the house.",
       "workBody1": "What is given is meant to strengthen the practical life of the assembly: the keeping of the place, the continuance of the work, and the relief of need where need is present.",
-      "workBody2": "KOI keeps this matter plain. Stewardship is handled with seriousness so that the work may remain in order and the house may not lack what is necessary.",
+      "workBody2": "IOG keeps this matter plain. Stewardship is handled with seriousness so that the work may remain in order and the house may not lack what is necessary.",
       "bankName": "First National Bank (FNB)"
     },
     "membership": {
       "eyebrow": "Membership",
       "title": "The Foundation of the Prophets",
-      "description": "Membership at KOI is received as a covenant matter. It joins doctrine, order, and fellowship under the word taught by the prophets, the apostles, and Christ the chief cornerstone.",
+      "description": "Membership at IOG is received as a covenant matter. It joins doctrine, order, and fellowship under the word taught by the prophets, the apostles, and Christ the chief cornerstone.",
       "covenant": "The Covenant",
       "covenantTitle": "Those received are no longer strangers, but fellow citizens in the household.",
       "covenantBody": "Membership is not casual subscription. It is an ordered request to walk in fellowship, repentance, and obedience within the household that confesses the God of Israel.",
       "observances": "Institutional Observances",
       "observancesTitle": "Membership is kept within a visible order of doctrine and practice.",
-      "observancesBody": "These pillars mark the life of the assembly and form the expected frame of covenant continuity at KOI.",
+      "observancesBody": "These pillars mark the life of the assembly and form the expected frame of covenant continuity at IOG.",
       "preparation": "Preparation",
       "preparationTitle": "This is a serious act of repentance and dedication to the God of Israel.",
       "preparationBody1": "A membership request should be made soberly. It is a declaration that a person desires to be received under the doctrine, judgments, statutes, and fellowship observed in this assembly.",
-      "preparationBody2": "KOI does not treat membership as a casual subscription. It is approached with truthfulness, prayer, and a willingness to be examined in the light of the word.",
+      "preparationBody2": "IOG does not treat membership as a casual subscription. It is approached with truthfulness, prayer, and a willingness to be examined in the light of the word.",
       "pillars": {
         "sabbath": {
           "label": "The Sabbath",
@@ -248,7 +248,7 @@
       "description": "Requests brought here are handled with sobriety, compassion, and care. Intercession is approached as a serious labor before God, not as public display.",
       "mandate": "The Mandate",
       "mandateTitle": "Prayer is shared so the body may bear, confess, and seek healing together.",
-      "mandateBody": "KOI receives prayer requests as matters of intercession, repentance, and mutual care. What is brought before the Lord should be brought truthfully, with reverence and with faith.",
+      "mandateBody": "IOG receives prayer requests as matters of intercession, repentance, and mutual care. What is brought before the Lord should be brought truthfully, with reverence and with faith.",
       "burdens": "Bear One Another's Burdens",
       "burdensTitle": "The elder and the assembly intercede so burdens need not be carried alone.",
       "burdensBody": "The teaching elder receives prayer requests with discretion, and the assembly joins where appropriate in collective intercession. This work is meant to comfort the afflicted, strengthen the weary, and bring matters before the Lord in an ordered spirit.",
@@ -259,16 +259,16 @@
     },
     "contact": {
       "inquiry": "Inquiry",
-      "title": "Write with clarity and KOI will be able to respond in order.",
+      "title": "Write with clarity and IOG will be able to respond in order.",
       "body": "Use the form for introductions, practical questions, or requests for further information about the Sabbath class and the work.",
-      "heroTitle": "Speak with KOI",
+      "heroTitle": "Speak with IOG",
       "heroDescription": "Send a careful inquiry to the assembly and a brother will respond when able."
     },
     "blog": {
-      "title": "The KOI Journal",
+      "title": "The IOG Journal",
       "linksLabel": "Journal article links",
-      "metadataTitle": "Blog | Kingdom of Israel",
-      "metadataDescription": "Weekly writings and doctrinal articles from the Kingdom of Israel study house.",
+      "metadataTitle": "Blog | Israel of God",
+      "metadataDescription": "Weekly writings and doctrinal articles from the Israel of God study house.",
       "eyebrow": "Weekly Writing",
       "archiveLabel": "Study Archive",
       "archiveTitle": "A disciplined journal for doctrine and remembrance.",
@@ -276,7 +276,7 @@
       "articleCountLabel": "Articles",
       "topicCountLabel": "Topics",
       "readArticle": "Read article",
-      "body": "Multilingual KOI editorial writings, study reflections, and doctrinal journal articles prepared for careful reading."
+      "body": "Multilingual IOG editorial writings, study reflections, and doctrinal journal articles prepared for careful reading."
     }
   },
   "reader": {
@@ -306,14 +306,14 @@
       "received": "Received",
       "form": "Form",
       "submitting": "Submitting...",
-      "localNote": "This phase validates and resolves locally while KOI's delivery workflow is prepared for the next batch."
+      "localNote": "This phase validates and resolves locally while IOG's delivery workflow is prepared for the next batch."
     },
     "visit": {
       "title": "Plan a visit",
-      "description": "Tell KOI a little about your intended visit so the class can receive you with order and care.",
+      "description": "Tell IOG a little about your intended visit so the class can receive you with order and care.",
       "submitLabel": "Send visit request",
       "successTitle": "Visit request prepared",
-      "successBody": "Your visit request passed validation and is ready for KOI's delivery workflow.",
+      "successBody": "Your visit request passed validation and is ready for IOG's delivery workflow.",
       "fields": {
         "fullName": {
           "label": "Full name",
@@ -360,7 +360,7 @@
       "description": "Use this form for questions, introductions, or requests for information.",
       "submitLabel": "Send inquiry",
       "successTitle": "Inquiry prepared",
-      "successBody": "Your inquiry passed validation and is ready for KOI's delivery workflow.",
+      "successBody": "Your inquiry passed validation and is ready for IOG's delivery workflow.",
       "fields": {
         "fullName": {
           "label": "Full name",
@@ -387,12 +387,12 @@
     "membership": {
       "kicker": "Interview Request",
       "title": "Request membership interview",
-      "description": "Use this form if you are seeking covenant fellowship with KOI and are prepared to be received on the doctrinal foundation taught here.",
+      "description": "Use this form if you are seeking covenant fellowship with IOG and are prepared to be received on the doctrinal foundation taught here.",
       "submitLabel": "Request Membership Interview",
       "submitError": "Unable to submit membership request.",
       "successTitle": "Membership request received",
-      "successBody": "Your membership request has been received for KOI's interview workflow.",
-      "note": "This request will be stored for KOI's institutional review workflow.",
+      "successBody": "Your membership request has been received for IOG's interview workflow.",
+      "note": "This request will be stored for IOG's institutional review workflow.",
       "fields": {
         "fullName": {
           "label": "Full Name",
@@ -409,7 +409,7 @@
           "placeholder": "Johannesburg"
         },
         "foundationAcknowledgment": {
-          "label": "I confirm my commitment to the doctrinal foundation of KOI."
+          "label": "I confirm my commitment to the doctrinal foundation of IOG."
         }
       }
     },
@@ -420,8 +420,8 @@
       "submitLabel": "Submit Request",
       "submitError": "Unable to submit prayer request.",
       "successTitle": "Intercession request received",
-      "successBody": "Your prayer request has been received for KOI's intercession workflow.",
-      "note": "This request will be stored for KOI's intercession workflow and reviewed with care.",
+      "successBody": "Your prayer request has been received for IOG's intercession workflow.",
+      "note": "This request will be stored for IOG's intercession workflow and reviewed with care.",
       "fields": {
         "name": {
           "label": "Name",

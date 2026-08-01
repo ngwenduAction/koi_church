@@ -1,6 +1,6 @@
 {
   "common": {
-    "brandHome": "Lehae la Kingdom of Israel",
+    "brandHome": "Lehae la Israel of God",
     "openNavigation": "Bula tsamaiso",
     "closeNavigation": "Koala tsamaiso",
     "sideNavigation": "Tsamaiso ya lehlakore",
@@ -22,7 +22,7 @@
     "flagshipTeaching": "Thuto e Kgolo"
   },
   "hero": {
-    "title": "Ntlo ya Thuto ya Sabatha",
+    "title": "Sehlopha sa Thuto ya Bibele",
     "meta": "Moqebelo, 12:00 MOTSHEHARE / Sandton, Johannesburg, 2196",
     "mediaCaption": "Bakreste ba Pele",
     "mediaTitle": "Molao, bopaki, metsi a phelang.",
@@ -43,7 +43,7 @@
     "sabbath": {
       "eyebrow": "Sabatha ya Beke le Beke",
       "title": "Re bokana ka letsatsi la bosupa ho ithuta mangolo.",
-      "body": "KOI e kopana Sabatha e nngwe le e nngwe bakeng sa thuto ya Bibele e hlophisehileng, e bala thuto ka molao, baprofeta, Kreste, le baapostola.",
+      "body": "IOG e kopana Sabatha e nngwe le e nngwe bakeng sa thuto ya Bibele e hlophisehileng, e bala thuto ka molao, baprofeta, Kreste, le baapostola.",
       "link": "Rera ketelo ya hao",
       "metadataLabel": "Dintlha tsa Sabatha ya beke le beke",
       "dayLabel": "Letsatsi",
@@ -56,7 +56,7 @@
     "foundation": {
       "eyebrow": "Motheo",
       "title": "E hahilwe hodima baapostola le baprofeta, Jesu Kreste ka boyena e le lejwe le leholo la sekhutlo.",
-      "body": "KOI ke setjhaba sa thuto ya Bibele ya Sabatha se rutang lentswe la Modimo le sa kgaolwang ho ya ka baprofeta le baapostola. Re boloka Sabatha ya Morena, mekete ya Levitike 23, molao wa dijo wa Levitike 11, le molao wa borena wa Melao e Leshome.",
+      "body": "IOG ke setjhaba sa thuto ya Bibele ya Sabatha se rutang lentswe la Modimo le sa kgaolwang ho ya ka baprofeta le baapostola. Re boloka Sabatha ya Morena, mekete ya Levitike 23, molao wa dijo wa Levitike 11, le molao wa borena wa Melao e Leshome.",
       "pillars": [
         "Modimo wa Iseraele",
         "Jesu Kreste",
@@ -89,12 +89,12 @@
     "weekly": "Sabatha ya Beke le Beke",
     "library": "Laeborari",
     "channels": "Dikanale",
-    "lowerBrand": "Kingdom of Israel",
+    "lowerBrand": "Israel of God",
     "lowerText": "E hahilwe bakeng sa thuto ya Sabatha, thuto, dithuto, le taolo ya setjhaba."
   },
   "lessons": {
-    "metadataTitle": "Dithuto | Kingdom of Israel",
-    "metadataDescription": "Ditokomane tsa dithuto tsa Sabatha ka dipuo tse ngata tse tswang ho Kingdom of Israel, tse lokiseditsweng thuto ya kahare ho sebaka sena.",
+    "metadataTitle": "Dithuto | Israel of God",
+    "metadataDescription": "Ditokomane tsa dithuto tsa Sabatha ka dipuo tse ngata tse tswang ho Israel of God, tse lokiseditsweng thuto ya kahare ho sebaka sena.",
     "eyebrow": "Laeborari ya Dithuto",
     "title": "Dintho tsa thuto bakeng sa thuto ya Sabatha",
     "body": "Laeborari ya thuto ka dipuo tse ngata bakeng sa thuto, tokisetso ya beke le beke, le ho bala ka hloko ka Senyesemane, isiZulu, le Sesotho.",
@@ -130,7 +130,7 @@
     "visit": {
       "eyebrow": "Etela",
       "title": "Sehlopha sa Sabatha sa Beke le Beke",
-      "description": "Tlhahisoleseding ya moeti bakeng sa sehlopha sa Sabatha sa beke le beke ho Kingdom of Israel, ho kenyeletswa seo o ka se lebellang, seo o ka se tlisang, taelo ya moaparo, le moralo wa ketelo.",
+      "description": "Tlhahisoleseding ya moeti bakeng sa sehlopha sa Sabatha sa beke le beke ho Israel of God, ho kenyeletswa seo o ka se lebellang, seo o ka se tlisang, taelo ya moaparo, le moralo wa ketelo.",
       "guide": "Tataiso ya Moeti",
       "expectTitle": "Seo o ka se lebellang ka Sabatha",
       "expectBody": "Sehlopha sa beke le beke se hlophisehile, se thehilwe mangolong, mme se sebetsa. Baeti ba amohelwa bakeng sa thuto, ho mamela, le kopano le phutheho.",
@@ -146,7 +146,7 @@
       "men": "Banna",
       "women": "Basadi",
       "request": "Kopo ya Ketelo",
-      "requestTitle": "Bolella KOI hore o rera ho tla.",
+      "requestTitle": "Bolella IOG hore o rera ho tla.",
       "requestBody": "Sena se thusa sehlopha ho amohela baeti ka ho hlaka, haholoholo haeba o na le dipotso ka nako, phihlello, kapa ho tla le lelapa.",
       "essentials": {
         "day": "Letsatsi",
@@ -199,30 +199,30 @@
     "giving": {
       "eyebrow": "Botshepehi",
       "title": "Hlompha Morena ka thepa ya hao",
-      "description": "Ho nehelana ho KOI ho tshwarwa ka botebo, teboho, le taelo. Tshehetso ya mosebetsi e amohelwa ntle le pontsho le ka ho hlaka pela Modimo.",
+      "description": "Ho nehelana ho IOG ho tshwarwa ka botebo, teboho, le taelo. Tshehetso ya mosebetsi e amohelwa ntle le pontsho le ka ho hlaka pela Modimo.",
       "mandate": "Taelo",
       "mandateTitle": "Ntlo ya polokelo e tlatsoa ka kutlo, eseng ka pontsho.",
       "mandateBody": "Ho nehelana ha ho tshwarwe jwalo ka pontsho, kgatello, kapa lerata. Ho atamelwa jwalo ka ketso ya taelo pela Modimo, ho ya ka lentswe le molemong wa ntlo.",
       "work": "Mosebetsi",
       "workTitle": "Tshehetso e lebiswa ho mafutsana le tlhokomelo ya ntlo.",
       "workBody1": "Se nehelwang se reretswe ho matlafatsa bophelo bo sebetsang ba phutheho: ho boloka sebaka, ho tswela pele ha mosebetsi, le thuso moo tlhoko e leng teng.",
-      "workBody2": "KOI e boloka taba ena e hlakile. Botshepehi bo tshwarwa ka botebo hore mosebetsi o nne o be taelong mme ntlo e se ke ya hloka tse hlokahalang.",
+      "workBody2": "IOG e boloka taba ena e hlakile. Botshepehi bo tshwarwa ka botebo hore mosebetsi o nne o be taelong mme ntlo e se ke ya hloka tse hlokahalang.",
       "bankName": "First National Bank (FNB)"
     },
     "membership": {
       "eyebrow": "Botho",
       "title": "Motheo wa Baprofeta",
-      "description": "Botho ho KOI bo amohelwa jwalo ka taba ya selekane. Bo kopanya thuto, taelo, le kopano tlasa lentswe le rutoang ke baprofeta, baapostola, le Kreste lejwe le leholo la sekhutlo.",
+      "description": "Botho ho IOG bo amohelwa jwalo ka taba ya selekane. Bo kopanya thuto, taelo, le kopano tlasa lentswe le rutoang ke baprofeta, baapostola, le Kreste lejwe le leholo la sekhutlo.",
       "covenant": "Selekane",
       "covenantTitle": "Ba amohetsweng ha ba sa le basele, empa ke baahi mmoho ka tlung.",
       "covenantBody": "Botho ha se ngodiso e sa tebang. Ke kopo e hlophisehileng ya ho tsamaya kopanong, pako, le kutlo kahare ho ntlo e ipolelang Modimo wa Iseraele.",
       "observances": "Ditebello tsa Setheo",
       "observancesTitle": "Botho bo bolokwa kahare ho taelo e bonahalang ya thuto le tshebetso.",
-      "observancesBody": "Dikholomo tsena di tshwaya bophelo ba phutheho mme di bopa moralo o lebelletsweng wa tswelopele ya selekane ho KOI.",
+      "observancesBody": "Dikholomo tsena di tshwaya bophelo ba phutheho mme di bopa moralo o lebelletsweng wa tswelopele ya selekane ho IOG.",
       "preparation": "Tokisetso",
       "preparationTitle": "Ena ke ketso e tebileng ya pako le boinehelo ho Modimo wa Iseraele.",
       "preparationBody1": "Kopo ya botho e lokela ho etswa ka boikokobetso. Ke polelo ya hore motho o batla ho amohelwa tlasa thuto, dikahlolo, melao, le kopano e bolokwang phuthehong ena.",
-      "preparationBody2": "KOI ha e tshware botho jwalo ka ngodiso e sa tebang. E atamelwa ka nnete, thapelo, le boikemisetso ba ho hlahlojwa leseding la lentswe.",
+      "preparationBody2": "IOG ha e tshware botho jwalo ka ngodiso e sa tebang. E atamelwa ka nnete, thapelo, le boikemisetso ba ho hlahlojwa leseding la lentswe.",
       "pillars": {
         "sabbath": {
           "label": "Sabatha",
@@ -248,7 +248,7 @@
       "description": "Dikopo tse tliswang mona di tshwarwa ka boikokobetso, kutlwelo-bohloko, le tlhokomelo. Thapello e atamelwa jwalo ka mosebetsi o tebileng pela Modimo, eseng pontsho ya sechaba.",
       "mandate": "Taelo",
       "mandateTitle": "Thapelo e arolelanwa hore mmele o ka jara, wa ipolela, mme wa batla phodiso mmoho.",
-      "mandateBody": "KOI e amohela dikopo tsa thapelo e le ditaba tsa thapello, pako, le tlhokomelo ya bonngwe. Se tliswang pela Morena se lokela ho tliswa ka nnete, tlhompho, le tumelo.",
+      "mandateBody": "IOG e amohela dikopo tsa thapelo e le ditaba tsa thapello, pako, le tlhokomelo ya bonngwe. Se tliswang pela Morena se lokela ho tliswa ka nnete, tlhompho, le tumelo.",
       "burdens": "Jaranang Meroalo",
       "burdensTitle": "Moholo le phutheho ba rapella hore meroalo e se ke ya jarwa motho a le mong.",
       "burdensBody": "Moholo ya rutang o amohela dikopo tsa thapelo ka tlhokomelo, mme phutheho e kenella moo ho loketseng thapellong e kopanetsweng. Mosebetsi ona o reretswe ho kgothatsa ba mahlomoleng, ho matlafatsa ba kgathetseng, le ho tlisa ditaba pela Morena ka moya o hlophisehileng.",
@@ -259,16 +259,16 @@
     },
     "contact": {
       "inquiry": "Potso",
-      "title": "Ngola ka ho hlaka hore KOI e kgone ho araba ka taelo.",
+      "title": "Ngola ka ho hlaka hore IOG e kgone ho araba ka taelo.",
       "body": "Sebedisa foromo bakeng sa ho itsebisa, dipotso tse sebetsang, kapa dikopo tsa tlhahisoleseding e eketsehileng ka sehlopha sa Sabatha le mosebetsi.",
-      "heroTitle": "Bua le KOI",
+      "heroTitle": "Bua le IOG",
       "heroDescription": "Romela potso e hlokolosi phuthehong, mme morababo rona o tla araba ha a kgona."
     },
     "blog": {
-      "title": "Journale ya KOI",
+      "title": "Journale ya IOG",
       "linksLabel": "Dihokelo tsa dihlooho tsa koranta",
-      "metadataTitle": "Blog | Kingdom of Israel",
-      "metadataDescription": "Dingolwa tsa beke le beke le dithuto tsa Kingdom of Israel.",
+      "metadataTitle": "Blog | Israel of God",
+      "metadataDescription": "Dingolwa tsa beke le beke le dithuto tsa Israel of God.",
       "eyebrow": "Mongolo wa beke",
       "archiveLabel": "Polokelo ya thuto",
       "archiveTitle": "Journale e hlophisitsweng bakeng sa thuto le kgopotso.",
@@ -276,7 +276,7 @@
       "articleCountLabel": "Dingolwa",
       "topicCountLabel": "Dihlooho",
       "readArticle": "Bala sengolwa",
-      "body": "Dingolwa tsa KOI ka dipuo tse ngata, mehopolo ya thuto, le dihlooho tsa koranta ya thuto tse lokiseditsweng ho balwa ka hloko."
+      "body": "Dingolwa tsa IOG ka dipuo tse ngata, mehopolo ya thuto, le dihlooho tsa koranta ya thuto tse lokiseditsweng ho balwa ka hloko."
     }
   },
   "reader": {
@@ -306,14 +306,14 @@
       "received": "E amohetswe",
       "form": "Foromo",
       "submitting": "E romelwa...",
-      "localNote": "Karolo ena e netefatsa tlhahisoleseding mona ha phallo ya KOI e lokisetswa mohato o latelang."
+      "localNote": "Karolo ena e netefatsa tlhahisoleseding mona ha phallo ya IOG e lokisetswa mohato o latelang."
     },
     "visit": {
       "title": "Rera ketelo",
-      "description": "Bolella KOI hanyane ka ketelo ya hao hore sehlopha se o amohele ka taelo le tlhokomelo.",
+      "description": "Bolella IOG hanyane ka ketelo ya hao hore sehlopha se o amohele ka taelo le tlhokomelo.",
       "submitLabel": "Romela kopo ya ketelo",
       "successTitle": "Kopo ya ketelo e lokisitswe",
-      "successBody": "Kopo ya hao ya ketelo e netefaditswe mme e loketse phallo ya KOI.",
+      "successBody": "Kopo ya hao ya ketelo e netefaditswe mme e loketse phallo ya IOG.",
       "fields": {
         "fullName": {
           "label": "Lebitso le felletseng",
@@ -360,7 +360,7 @@
       "description": "Sebedisa foromo ena bakeng sa dipotso, ho itsebisa, kapa dikopo tsa tlhahisoleseding.",
       "submitLabel": "Romela potso",
       "successTitle": "Potso e lokisitswe",
-      "successBody": "Potso ya hao e netefaditswe mme e loketse phallo ya KOI.",
+      "successBody": "Potso ya hao e netefaditswe mme e loketse phallo ya IOG.",
       "fields": {
         "fullName": {
           "label": "Lebitso le felletseng",
@@ -387,12 +387,12 @@
     "membership": {
       "kicker": "Kopo ya Puisano",
       "title": "Kopa puisano ya botho",
-      "description": "Sebedisa foromo ena haeba o batla kopano ya selekane le KOI mme o ikemiseditse ho amohelwa motheong wa thuto e rutwang mona.",
+      "description": "Sebedisa foromo ena haeba o batla kopano ya selekane le IOG mme o ikemiseditse ho amohelwa motheong wa thuto e rutwang mona.",
       "submitLabel": "Kopa Puisano ya Botho",
       "submitError": "Ha ho kgonehe ho romela kopo ya botho.",
       "successTitle": "Kopo ya botho e amohetswe",
-      "successBody": "Kopo ya hao ya botho e amohetswe bakeng sa phallo ya puisano ya KOI.",
-      "note": "Kopo ena e tla bolokwa bakeng sa phallo ya tlhahlobo ya KOI.",
+      "successBody": "Kopo ya hao ya botho e amohetswe bakeng sa phallo ya puisano ya IOG.",
+      "note": "Kopo ena e tla bolokwa bakeng sa phallo ya tlhahlobo ya IOG.",
       "fields": {
         "fullName": {
           "label": "Lebitso le Felletseng",
@@ -409,7 +409,7 @@
           "placeholder": "Johannesburg"
         },
         "foundationAcknowledgment": {
-          "label": "Ke tiisa boitlamo ba ka motheong wa thuto wa KOI."
+          "label": "Ke tiisa boitlamo ba ka motheong wa thuto wa IOG."
         }
       }
     },
@@ -420,8 +420,8 @@
       "submitLabel": "Romela Kopo",
       "submitError": "Ha ho kgonehe ho romela kopo ya thapelo.",
       "successTitle": "Kopo ya thapello e amohetswe",
-      "successBody": "Kopo ya hao ya thapelo e amohetswe bakeng sa phallo ya thapello ya KOI.",
-      "note": "Kopo ena e tla bolokwa bakeng sa phallo ya thapello ya KOI mme e hlahlojwe ka hloko.",
+      "successBody": "Kopo ya hao ya thapelo e amohetswe bakeng sa phallo ya thapello ya IOG.",
+      "note": "Kopo ena e tla bolokwa bakeng sa phallo ya thapello ya IOG mme e hlahlojwe ka hloko.",
       "fields": {
         "name": {
           "label": "Lebitso",

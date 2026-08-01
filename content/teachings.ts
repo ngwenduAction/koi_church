@@ -6,7 +6,7 @@ export const teachings = [
     metadata: "Isaiah 8:20 | Bible Study",
     summary:
       "Isaiah 8:20 gives the measure: to the law and to the testimony. This study frames doctrine by that witness, testing every teaching by the word given through the prophets and apostles.",
-    speaker: "Kingdom of Israel",
+    speaker: "Israel of God",
     date: "",
     scriptureReferences: ["Isaiah 8:20"],
     mediaUrl: "",
@@ -41,7 +41,7 @@ export const lawAndTestimonyArticle = {
           heading: "The Testimony of Christ",
           paragraphs: [
             "The testimony is not a rival witness to the law. It is the prophetic and apostolic witness that declares Christ, confirms the word already spoken, and brings the hearer to understanding. Moses and the prophets speak forward; Christ and the apostles speak in fulfillment and light, yet always according to the same truth.",
-            "For this reason KOI does not separate Jesus Christ from the law given by God of old, nor the apostles from the prophets that came before them. The testimony of Christ reveals the life, judgment, mercy, and purpose that stand in continuity with the word already established.",
+            "For this reason IOG does not separate Jesus Christ from the law given by God of old, nor the apostles from the prophets that came before them. The testimony of Christ reveals the life, judgment, mercy, and purpose that stand in continuity with the word already established.",
           ],
         },
         {
@@ -59,7 +59,7 @@ export const lawAndTestimonyArticle = {
       nativeTitle: "Umthetho Nobufakazi",
       pdfHref: "/lessons/Umthetho%20Nobufakazi_IsiZulu.pdf",
       intro:
-        "The full KOI Sabbath lesson in IsiZulu is attached below as the primary reading document. This journal view keeps the same study structure and provides direct access to the native PDF.",
+        "The full IOG Sabbath lesson in IsiZulu is attached below as the primary reading document. This journal view keeps the same study structure and provides direct access to the native PDF.",
       sections: [
         {
           heading: "Study Frame",
@@ -81,7 +81,7 @@ export const lawAndTestimonyArticle = {
       nativeTitle: "Molao le Bopaki",
       pdfHref: "/lessons/Molao%20le%20Bopaki_Sesotho.pdf",
       intro:
-        "The full KOI Sabbath lesson in Sesotho is attached below as the primary reading document. This journal view preserves the same doctrinal arc and makes the source PDF immediately available.",
+        "The full IOG Sabbath lesson in Sesotho is attached below as the primary reading document. This journal view preserves the same doctrinal arc and makes the source PDF immediately available.",
       sections: [
         {
           heading: "Study Frame",

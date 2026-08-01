@@ -8,9 +8,9 @@ import { Container } from "../../shared/components/Container";
 import { HeroInterface } from "../../features/home/components/HeroInterface";
 
 export const metadata: Metadata = {
-  title: "Membership | Kingdom of Israel",
+  title: "Membership | Israel of God",
   description:
-    "Membership at Kingdom of Israel is a covenant request grounded in doctrine, observance, and dedication to the God of Israel.",
+    "Membership at Israel of God is a covenant request grounded in doctrine, observance, and dedication to the God of Israel.",
 };
 
 export default async function MembershipPage() {

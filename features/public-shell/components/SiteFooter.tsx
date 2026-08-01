@@ -21,7 +21,7 @@ export function SiteFooter() {
       <Container className="koi-footer__inner">
         <div className="koi-footer__brand-panel">
           <Link className="koi-footer__logo-link" href="/" aria-label={t("common.brandHome")}>
-            <KoiLogoMark className="koi-footer__logo" sizes="(max-width: 767px) 168px, 220px" />
+            <KoiLogoMark className="koi-footer__logo" sizes="(max-width: 680px) 104px, 128px" tone="light" />
           </Link>
           <p className="koi-footer__thesis">{t("home.foundation.body")}</p>
         </div>
@@ -112,14 +112,14 @@ export function SiteFooter() {
 
         .koi-footer__logo-link {
           display: inline-flex;
-          width: min(21rem, 82vw);
-          height: 4.35rem;
+          width: 15rem;
+          height: 15rem;
           align-items: center;
           padding: 0.62rem 0.85rem;
-          border: 1px solid color-mix(in srgb, var(--color-linen) 18%, transparent);
+          border: 1px solid transparent;
           border-radius: 0.8rem;
-          background: color-mix(in srgb, var(--color-linen) 94%, transparent);
-          box-shadow: 0 20px 55px rgba(0, 0, 0, 0.24);
+          background: transparent;
+          box-shadow: none;
           color: var(--color-ink);
         }
 
@@ -253,8 +253,8 @@ export function SiteFooter() {
           }
 
           .koi-footer__logo-link {
-            width: min(18rem, 84vw);
-            height: 3.75rem;
+            width: 6.5rem;
+            height: 6.5rem;
           }
 
           .koi-footer__lower {

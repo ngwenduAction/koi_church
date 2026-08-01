@@ -6,9 +6,9 @@ import { ScriptureBlock } from "../../features/pages/components/ScriptureBlock";
 import { Container } from "../../shared/components/Container";
 
 export const metadata: Metadata = {
-  title: "Prayer | Kingdom of Israel",
+  title: "Prayer | Israel of God",
   description:
-    "A private intercession page for Kingdom of Israel, where prayer requests may be submitted carefully for the elder and the assembly.",
+    "A private intercession page for Israel of God, where prayer requests may be submitted carefully for the elder and the assembly.",
 };
 
 export default async function PrayerPage() {

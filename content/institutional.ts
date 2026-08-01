@@ -18,7 +18,7 @@ export type IntakeConfig = {
 };
 
 export const visitDetails = {
-  title: "Visit KOI",
+  title: "Visit IOG",
   eyebrow: "Weekly Sabbath Class",
   description:
     "Join the weekly Sabbath class in Johannesburg for ordered study, listening, and fellowship in Christ.",
@@ -59,7 +59,7 @@ export const givingDetails = {
   title: "Stewardship in seriousness and order",
   description:
     "Giving is handled plainly, with gratitude before God and without display. Use the banking details below if you wish to support the work.",
-  accountHolder: "KOI Finance",
+  accountHolder: "IOG Finance",
   bank: "FNB",
   accountNumber: "63809500034",
   branch: "250655",
@@ -86,7 +86,7 @@ export const contactDetails = {
   eyebrow: "Contact",
   title: "General inquiries",
   description:
-    "Use this page for practical questions, introductions, or requests for information about KOI and the weekly Sabbath class.",
+    "Use this page for practical questions, introductions, or requests for information about IOG and the weekly Sabbath class.",
   email: "kingdomofisrael1010@gmail.com",
 };
 
@@ -101,11 +101,11 @@ export const prayerDetails = {
 export const visitRequestForm: IntakeConfig = {
   title: "Plan a visit",
   description:
-    "Tell KOI a little about your intended visit so the class can receive you with order and care.",
+    "Tell IOG a little about your intended visit so the class can receive you with order and care.",
   submitLabel: "Send visit request",
   successTitle: "Visit request prepared",
   successBody:
-    "Your visit request passed validation in this phase and is ready for KOI's delivery workflow once backend wiring is connected.",
+    "Your visit request passed validation in this phase and is ready for IOG's delivery workflow once backend wiring is connected.",
   fields: [
     {
       name: "fullName",
@@ -171,11 +171,11 @@ export const visitRequestForm: IntakeConfig = {
 export const membershipForm: IntakeConfig = {
   title: "Request membership interview",
   description:
-    "Use this form if you are seeking covenant fellowship with KOI and are prepared to be received on the doctrinal foundation taught here.",
+    "Use this form if you are seeking covenant fellowship with IOG and are prepared to be received on the doctrinal foundation taught here.",
   submitLabel: "Request Membership Interview",
   successTitle: "Membership request prepared",
   successBody:
-    "Your membership request passed validation in this phase and is ready for KOI's interview workflow once backend wiring is connected.",
+    "Your membership request passed validation in this phase and is ready for IOG's interview workflow once backend wiring is connected.",
   fields: [
     {
       name: "fullName",
@@ -207,7 +207,7 @@ export const membershipForm: IntakeConfig = {
     },
     {
       name: "foundationAcknowledgment",
-      label: "I confirm my commitment to the doctrinal foundation of KOI.",
+      label: "I confirm my commitment to the doctrinal foundation of IOG.",
       type: "checkbox",
       required: true,
     },
@@ -221,7 +221,7 @@ export const contactForm: IntakeConfig = {
   submitLabel: "Send inquiry",
   successTitle: "Inquiry prepared",
   successBody:
-    "Your inquiry passed validation in this phase and is ready for KOI's delivery workflow once backend wiring is connected.",
+    "Your inquiry passed validation in this phase and is ready for IOG's delivery workflow once backend wiring is connected.",
   fields: [
     {
       name: "fullName",
@@ -267,7 +267,7 @@ export const prayerForm: IntakeConfig = {
   submitLabel: "Submit Request",
   successTitle: "Intercession request prepared",
   successBody:
-    "Your prayer request passed validation in this phase and is ready for KOI's intercession workflow once backend wiring is connected.",
+    "Your prayer request passed validation in this phase and is ready for IOG's intercession workflow once backend wiring is connected.",
   fields: [
     {
       name: "name",

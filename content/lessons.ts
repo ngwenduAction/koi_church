@@ -18,7 +18,7 @@ export const lessonVariants: LessonVariant[] = [
         heading: "The law as measure",
         paragraphs: [
           "The commandments given by God are not treated as fragments of a vanished order. They remain the revealed measure by which conduct, judgment, worship, and doctrine are examined before the Most High.",
-          "For KOI, to speak of truth without the law is to speak without the measure that names obedience, holiness, remembrance, and separation.",
+          "For IOG, to speak of truth without the law is to speak without the measure that names obedience, holiness, remembrance, and separation.",
         ],
       },
       {

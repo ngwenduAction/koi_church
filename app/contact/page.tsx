@@ -10,7 +10,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("pages.contact");
 
   return {
-    title: `${t("inquiry")} | Kingdom of Israel`,
+    title: `${t("inquiry")} | Israel of God`,
     description: t("body"),
   };
 }

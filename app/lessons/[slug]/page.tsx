@@ -28,13 +28,13 @@ export async function generateMetadata({ params }: LessonReaderPageProps): Promi
 
   if (!lesson) {
     return {
-      title: "Lesson Not Found | Kingdom of Israel",
+      title: "Lesson Not Found | Israel of God",
     };
   }
 
   return {
-    title: `${lesson.title} | Kingdom of Israel`,
-    description: lesson.summary || `${lesson.title} in the KOI multilingual lesson reader.`,
+    title: `${lesson.title} | Israel of God`,
+    description: lesson.summary || `${lesson.title} in the IOG multilingual lesson reader.`,
   };
 }
 

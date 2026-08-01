@@ -50,7 +50,7 @@ export function HeroInterface({
   mediaMobileUrl,
   mediaType = "image",
   pageTitle = "Law, testimony, living water.",
-  pageCaption = "Sabbath Study House",
+  pageCaption = "Bible Study Class",
   pageTitleKey = "hero.mediaTitle",
   pageCaptionKey = "hero.mediaCaption",
   bottomImage = "/media/default-bottom.jpg",
@@ -156,7 +156,7 @@ export function HeroInterface({
           data-hero-layer="identity"
           aria-label={t("common.brandHome")}
         >
-          <KoiLogoMark priority className="koi-identity-logo" sizes="290px" />
+          <KoiLogoMark priority className="koi-identity-logo" sizes="200px" />
           <div className="koi-identity-text">
             <h1 className="koi-identity-title">{t("hero.title")}</h1>
             <p className="koi-identity-meta">{t("hero.meta")}</p>
@@ -309,7 +309,7 @@ export function HeroInterface({
 
         .koi-identity-logo {
           display: inline-flex;
-          width: min(16rem, 100%);
+          width: min(12.5rem, 100%);
           height: auto;
           block-size: auto;
           flex: 0 0 auto;
@@ -592,7 +592,7 @@ export function HeroInterface({
           }
 
           .koi-identity-logo {
-            width: min(10.75rem, calc(100vw - 6.5rem));
+            width: min(9.5rem, calc(100vw - 6.5rem));
             max-width: 100%;
           }
 
@@ -728,13 +728,13 @@ export function HeroInterface({
           }
 
           .koi-identity-logo {
-            width: min(9.85rem, calc(100vw - 6rem));
+            width: min(9rem, calc(100vw - 6rem));
           }
         }
 
         @media (max-width: 340px) {
           .koi-identity-logo {
-            width: min(9.15rem, calc(100vw - 5.7rem));
+            width: min(8.5rem, calc(100vw - 5.7rem));
           }
         }
         @media (min-width: 540px) and (max-width: 1023px) {
@@ -750,7 +750,7 @@ export function HeroInterface({
           }
 
           .koi-identity-logo {
-            width: min(11.75rem, 48vw);
+            width: min(10.5rem, 48vw);
           }
 
           .koi-identity-title {
@@ -810,7 +810,7 @@ export function HeroInterface({
           }
 
           .koi-identity-logo {
-            width: 11.6rem;
+            width: 8.75rem;
           }
 
           .koi-identity-title {

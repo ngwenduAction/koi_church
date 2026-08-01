@@ -21,13 +21,13 @@ export async function generateMetadata({params}: BlogArticlePageProps): Promise<
   const article = blogArticles.find((item) => item.slug === slug);
 
   if (!article) {
-    return {title: "Teaching | Kingdom of Israel"};
+    return {title: "Teaching | Israel of God"};
   }
 
   const translation = article.translations[activeLanguage] ?? article.translations.en;
 
   return {
-    title: `${translation.title} | Kingdom of Israel`,
+    title: `${translation.title} | Israel of God`,
     description: translation.intro,
   };
 }

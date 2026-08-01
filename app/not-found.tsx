@@ -1,4 +1,4 @@
-﻿import { Container } from "../shared/components/Container";
+import { Container } from "../shared/components/Container";
 import { Button } from "../shared/components/Button";
 
 export default function NotFound() {
@@ -7,7 +7,7 @@ export default function NotFound() {
       <Container size="narrow">
         <p className="eyebrow">Page Not Found</p>
         <h1 id="not-found-title" className="editorial-title">
-          This page is not yet part of the KOI library.
+          This page is not yet part of the IOG library.
         </h1>
         <p className="editorial-copy">
           Return to the public foundation or continue with the available lesson library.

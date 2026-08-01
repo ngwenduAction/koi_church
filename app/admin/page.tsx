@@ -4,8 +4,8 @@ import { AdminDashboardClient } from "../../features/admin/components/AdminDashb
 import { Container } from "../../shared/components/Container";
 
 export const metadata: Metadata = {
-  title: "Admin | Kingdom of Israel",
-  description: "Protected administrative records for Kingdom of Israel.",
+  title: "Admin | Israel of God",
+  description: "Protected administrative records for Israel of God.",
   robots: {
     index: false,
     follow: false,
@@ -65,7 +65,7 @@ export default async function AdminPage() {
           <h1>Institutional records kept in order before the house.</h1>
           <p className="reading-prose">
             This protected view is reserved for active membership interviews, intercession matters, and the treasury
-            ledger presently held in KOI&apos;s system of record.
+            ledger presently held in IOG&apos;s system of record.
           </p>
         </header>
 

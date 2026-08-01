@@ -72,7 +72,7 @@ export async function POST(request: Request) {
       !verifiedEmail
     ) {
       return NextResponse.json(
-        { error: "Transaction verification did not match KOI offering rules." },
+        { error: "Transaction verification did not match IOG offering rules." },
         { status: 400 },
       );
     }

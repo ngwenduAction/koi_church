@@ -1,6 +1,6 @@
 export const site = {
-  name: "Kingdom of Israel",
-  shortName: "KOI",
+  name: "Israel of God",
+  shortName: "IOG",
   description:
     "A Sabbath bible study community built upon the foundation of the apostles and prophets, with Jesus Christ as the cornerstone.",
   sabbath: {
