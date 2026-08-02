@@ -20,17 +20,17 @@ export const site = {
     },
     {
       platform: "TikTok",
-      url: "https://www.tiktok.com/@koi_bible_study?lang=en",
+      url: "https://www.tiktok.com/@iog_bible_study_class?lang=en",
       label: "TikTok",
     },
     {
       platform: "Instagram",
-      url: "https://www.instagram.com/koi_biblestudy/",
+      url: "https://www.instagram.com/iog_biblestudyclass/",
       label: "Instagram",
     },
     {
       platform: "X",
-      url: "https://x.com/KOI_BibleStudy",
+      url: "https://x.com/IOG_BibleStudy",
       label: "X",
     },
     {
