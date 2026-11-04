@@ -24,7 +24,7 @@ export const visitDetails = {
     "Join the weekly Sabbath class in Johannesburg for ordered study, listening, and fellowship in Christ.",
   essentials: [
     { label: "Day", value: "Saturday" },
-    { label: "Time", value: "12:00 noon" },
+    { label: "Time", value: "13:00 noon" },
     { label: "City", value: "Johannesburg" },
     { label: "Teacher", value: "The teaching elder" },
     { label: "Bible reader", value: "Brothers" },
@@ -87,7 +87,7 @@ export const contactDetails = {
   title: "General inquiries",
   description:
     "Use this page for practical questions, introductions, or requests for information about IOG and the weekly Sabbath class.",
-  email: "kingdomofisrael1010@gmail.com",
+  email: "iogpalmridge@gmail.com",
 };
 
 export const prayerDetails = {

@@ -5,17 +5,17 @@ export const site = {
     "A Sabbath bible study community built upon the foundation of the apostles and prophets, with Jesus Christ as the cornerstone.",
   sabbath: {
     label: "Weekly Sabbath Bible Study",
-    time: "Saturday, 12:00 noon",
-    location: "Sandton, Johannesburg, 2196",
+    time: "Saturday, 13:00 noon",
+    location: "9192 Sefokabolea St, Katlehong, South Africa, 1488",
   },
   contact: {
-    email: "kingdomofisrael1010@gmail.com",
+    email: "iogpalmridge@gmail.com",
     phone: "",
   },
   socials: [
     {
       platform: "Facebook",
-      url: "https://www.facebook.com/profile.php?id=61589376132306",
+      url: "https://www.facebook.com/IOGSA",
       label: "Facebook",
     },
     {
@@ -40,4 +40,3 @@ export const site = {
     },
   ],
 } as const;
-
